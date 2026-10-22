@@ -7,7 +7,7 @@ Before building catchscore I checked whether the problem is real, using merged p
 - **1,297 merged pull requests** from **136 Python repositories with 500+ stars** (pydantic-ai, reflex, agno, fastmcp, vllm, transformers, pytorch, AutoGPT, litellm, langflow and others).
   - All were created after July 2026 and all change at least one Python test file.
   - 1,277 carry the "Generated with Claude Code" marker. 17 were opened by GitHub's Copilot coding agent.
-- Collected read-only through the GitHub API ([`agent-test-audit/collect_popular.py`](../../agent-test-audit/collect_popular.py)). No code from these repositories was downloaded or run.
+- Collected read-only through the GitHub API ([`study/collect_popular.py`](../study/collect_popular.py)). No code from these repositories was downloaded or run.
 
 ## 1. Looking only at the diff mostly produces noise
 

@@ -1,6 +1,6 @@
 """Pick merged agent PRs to score and look up the commits each needs, so the CI jobs need no token.
 
-    python bench/select.py ../agent-test-audit/data/prs.jsonl bench/pilot.json --n 30 --per-repo 2
+    python bench/select.py study/prs.jsonl bench/pilot.json --n 30 --per-repo 2
 
 Keeps PRs that change both Python source and Python tests. Samples at random (fixed seed) with at
 most --per-repo PRs per repository, so a few big projects don't dominate.
