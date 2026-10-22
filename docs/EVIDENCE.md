@@ -47,6 +47,6 @@ Python reuses cached bytecode when a file's size and modification time (in whole
 
 ## What would make this a stronger study (next steps)
 
-- **Run mutation testing on the 1,120 real PRs that change both source and tests.** This needs a sandbox (GitHub Actions or a container) because it runs other people's code. The headline would be "X% of bugs injected into agent-written changes survive the agent's own tests", a number no vendor has published.
+- **Run mutation testing on the 1,120 real PRs that change both source and tests.** This needs a sandbox (GitHub Actions or a container) because it runs other people's code. The headline would be "X% of bugs injected into agent-written changes survive the agent's own tests", a measurement I could not find published anywhere.
 - Compare agent-written and human-written PRs in the same repositories, as a baseline.
 - Have a second person label the manual-review sample to measure agreement.

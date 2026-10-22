@@ -2,7 +2,7 @@
 
 **Would your tests catch a bug in what just changed?**
 
-AI coding agents write code faster than anyone can review it, and they write the tests too. Those tests usually pass. The question nobody checks is whether they would *fail* if the code were wrong.
+AI coding agents write code faster than anyone can review it, and they write the tests too. Those tests usually pass. What rarely gets checked is whether they would *fail* if the code were wrong.
 
 catchscore checks this directly. It injects small, realistic bugs into the lines you just changed, runs your tests against each one, and tells you which bugs your tests would let through. With `--suggest`, Claude writes tests for those gaps, and catchscore only keeps the ones it has run and verified.
 
@@ -80,7 +80,17 @@ Either way, the agent gets a concrete definition of done: name the bugs your tes
 - Python and pytest only, for now.
 - Some mutants are *equivalent*: they don't change behaviour, so no test could catch them. A score of 100% isn't always possible, so treat survivors as questions, not verdicts.
 - Runtime is one test run per mutant. Point `--pytest` at the relevant test files, and use `--max-mutants` to cap a run. Planned: running only the tests that cover each changed line, and running mutants in parallel.
+- Suggested tests are checked against the code as it is now, so a test can lock in a bug that's already there. Passing on today's code proves the test catches the injected bugs, not that the current behaviour is right. Read them before keeping them.
 - `--suggest` sends the changed module and its tests to Claude through your Claude Code CLI.
+
+## Related work
+
+catchscore puts together known ideas; it doesn't invent them. What it adds is a Python CLI aimed at checking an agent's change locally before it's pushed, and a verification step that throws away any suggested test it hasn't run and seen catch a bug.
+
+- **Diff-scoped mutation testing.** [Google](https://research.google/pubs/practical-mutation-testing-at-scale-a-view-from-google/) shows surviving mutants in code review. The [python-mutation-report](https://github.com/marketplace/actions/python-mutation-report) GitHub Action runs mutmut on a PR's changed lines. [Tautest](https://www.hunted.space/dashboard/tautest) does the same for JavaScript with StrykerJS.
+- **Mutation testing tools.** [mutmut](https://github.com/boxed/mutmut) and [cosmic-ray](https://github.com/sixty-north/cosmic-ray) for Python, [Stryker](https://stryker-mutator.io/) for JavaScript and .NET, [PIT](https://pitest.org/) for Java. They're more thorough on whole projects, and catchscore's operators are a small subset of theirs.
+- **Using surviving mutants to guide LLM-written tests.** Meta's [ACH](https://dl.acm.org/doi/10.1145/3696630.3728544): engineers accepted 73% of its generated tests. [MUTGEN](https://arxiv.org/abs/2506.02954) puts mutation feedback into the prompt.
+- **Agent skills.** Several Claude Code skills have the agent work through surviving mutants ([agentic-qe](https://openskillindex.com/skills/proffesor-for-testing-agentic-qe-mutation-testing), [claude-swe-workflows](https://openskillindex.com/skills/chrisallenlane-claude-swe-workflows-test-mutation)). Those let the model decide when it's done; catchscore decides by running the tests.
 
 ## Roadmap
 
