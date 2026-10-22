@@ -75,7 +75,8 @@ def main(argv=None):
                           for r in results if not r.killed],
             "integrity": [asdict(f) for f in findings],
             "suggestion": suggestion and {"path": suggestion.path, "now_caught": len(suggestion.caught),
-                                          "still_missed": len(suggestion.still_missed)},
+                                          "still_missed": len(suggestion.still_missed),
+                                          "rejected": suggestion.rejected or None},
         }, indent=2))
     else:
         print(render(results, findings, score, suggestion))
@@ -97,7 +98,10 @@ def render(results, findings, score, suggestion=None) -> str:
     if findings:
         out += ["", "Test changes worth a second look:"]
         out += [f"  {f.path}: {f.kind}: {f.detail}" for f in findings]
-    if suggestion:
+    if suggestion and suggestion.rejected:
+        out += ["", f"Suggested tests were rejected: {suggestion.rejected.splitlines()[0]}",
+                f"  (kept for inspection in {suggestion.path}; details in .catchscore/rejected_reason.txt)"]
+    elif suggestion:
         total = len(suggestion.caught) + len(suggestion.still_missed)
         out += ["", f"Suggested tests in {suggestion.path} pass on your code and catch "
                     f"{len(suggestion.caught)} of those {total} bugs. Review them, then move them into tests/."]

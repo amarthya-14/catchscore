@@ -41,10 +41,11 @@ CODE_BLOCK = re.compile(r"```(?:python)?\n(.*?)```", re.S)
 
 @dataclass
 class Suggestion:
-    path: str            # where the accepted test file was written in the user's repo
+    path: str            # where the test file was written in the user's repo
     code: str
     caught: list[Result]  # survivors this file now kills
     still_missed: list[Result]
+    rejected: str = ""   # why the file was not accepted ("" if accepted)
 
 
 def _ask_claude(prompt: str, model: str | None, timeout: float) -> str:
@@ -74,22 +75,35 @@ def suggest(repo: Path, runner: Runner, survivors: list[Result], test_paths: lis
         import_name=path.removesuffix(".py").replace("/", "."),
         survivors="\n".join(f"- line {r.mutant.line}: `{lines[r.mutant.line - 1].strip()}`  bug: {r.mutant.description}"
                             for r in results))
-    m = CODE_BLOCK.search(_ask_claude(prompt, model, timeout))
-    if not m:
-        return None
-    code = m.group(1)
+    reply = _ask_claude(prompt, model, timeout)
+    m = CODE_BLOCK.search(reply)
+    code = m.group(1) if m else reply
     rel = f"tests/test_catchscore_{Path(path).stem}.py"
+    out_dir = repo / ".catchscore"
+    out_dir.mkdir(exist_ok=True)
+    if not m:
+        return _reject(out_dir, rel, code, results, "the reply contained no Python code block")
     runner.add_file(rel, code)
+    runner.only = [rel]
     try:
-        if not runner.passes():
-            return None  # the suggestion is wrong about the current behaviour; never keep it
+        ok, output = runner.passes()
+        if not ok:
+            # Wrong about the current behaviour (or broken): never keep it, but show why.
+            return _reject(out_dir, rel, code, results, "the suggested tests fail on the current code:\n" + output)
         rerun = [runner.run(r.mutant) for r in results]
     finally:
+        runner.only = None
         runner.remove_file(rel)
     caught = [r for r in rerun if r.killed]
     if not caught:
-        return None
-    out = repo / ".catchscore" / Path(rel).name
-    out.parent.mkdir(exist_ok=True)
+        return _reject(out_dir, rel, code, results, "the suggested tests pass but catch none of the bugs")
+    out = out_dir / Path(rel).name
     out.write_text(code)
     return Suggestion(str(out.relative_to(repo)), code, caught, [r for r in rerun if not r.killed])
+
+
+def _reject(out_dir: Path, rel: str, code: str, results: list[Result], reason: str) -> Suggestion:
+    out = out_dir / ("rejected_" + Path(rel).name)
+    out.write_text(code)
+    (out_dir / "rejected_reason.txt").write_text(reason)
+    return Suggestion(str(out.relative_to(out_dir.parent)), code, [], results, reason)

@@ -123,3 +123,53 @@ def test_end_to_end_on_the_demo_project(tmp_path):
     assert report["caught"] == 2
     assert any(s["mutation"] == "`>` -> `>=`" for s in report["survivors"])
     assert {f["detail"] for f in report["integrity"]} == {"test_discount_runs", "test_discount_returns_a_number"}
+
+
+GOOD_TESTS = '''```python
+import pytest
+import shop
+
+
+def test_save10_above_and_at_boundary():
+    assert shop.discount(200, "SAVE10") == pytest.approx(20)
+    assert shop.discount(100, "SAVE10") == 0
+
+
+def test_half_is_capped():
+    assert shop.discount(30, "HALF") == pytest.approx(15)
+    assert shop.discount(60, "HALF") == 25
+    assert shop.discount(50, "HALF") == 25
+
+
+def test_unknown_code():
+    assert shop.discount(10, "BOGUS") == 0
+```'''
+
+WRONG_TESTS = '```python\nimport shop\n\n\ndef test_wrong():\n    assert shop.discount(200, "SAVE10") == 999\n```'
+
+
+@pytest.mark.parametrize("reply, accepted", [(GOOD_TESTS, True), (WRONG_TESTS, False)])
+def test_suggestions_are_kept_only_if_they_pass_and_catch_bugs(tmp_path, monkeypatch, reply, accepted):
+    from catchscore import suggest as suggest_module
+    from catchscore.diff import git_diff
+    from catchscore.run import Runner
+
+    repo = tmp_path / "shop"
+    subprocess.run(["bash", str(ROOT / "examples" / "make_demo.sh"), str(repo)], check=True, capture_output=True)
+    monkeypatch.setattr(suggest_module, "_ask_claude", lambda *a, **k: reply)
+    files = git_diff(repo, None)
+    mutants = [m for f in files if f.path == "shop.py" for m in mutants_for(f.path, (repo / f.path).read_text(), f.added_lines)]
+    # An explicit test path in the command: the suggested file must still be the one that gets verified.
+    runner = Runner(repo, [sys.executable, "-m", "pytest", "tests/test_shop.py"])
+    try:
+        runner.baseline()
+        survivors = [r for r in (runner.run(m) for m in mutants) if not r.killed]
+        result = suggest_module.suggest(repo, runner, survivors, ["tests/test_shop.py"])
+    finally:
+        runner.close()
+    if accepted:
+        assert not result.rejected and len(result.caught) == len(survivors)
+        assert (repo / result.path).exists()
+    else:
+        assert result.rejected.startswith("the suggested tests fail on the current code")
+        assert (repo / ".catchscore" / "rejected_reason.txt").exists()

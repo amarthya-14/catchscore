@@ -10,7 +10,8 @@ from dataclasses import dataclass
 from .diff import FileDiff, is_test_file
 
 TEST_DEF = re.compile(r"^\s*(?:async\s+)?def\s+(test_\w+)")
-ASSERTISH = re.compile(r"\bassert\b|pytest\.raises|self\.assert\w+\(|\.assert_\w+\(|assert_\w+\(")
+ASSERTISH = re.compile(r"\bassert\b|pytest\.(raises|fail|warns)|self\.assert\w+\(|\.assert_\w+\(|assert_\w+\(|"
+                       r"raise\s+AssertionError|self\.fail\(")
 HELPER_CHECK = re.compile(r"\b(check|verify|expect|validate)_?\w*\(|snapshot")
 # Platform, hardware and optional-dependency skips are routine; an unconditional skip is not.
 UNCONDITIONAL_SKIP = re.compile(

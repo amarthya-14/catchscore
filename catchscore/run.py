@@ -20,19 +20,27 @@ class Result:
     reason: str  # "failed", "timeout" or "survived"
 
 
-def _pytest(workdir: Path, cmd: list[str], timeout: float) -> tuple[bool, float]:
+def _pytest(workdir: Path, cmd: list[str], timeout: float, want_output: bool = False):
     start = time.monotonic()
     try:
         proc = subprocess.run(cmd, cwd=workdir, capture_output=True, text=True, timeout=timeout)
     except subprocess.TimeoutExpired:
-        return False, timeout
-    return proc.returncode == 0, time.monotonic() - start
+        return (False, timeout, "timed out") if want_output else (False, timeout)
+    took = time.monotonic() - start
+    if want_output:
+        return proc.returncode == 0, took, proc.stdout[-3000:] + proc.stderr[-1000:]
+    return proc.returncode == 0, took
 
 
 class Runner:
     def __init__(self, repo: Path, pytest_cmd: list[str], max_timeout: float = 120):
         self.repo = repo
         self.cmd = pytest_cmd + ["-x", "-q", "-p", "no:cacheprovider"]
+        # Everything up to "pytest" is how to invoke it; the rest selects tests. Verifying a suggested
+        # test file swaps the selection for just that file.
+        cut = next((i + 1 for i, t in enumerate(pytest_cmd) if t.endswith("pytest")), len(pytest_cmd))
+        self.invoke = pytest_cmd[:cut]
+        self.only: list[str] | None = None
         self.max_timeout = max_timeout
         self.tmp = Path(tempfile.mkdtemp(prefix="catchscore-"))
         self.work = self.tmp / repo.name
@@ -51,16 +59,21 @@ class Runner:
         original = target.read_text()
         target.write_text(mutant.source)
         try:
-            passed, took = _pytest(self.work, self.cmd, self.timeout)
+            passed, took = _pytest(self.work, self._cmd(), self.timeout)
             if took >= self.timeout:
                 return Result(mutant, True, "timeout")
             return Result(mutant, not passed, "failed" if not passed else "survived")
         finally:
             target.write_text(original)
 
-    def passes(self) -> bool:
-        ok, _ = _pytest(self.work, self.cmd, self.timeout)
-        return ok
+    def _cmd(self) -> list[str]:
+        if self.only is None:
+            return self.cmd
+        return self.invoke + self.only + ["-x", "-q", "-p", "no:cacheprovider"]
+
+    def passes(self) -> tuple[bool, str]:
+        ok, _, output = _pytest(self.work, self._cmd(), self.timeout, want_output=True)
+        return ok, output
 
     def add_file(self, rel: str, text: str):
         (self.work / rel).parent.mkdir(parents=True, exist_ok=True)

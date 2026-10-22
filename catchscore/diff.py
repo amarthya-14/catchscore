@@ -63,7 +63,8 @@ def parse(diff_text: str) -> list[FileDiff]:
 
 def git_diff(repo: Path, base: str | None) -> list[FileDiff]:
     """Changes in the working tree against `base` (default: HEAD, i.e. uncommitted work), untracked files included."""
-    args = ["git", "-C", str(repo), "diff", "--unified=0", "--no-color", base or "HEAD"]
+    # --relative: paths relative to `repo`, so a subdirectory of a monorepo (e.g. backend/) works as the root.
+    args = ["git", "-C", str(repo), "diff", "--relative", "--unified=0", "--no-color", base or "HEAD"]
     diff = subprocess.run(args, capture_output=True, text=True, check=True).stdout
     files = parse(diff)
     # `git diff` ignores untracked files, but an agent's new modules and tests often are untracked.
