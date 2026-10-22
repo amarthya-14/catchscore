@@ -10,7 +10,7 @@ install_log="$work/install.log"; touch "$install_log"
 proj=.; py=
 result() {  # result STAGE DETAIL: record why this PR was not scored
   jq -n --arg repo "$repo" --argjson pr "$pr" --arg stage "$1" \
-     --arg detail "$(tail -c 2500 <<<"$2"; echo; df -h / | tail -1)" \
+     --arg detail "$(tail -c 2500 <<<"$2"; echo; df -h / "${TMPDIR:-/tmp}" | tail -2)" \
      --arg install "$(tail -c 1500 "$install_log")" --arg proj "$proj" --arg py "$py" \
      --argjson secs $((SECONDS - started)) \
      '{repo: $repo, pr: $pr, skipped: $stage, detail: $detail, install_tail: $install, project_dir: $proj,
@@ -70,7 +70,7 @@ code=$?
 [ $code -eq 124 ] && result timeout "catchscore ran over 25 minutes"
 [ $code -eq 0 ] || result run "exit $code: $(cat "$work/score.err")
 --- pytest log of the fast path:
-$(tail -c 1500 /tmp/catchscore-*/serve-*/pytest.log 2>/dev/null)"
+$(tail -c 1500 "${TMPDIR:-/tmp}"/catchscore-*/serve-*/pytest.log 2>/dev/null)"
 jq --arg repo "$repo" --argjson pr "$pr" --arg tests "$tests" --arg proj "$proj" --arg py "$py" \
    --argjson secs $((SECONDS - started)) \
    '. + {repo: $repo, pr: $pr, tests: $tests, project_dir: $proj, python: $py, total_seconds: $secs}' \

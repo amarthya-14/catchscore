@@ -50,6 +50,9 @@ jobs:
           UV_TORCH_BACKEND: cpu
           GITHUB_TOKEN: ""
         run: |
+          # /tmp on these runners is a small separate filesystem with a quota; installs, catchscore's
+          # scratch copies and even the result file ran out of space there. Use the main disk.
+          export TMPDIR="$RUNNER_TEMP/tmp" && mkdir -p "$TMPDIR"
           mkdir -p out
           bash catchscore/bench/score_pr.sh "${{ matrix.pr.repo }}" "${{ matrix.pr.pr }}" \
             "${{ matrix.pr.head }}" "${{ matrix.pr.base }}" "$PWD/out/result.json"
