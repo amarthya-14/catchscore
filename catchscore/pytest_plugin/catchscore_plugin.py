@@ -61,8 +61,8 @@ def pytest_runtestloop(session):
     return True
 
 
-def _run(items) -> bool:
-    """Run tests like `pytest -x` would; True if any failed."""
+def _run(items, counts=None) -> bool:
+    """Run tests like `pytest -x` would; True if any failed. Tallies passed/skipped tests into `counts`."""
     from _pytest.runner import runtestprotocol
 
     for i, item in enumerate(items):
@@ -71,6 +71,8 @@ def _run(items) -> bool:
         reports = runtestprotocol(item, nextitem=items[i + 1] if i + 1 < len(items) else None, log=False)
         if any(r.failed for r in reports):
             return True
+        if counts is not None:
+            counts["skipped" if any(r.skipped for r in reports) else "passed"] += 1
     return False
 
 
@@ -93,7 +95,9 @@ def _serve(items, d):
     if pid == 0:  # baseline, traced
         code = 98
         try:
-            code = 1 if _run(items) else 0
+            counts = {"passed": 0, "skipped": 0}
+            code = 1 if _run(items, counts) else 0
+            _write(os.path.join(d, "counts.json"), counts)
             if _tracer:
                 _tracer.stop()
                 _tracer.write(os.path.join(d, "trace.json"))
@@ -104,7 +108,9 @@ def _serve(items, d):
     os.environ.pop(tr.ENV_FILES, None)  # mutant runs (and processes they start) are not traced
     _, status = os.waitpid(pid, 0)
     ok = os.WIFEXITED(status) and os.WEXITSTATUS(status) == 0
-    _write(os.path.join(d, "baseline.json"), {"ok": ok, "seconds": time.monotonic() - start})
+    counts_path = os.path.join(d, "counts.json")
+    counts = json.load(open(counts_path)) if os.path.exists(counts_path) else None
+    _write(os.path.join(d, "baseline.json"), {"ok": ok, "seconds": time.monotonic() - start, "tests": counts})
     if not ok:
         return
     batch_path = os.path.join(d, "batch.json")

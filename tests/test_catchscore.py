@@ -308,3 +308,14 @@ def test_an_editable_install_of_the_original_folder_does_not_hide_the_bugs(tmp_p
                              check=True, capture_output=True, text=True, env=env).stdout
         report = json.loads(out)
         assert report["injected"] > 0 and report["caught"] == report["injected"], (flags, report["survivors"])
+
+
+def test_warns_when_every_test_was_skipped(tmp_path):
+    after = {"calc.py": "def double(x):\n    return x * 2\n",
+             "tests/test_calc.py": "import pytest\n\n\n@pytest.mark.skip(reason='needs a GPU')\ndef test_double():\n"
+                                   "    from calc import double\n    assert double(2) == 4\n"}
+    repo = _project(tmp_path, BEFORE, after)
+    assert _score(repo)["baseline_tests"] == {"passed": 0, "skipped": 1}
+    text = subprocess.run([sys.executable, "-m", "catchscore.cli", "--repo", str(repo)],
+                          check=True, capture_output=True, text=True).stdout
+    assert "no test actually ran (1 skipped)" in text

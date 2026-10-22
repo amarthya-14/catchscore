@@ -52,7 +52,7 @@ def main(argv=None):
         mutants += mutants_for(f.path, source, f.added_lines)
     mutants = mutants[: args.max_mutants]
 
-    results, suggestion, stats = [], None, None
+    results, suggestion, stats, runner_counts = [], None, None, None
     if mutants:
         runner = Runner(repo, shlex.split(args.pytest))
         try:
@@ -73,6 +73,7 @@ def main(argv=None):
                 test_paths = [f.path for f in files if is_test_file(f.path) and f.status != "removed"]
                 suggestion = suggest(repo, runner, survivors, test_paths, args.model)
         finally:
+            runner_counts = runner.test_counts
             runner.close()
         if not args.json and sys.stderr.isatty():
             print("\r" + " " * 50 + "\r", end="", file=sys.stderr)
@@ -91,15 +92,18 @@ def main(argv=None):
                                           "rejected": suggestion.rejected or None},
             "seconds": round(time.monotonic() - started, 1),
             "how_tested": stats,
+            "baseline_tests": runner_counts,
         }, indent=2))
     else:
-        print(render(results, findings, score, suggestion))
+        print(render(results, findings, score, suggestion, runner_counts))
     if args.min_score is not None and score is not None and score < args.min_score:
         sys.exit(1)
 
 
-def render(results, findings, score, suggestion=None) -> str:
+def render(results, findings, score, suggestion=None, counts=None) -> str:
     out = ["catchscore: would your tests catch a bug in what just changed?", ""]
+    if counts and counts["passed"] == 0:
+        out += [f"Warning: no test actually ran ({counts['skipped']} skipped), so no bug could be caught.", ""]
     if not results:
         out.append("No changed Python source lines to test.")
     else:

@@ -38,10 +38,16 @@ jobs:
         with:
           path: catchscore
           persist-credentials: false
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h /
       - uses: astral-sh/setup-uv@v6
       - name: Score ${{ matrix.pr.repo }}#${{ matrix.pr.pr }}
         env:
           CATCHSCORE_SRC: ${{ github.workspace }}/catchscore
+          # CPU builds of PyTorch: the CUDA ones are several GB and runners have no GPU anyway.
+          UV_TORCH_BACKEND: cpu
           GITHUB_TOKEN: ""
         run: |
           mkdir -p out
@@ -72,12 +78,16 @@ jobs:
           {
             echo "## Benchmark results"
             echo
-            echo "Scored: $(jq -s 'map(select(.injected)) | length' all.jsonl) of $(wc -l < all.jsonl) PRs"
+            # Scored: bugs were injected and at least one test really ran (not all skipped).
+            S='map(select(.injected > 0 and ((.baseline_tests.passed // 1) > 0)))'
+            echo "Scored: $(jq -s "$S | length" all.jsonl) of $(wc -l < all.jsonl) PRs"
             echo
-            echo "Skipped, by stage:"
+            echo "Not scored, by stage:"
             jq -rs 'map(select(.skipped)) | group_by(.skipped)[] | "- \(.[0].skipped): \(length)"' all.jsonl
+            echo "- no mutable changed lines: $(jq -s 'map(select(.injected == 0)) | length' all.jsonl)"
+            echo "- every test skipped: $(jq -s 'map(select(.injected > 0 and .baseline_tests.passed == 0)) | length' all.jsonl)"
             echo
-            echo "Bugs caught across scored PRs: $(jq -s 'map(select(.injected)) | (map(.caught) | add // 0 | tostring) + " of " + (map(.injected) | add // 0 | tostring)' all.jsonl)"
+            echo "Bugs caught across scored PRs: $(jq -s "$S | (map(.caught) | add // 0 | tostring) + \" of \" + (map(.injected) | add // 0 | tostring)" all.jsonl)"
           } >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:

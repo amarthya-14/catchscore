@@ -9,7 +9,8 @@ work="$(mktemp -d)"
 install_log="$work/install.log"; touch "$install_log"
 proj=.; py=
 result() {  # result STAGE DETAIL: record why this PR was not scored
-  jq -n --arg repo "$repo" --argjson pr "$pr" --arg stage "$1" --arg detail "$(tail -c 2500 <<<"$2")" \
+  jq -n --arg repo "$repo" --argjson pr "$pr" --arg stage "$1" \
+     --arg detail "$(tail -c 2500 <<<"$2"; echo; df -h / | tail -1)" \
      --arg install "$(tail -c 1500 "$install_log")" --arg proj "$proj" --arg py "$py" \
      --argjson secs $((SECONDS - started)) \
      '{repo: $repo, pr: $pr, skipped: $stage, detail: $detail, install_tail: $install, project_dir: $proj,
@@ -47,15 +48,16 @@ py=$(head -1 .python-version 2>/dev/null || head -1 "$work/src/.python-version" 
 py=${py:-3.12}
 uv venv -q --seed --python "$py" "$work/venv" >>"$install_log" 2>&1 || result install "could not create a Python $py venv"
 . "$work/venv/bin/activate"
-uv pip install -q pytest "$CATCHSCORE_SRC" >>"$install_log" 2>&1 || result install "could not install catchscore"
+# --no-config: some projects (e.g. sentry) point uv at their own package index, which lacks our tools.
+uv pip install -q --no-config pytest pytest-asyncio pytest-mock "$CATCHSCORE_SRC" >>"$install_log" 2>&1 ||
+  result install "could not install catchscore"
 # Best effort for the project itself: whichever of these exist. Failures show up as a failing baseline.
 {
   uv pip install -q -e ".[test]" || uv pip install -q -e ".[tests]" || uv pip install -q -e ".[dev]" ||
     uv pip install -q -e . || true
   uv pip install -q --group dev || uv pip install -q --group test || true
-  for r in requirements.txt requirements-dev.txt requirements-test.txt requirements_test.txt test-requirements.txt; do
-    if [ -f "$r" ]; then uv pip install -q -r "$r" || true; fi
-  done
+  find . -maxdepth 3 -name '*requirements*.txt' -not -path '*/node_modules/*' -not -path '*/docs/*' |
+    while read -r r; do uv pip install -q -r "$r" || true; done
 } >>"$install_log" 2>&1
 
 timeout 1500 catchscore --json --base "$fork" --max-mutants 40 --jobs 2 --pytest "python -m pytest $tests" \

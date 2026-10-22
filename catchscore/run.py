@@ -4,6 +4,7 @@ import ast
 import json
 import os
 import queue
+import re
 import shutil
 import subprocess
 import sys
@@ -75,6 +76,7 @@ class Runner:
         self._spans: dict[str, dict[int, range]] = {}
         self.stats = {"in_memory": 0, "fresh_process": 0, "not_run": 0}  # how each mutant was tested
         self.roots: list[str] = []
+        self.test_counts: dict[str, int] | None = None  # passed/skipped tests in the baseline
         self.max_timeout = max_timeout
         self.tmp = Path(tempfile.mkdtemp(prefix="catchscore-"))
         self.work = self.tmp / repo.name
@@ -101,6 +103,7 @@ class Runner:
         if not ok:
             self.tests_on = None
             ok, took, output = _pytest(self.work, self.cmd, self.max_timeout, want_output=True, env=self._env(self.work))
+            self.test_counts = _counts(output)
         if not ok:
             raise RuntimeError("the test suite fails before any mutation; fix it first (or pass --pytest).\n"
                                "Last lines of pytest's output:\n" + output[-2500:])
@@ -111,7 +114,9 @@ class Runner:
         out = Path(tempfile.mkdtemp(prefix="trace-", dir=self.tmp))
         files = {os.path.realpath(self.work / p): p for p in paths}
         env = self._env(self.work, plugin=True, CATCHSCORE_TRACE_FILES=json.dumps(files), CATCHSCORE_TRACE_OUT=str(out))
-        ok, took = _pytest(self.work, self.cmd + ["-p", "catchscore_plugin"], self.max_timeout, env=env)
+        ok, took, output = _pytest(self.work, self.cmd + ["-p", "catchscore_plugin"], self.max_timeout,
+                                   want_output=True, env=env)
+        self.test_counts = _counts(output)
         if not ok or not (out / "main.json").exists():
             return False, took  # e.g. another tracer (pytest-cov) took over: fall back to running every test
         self._load_trace(out)
@@ -171,6 +176,7 @@ class Runner:
             if not baseline or not baseline["ok"]:
                 return None  # not supported here, or the tests need a fresh process: do it the slow way
             self.timeout = min(self.max_timeout, baseline["seconds"] * 3 + 5)
+            self.test_counts = baseline.get("tests")
             self._load_trace(out)
             results, forked, rest = {}, [], []
             for m in mutants:
@@ -294,6 +300,15 @@ class Runner:
 
     def close(self):
         shutil.rmtree(self.tmp, ignore_errors=True)
+
+
+def _counts(output: str) -> dict[str, int] | None:
+    """Passed/skipped counts from pytest's summary line, e.g. "3 passed, 2 skipped in 0.1s"."""
+    summary = [line for line in output.splitlines() if re.search(r"\d+ (passed|skipped)", line)]
+    if not summary:
+        return {"passed": 0, "skipped": 0} if "no tests ran" in output else None
+    found = dict((k, int(n)) for n, k in re.findall(r"(\d+) (passed|skipped)", summary[-1]))
+    return {"passed": found.get("passed", 0), "skipped": found.get("skipped", 0)}
 
 
 def _wait_for(path: Path, proc: subprocess.Popen, timeout: float):
