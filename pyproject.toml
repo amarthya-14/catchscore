@@ -1,0 +1,17 @@
+[project]
+name = "catchscore"
+version = "0.1.0"
+description = "Would your tests catch a bug in what just changed? Mutation testing scoped to your diff, plus test-integrity checks for AI coding agents."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+catchscore = "catchscore.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
