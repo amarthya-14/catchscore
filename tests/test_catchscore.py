@@ -133,6 +133,7 @@ import shop
 def test_save10_above_and_at_boundary():
     assert shop.discount(200, "SAVE10") == pytest.approx(20)
     assert shop.discount(100, "SAVE10") == 0
+    assert shop.discount(101, "SAVE10") == pytest.approx(10.1)
 
 
 def test_half_is_capped():
@@ -182,3 +183,23 @@ def test_parallel_jobs_give_the_same_results(tmp_path):
         [sys.executable, "-m", "catchscore.cli", "--json", "--jobs", jobs, "--repo", str(tmp_path / "shop")],
         check=True, capture_output=True, text=True).stdout) for jobs in ("1", "4")]
     assert reports[0]["survivors"] == reports[1]["survivors"]
+
+
+def test_same_size_mutants_are_not_hidden_by_python_bytecode_cache(tmp_path):
+    """`/ 2` -> `* 2` keeps the file size and is written within the same second as the baseline run.
+    If Python reused its cached bytecode, the old code would run and these bugs would wrongly survive."""
+    repo = tmp_path / "calc"
+    (repo / "tests").mkdir(parents=True)
+    git = ["git", "-C", str(repo)]
+    subprocess.run(git + ["init", "-q"], check=True)
+    (repo / "calc.py").write_text("def f(x):\n    return 4\n")
+    (repo / "tests" / "test_calc.py").write_text("from calc import f\n\n\ndef test_f():\n    assert f(4) == 4\n")
+    subprocess.run(git + ["add", "-A"], check=True)
+    subprocess.run(git + ["-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", "init"], check=True)
+    # Mutants run in this order: two harmless ones (`+`->`-`, `*`->`/`), then two real ones (1->2, 0->1),
+    # all the same size. A stale cache would run a harmless mutant's code for a real one, hiding it.
+    (repo / "calc.py").write_text("def f(x):\n    return x * 1 + 0\n")
+    report = json.loads(subprocess.run([sys.executable, "-m", "catchscore.cli", "--json", "--repo", str(repo)],
+                                       check=True, capture_output=True, text=True).stdout)
+    assert report["injected"] == 5 and report["caught"] == 3, report["survivors"]
+    assert {s["mutation"] for s in report["survivors"]} == {"`+` -> `-`", "`*` -> `/`"}

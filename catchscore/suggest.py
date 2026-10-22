@@ -19,6 +19,9 @@ and that would fail if any one of these bugs were introduced.
 Rules:
 - Test behaviour through the module's public functions; do not modify or repeat existing tests.
 - Target the boundaries and branches the bugs touch (e.g. a `>` that could become `>=` needs a test at the boundary).
+- Use realistic inputs only. If a bug could only be caught with contrived objects (e.g. a str subclass that
+  is falsy, a mock that behaves unlike the real thing), don't test it; list it in a final comment as
+  "probably harmless" with one line on why.
 - Import the module as `{import_name}`. Use only pytest and the standard library.
 - Reply with one ```python code block and nothing else.
 

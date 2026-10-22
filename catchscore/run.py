@@ -1,5 +1,6 @@
 """Run the test suite against each mutant in a scratch copy of the project, never in the user's tree."""
 
+import os
 import queue
 import shutil
 import subprocess
@@ -22,10 +23,16 @@ class Result:
     reason: str  # "failed", "timeout" or "survived"
 
 
+# Python reuses cached bytecode when a source file's size and mtime (whole seconds) look unchanged. A
+# mutant like `/ 2` -> `/ 3` keeps the size, and is written within the same second, so the tests would
+# silently run the previous code and the bug would wrongly "survive". Never write or read the cache.
+ENV = {**os.environ, "PYTHONDONTWRITEBYTECODE": "1"}
+
+
 def _pytest(workdir: Path, cmd: list[str], timeout: float, want_output: bool = False):
     start = time.monotonic()
     try:
-        proc = subprocess.run(cmd, cwd=workdir, capture_output=True, text=True, timeout=timeout)
+        proc = subprocess.run(cmd, cwd=workdir, capture_output=True, text=True, timeout=timeout, env=ENV)
     except subprocess.TimeoutExpired:
         return (False, timeout, "timed out") if want_output else (False, timeout)
     took = time.monotonic() - start
