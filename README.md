@@ -45,7 +45,7 @@ Across 214 merged PRs in about 60 popular Python projects, the tests that came w
 ## Install and use
 
 ```bash
-pip install git+https://github.com/amarthya-14/catchscore   # PyPI release coming
+pip install catchscore
 catchscore                  # uncommitted changes vs HEAD
 catchscore --base main      # everything on this branch
 catchscore --suggest        # also ask Claude for tests that close the gaps (needs the `claude` CLI)
