@@ -58,5 +58,16 @@ class Runner:
         finally:
             target.write_text(original)
 
+    def passes(self) -> bool:
+        ok, _ = _pytest(self.work, self.cmd, self.timeout)
+        return ok
+
+    def add_file(self, rel: str, text: str):
+        (self.work / rel).parent.mkdir(parents=True, exist_ok=True)
+        (self.work / rel).write_text(text)
+
+    def remove_file(self, rel: str):
+        (self.work / rel).unlink(missing_ok=True)
+
     def close(self):
         shutil.rmtree(self.tmp, ignore_errors=True)
