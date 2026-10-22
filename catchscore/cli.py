@@ -9,6 +9,7 @@ import argparse
 import json
 import shlex
 import sys
+import time
 from dataclasses import asdict
 from pathlib import Path
 
@@ -29,6 +30,8 @@ def main(argv=None):
     p.add_argument("--jobs", "-j", type=int, default=1,
                    help="test this many bugs in parallel, each in its own copy (default: 1; use more if your "
                         "tests don't share ports, files or databases)")
+    p.add_argument("--no-select", action="store_true",
+                   help="run the whole test command in a fresh process for every bug (slower; the reference behaviour)")
     p.add_argument("--min-score", type=float, help="exit 1 if the catch score is below this percentage")
     p.add_argument("--json", action="store_true", help="print a JSON report")
     p.add_argument("--suggest", action="store_true",
@@ -36,6 +39,7 @@ def main(argv=None):
     p.add_argument("--model", help="Claude model for --suggest (default: the CLI's default)")
     args = p.parse_args(argv)
 
+    started = time.monotonic()
     repo = Path(args.repo).resolve()
     files = git_diff(repo, args.base)
     findings = integrity.check(files)
@@ -48,16 +52,20 @@ def main(argv=None):
         mutants += mutants_for(f.path, source, f.added_lines)
     mutants = mutants[: args.max_mutants]
 
-    results, suggestion = [], None
+    results, suggestion, stats = [], None, None
     if mutants:
         runner = Runner(repo, shlex.split(args.pytest))
         try:
-            runner.baseline()
             def progress(i, n):
                 if not args.json and sys.stderr.isatty():
                     print(f"\r  testing injected bug {i}/{n}...", end="", file=sys.stderr, flush=True)
 
-            results = runner.run_many(mutants, args.jobs, progress)
+            if args.no_select:
+                runner.baseline()
+                results = runner.run_many(mutants, args.jobs, progress)
+            else:
+                results = runner.score(mutants, args.jobs, progress)
+                stats = runner.stats
             survivors = [r for r in results if not r.killed]
             if args.suggest and survivors:
                 if not args.json:
@@ -75,12 +83,14 @@ def main(argv=None):
     if args.json:
         print(json.dumps({
             "score": score, "caught": caught, "injected": len(results),
-            "survivors": [{"path": r.mutant.path, "line": r.mutant.line, "mutation": r.mutant.description}
-                          for r in results if not r.killed],
+            "survivors": [{"path": r.mutant.path, "line": r.mutant.line, "mutation": r.mutant.description,
+                           "reason": r.reason} for r in results if not r.killed],
             "integrity": [asdict(f) for f in findings],
             "suggestion": suggestion and {"path": suggestion.path, "now_caught": len(suggestion.caught),
                                           "still_missed": len(suggestion.still_missed),
                                           "rejected": suggestion.rejected or None},
+            "seconds": round(time.monotonic() - started, 1),
+            "how_tested": stats,
         }, indent=2))
     else:
         print(render(results, findings, score, suggestion))
@@ -95,10 +105,14 @@ def render(results, findings, score, suggestion=None) -> str:
     else:
         caught = sum(r.killed for r in results)
         out.append(f"Injected {len(results)} small bugs into the changed lines. Tests caught {caught} ({score:.0f}%).")
-        survivors = [r for r in results if not r.killed]
-        if survivors:
-            out += ["", "Your tests would NOT notice these bugs:"]
-            out += [f"  {r.mutant.path}:{r.mutant.line}  {r.mutant.description}" for r in survivors]
+        unreached = [r for r in results if r.reason == "not run by any test"]
+        missed = [r for r in results if not r.killed and r not in unreached]
+        if missed:
+            out += ["", "Your tests run these lines but would NOT notice these bugs:"]
+            out += [f"  {r.mutant.path}:{r.mutant.line}  {r.mutant.description}" for r in missed]
+        if unreached:
+            out += ["", "No test even runs these lines, so these bugs would go unnoticed:"]
+            out += [f"  {r.mutant.path}:{r.mutant.line}  {r.mutant.description}" for r in unreached]
     if findings:
         out += ["", "Test changes worth a second look:"]
         out += [f"  {f.path}: {f.kind}: {f.detail}" for f in findings]
