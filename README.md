@@ -40,6 +40,8 @@ Pathlight's commit `2c68c02` was written with Claude Code and adds the logic tha
 
 For example, `not has_skill(..., implied=False) and has_skill(...)` → `or` would let the resume claim skills the candidate doesn't have, and no test notices. One `catchscore --suggest` run produced verified tests that catch all 13 survivors in that module, raising the commit's catch rate from 45% to 72%. The details and the method are in [docs/EVIDENCE.md](docs/EVIDENCE.md). The same document covers a scan of 1,297 merged agent PRs from 136 popular repositories. That scan explains why catchscore runs your tests instead of judging diffs: diffs alone mostly produce false alarms.
 
+Across 214 merged PRs in about 60 popular Python projects, the tests that came with each change let a median of 17% of injected bugs through. About a third of PRs let through more than a quarter. Agent-written and human-written PRs from the same projects did about equally well once PR size is taken into account. The spread between PRs is much larger than the difference between agents and people. See [docs/BENCHMARK.md](docs/BENCHMARK.md).
+
 ## Install and use
 
 ```bash
@@ -101,5 +103,5 @@ catchscore puts together known ideas; it doesn't invent them. What it adds is a 
 
 - A GitHub Action that comments the score and survivors on each PR.
 - JavaScript and TypeScript support (Jest and Vitest).
-- A public benchmark: catch scores of agent-written changes across real open-source PRs, measured in a sandbox.
+- The benchmark beyond Python, and on agent changes that were never merged.
 - A small fine-tuned model to rank survivors by how much they matter.
