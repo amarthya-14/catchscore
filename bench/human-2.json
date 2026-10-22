@@ -1,0 +1,940 @@
+[
+  {
+    "repo": "headroomlabs-ai/headroom",
+    "pr": 4054,
+    "head": "f61cd097d755ad21d3dfce21ef01cc050dcb796d",
+    "base": "17abee2721c1946bc8903d623bec91ff6e531c17",
+    "group": "human"
+  },
+  {
+    "repo": "headroomlabs-ai/headroom",
+    "pr": 4022,
+    "head": "594dc40a0882075cb1502e3271f30e4cfbf39d9c",
+    "base": "87e05b68b8aa578f1439abfc8006b38cd09db14d",
+    "group": "human"
+  },
+  {
+    "repo": "chidiwilliams/buzz",
+    "pr": 1651,
+    "head": "314e1c7eccdf59309f5674b6dd9dccebb0ab1406",
+    "base": "5082ca4e139a4d500525c54a25039a46574e1288",
+    "group": "human"
+  },
+  {
+    "repo": "chidiwilliams/buzz",
+    "pr": 1650,
+    "head": "40e672e5c94eb570a3d433721618e2b70beb59c5",
+    "base": "100589fd8c492869f2994b525e1092eda81e4e88",
+    "group": "human"
+  },
+  {
+    "repo": "chidiwilliams/buzz",
+    "pr": 1641,
+    "head": "32e90502d91edc48df7dda0d1c9cc2a806bce6df",
+    "base": "8d0812a243afeda5201c416b6e3c680af18fc88e",
+    "group": "human"
+  },
+  {
+    "repo": "HKUDS/RAG-Anything",
+    "pr": 411,
+    "head": "272cb44a08e1982df3dabaa801dc9b557e40c0ff",
+    "base": "da6e2d87a7d3f2746c4541f59953b8764213f6a2",
+    "group": "human"
+  },
+  {
+    "repo": "HKUDS/RAG-Anything",
+    "pr": 407,
+    "head": "c23be58d237a99c2ae763ffe5d3a027ac0cfc79e",
+    "base": "da6e2d87a7d3f2746c4541f59953b8764213f6a2",
+    "group": "human"
+  },
+  {
+    "repo": "HKUDS/RAG-Anything",
+    "pr": 404,
+    "head": "54d4e9229a6fb9a5ae8a1b4ec205711364b037a3",
+    "base": "da6e2d87a7d3f2746c4541f59953b8764213f6a2",
+    "group": "human"
+  },
+  {
+    "repo": "saleor/saleor",
+    "pr": 19923,
+    "head": "8da27bfe0143431a84cccfe197a6cb8dda763665",
+    "base": "3dd4bf79a46132ed2f8e6225a9863f5ef8dc243b",
+    "group": "human"
+  },
+  {
+    "repo": "saleor/saleor",
+    "pr": 19920,
+    "head": "3e247353d7116a4f296c75f4ecffbd145e0cd54f",
+    "base": "dfa97c976418c4760ffd63d34b5e13698dfd85e8",
+    "group": "human"
+  },
+  {
+    "repo": "saleor/saleor",
+    "pr": 19916,
+    "head": "6e7d2da7e8245e5abcff8257c8cd250d01632abc",
+    "base": "97ce80680b9fc74fea0fa2c0c391d393c330233c",
+    "group": "human"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "pr": 7185,
+    "head": "537a7d224723c5b30b2fb34f84230ecc68a310b4",
+    "base": "19cb89aff472325c707f64b2f34ae6afdbf7faf7",
+    "group": "human"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "pr": 7066,
+    "head": "b77e4fe6b60af3403fcdfc2f6a4bc07499648279",
+    "base": "f4acc89a298ac7573fcd50faf46a4bfa7aeedb15",
+    "group": "human"
+  },
+  {
+    "repo": "mem0ai/mem0",
+    "pr": 6907,
+    "head": "ead1bc6cc80ce2882040a392c12c9d74f365b2cf",
+    "base": "96d45b78c702b742fc91a2ce9eae91805be9144b",
+    "group": "human"
+  },
+  {
+    "repo": "rohitg00/ai-engineering-from-scratch",
+    "pr": 643,
+    "head": "44cb8b6243490f9a2ea8ca7cac7d73abb342287c",
+    "base": "45fa4084de6ba2f88fa96a41e69efa2166f868b3",
+    "group": "human"
+  },
+  {
+    "repo": "rohitg00/ai-engineering-from-scratch",
+    "pr": 567,
+    "head": "f415b77da972a181a6471041e3e2c499a01bc4b1",
+    "base": "b6a7a1706bae08c6b4e90f2d9dbfd997f8cbe126",
+    "group": "human"
+  },
+  {
+    "repo": "rohitg00/ai-engineering-from-scratch",
+    "pr": 565,
+    "head": "d1fd7dbf06a7d4548020fe9b97c9928aaa8b5ff2",
+    "base": "e2f1608e33181e0c2c922db542284b94dbe9a89a",
+    "group": "human"
+  },
+  {
+    "repo": "netbox-community/netbox",
+    "pr": 23456,
+    "head": "49bfeb68e114615252eb0020fab5903a8f2ce5dd",
+    "base": "d6710b966df79cca2fab0a1a2072b08c0f95221c",
+    "group": "human"
+  },
+  {
+    "repo": "netbox-community/netbox",
+    "pr": 23455,
+    "head": "15ca606e02b0a9774b0baa70f9d0314379e1a78a",
+    "base": "d6710b966df79cca2fab0a1a2072b08c0f95221c",
+    "group": "human"
+  },
+  {
+    "repo": "netbox-community/netbox",
+    "pr": 23451,
+    "head": "49bfdb2d7aabf6b5bbf6f89f5e3e7665ce57c764",
+    "base": "646391c3598b0fc9a072f2288542b75c06b73ad7",
+    "group": "human"
+  },
+  {
+    "repo": "huggingface/pytorch-image-models",
+    "pr": 2871,
+    "head": "5faf0dd9c15a2aef9afabff29e13d74aaa581134",
+    "base": "6bd3254ea700ea465dc4f7f4aa2e785beb03db03",
+    "group": "human"
+  },
+  {
+    "repo": "vllm-project/vllm",
+    "pr": 62911,
+    "head": "bc10345818ca0b22c717e5fc30cda90dbaea20ab",
+    "base": "c1210ccbe5eab9ad5ee1213f0fc09c3ff13e4bea",
+    "group": "human"
+  },
+  {
+    "repo": "vllm-project/vllm",
+    "pr": 62859,
+    "head": "c9f804af412cf72b97e4846d5ec84c4f35289ffe",
+    "base": "db3b0f0fae4bc98492b3863685e541e62bc59576",
+    "group": "human"
+  },
+  {
+    "repo": "vllm-project/vllm",
+    "pr": 62783,
+    "head": "0bba690792b1b616e6a6ef4e1862824b8d45b72e",
+    "base": "0dd9da117dc7e3cddfa065a141bb726584dff6ec",
+    "group": "human"
+  },
+  {
+    "repo": "huggingface/diffusers",
+    "pr": 15092,
+    "head": "bc4d439493e4c56a5b72195cb8b1689a47a7e6e1",
+    "base": "784ae091a80d568f089842d766cac34637eef86e",
+    "group": "human"
+  },
+  {
+    "repo": "huggingface/diffusers",
+    "pr": 15088,
+    "head": "ca40b68249be00252b7d9dcf44bb8f46b8931bba",
+    "base": "de988b7ee77c393a63865d265d19e267ef9c7bf5",
+    "group": "human"
+  },
+  {
+    "repo": "huggingface/diffusers",
+    "pr": 15024,
+    "head": "b4ec9bc7378abc8c724e8392950746bcd307a072",
+    "base": "08d69774f08f19ae903f97bc393a8abdeafc98aa",
+    "group": "human"
+  },
+  {
+    "repo": "PostHog/posthog",
+    "pr": 121893,
+    "head": "a4e7c22d49650fe67abe34d3923a1afd277cc65f",
+    "base": "eb32fee5d1854e71a19560057fce261b414f249a",
+    "group": "human"
+  },
+  {
+    "repo": "PostHog/posthog",
+    "pr": 121300,
+    "head": "77ecbb900d311a69645dcedb00748d77a8b0be69",
+    "base": "202ead738f9a41fb9f164a046611e9ffef15dc04",
+    "group": "human"
+  },
+  {
+    "repo": "PostHog/posthog",
+    "pr": 121281,
+    "head": "5f27de05030a3c3f984b6aa7ded36919be856bd0",
+    "base": "203e84ffe465998d3173fd3f0453628e0a2a88ad",
+    "group": "human"
+  },
+  {
+    "repo": "keras-team/keras",
+    "pr": 24025,
+    "head": "416379af672280a04fe698e115e0f964c9ccd42d",
+    "base": "e0d419a85972227ef8fd17f4e7246d70eb02ee8c",
+    "group": "human"
+  },
+  {
+    "repo": "keras-team/keras",
+    "pr": 24022,
+    "head": "341536b5dd7f5ee64d65dab1f3302a18fba5ed88",
+    "base": "460a7a8817282b59465c8a5aedb818ade5bf0835",
+    "group": "human"
+  },
+  {
+    "repo": "keras-team/keras",
+    "pr": 24017,
+    "head": "5b21dcdb554cf5f5043d82617ab5eca8c09fd4c3",
+    "base": "12cb103522f3c776cd508918efa1c97b73bdf7e9",
+    "group": "human"
+  },
+  {
+    "repo": "Genesis-Embodied-AI/genesis-world",
+    "pr": 3583,
+    "head": "b80f646f058089ed4f68337d6c5d9387141c357a",
+    "base": "375fd7eb48b68da9126e76124d93928ae1914ac1",
+    "group": "human"
+  },
+  {
+    "repo": "Genesis-Embodied-AI/genesis-world",
+    "pr": 3582,
+    "head": "8d739c92d1382ee1b686ab09569aa303516cfc2e",
+    "base": "b1025caeb17f66ea489552b9ec1e2210ec9f8ca2",
+    "group": "human"
+  },
+  {
+    "repo": "Genesis-Embodied-AI/genesis-world",
+    "pr": 3580,
+    "head": "27d0793fe471403c49864328edf4e387b7ee77ec",
+    "base": "e1edcb8a2804c9cd26521175ec056e494c6bf8d0",
+    "group": "human"
+  },
+  {
+    "repo": "freqtrade/freqtrade",
+    "pr": 13692,
+    "head": "b0a675214839a71cca3e5519c85e84c5e9cf57e8",
+    "base": "b8ca1a9fcd3ca715fda3b731afb6a1667c261517",
+    "group": "human"
+  },
+  {
+    "repo": "NandhaKishorM/laya",
+    "pr": 1297,
+    "head": "8836bf68c9444d9dc9582140103361df5b9dd7e8",
+    "base": "ffc142012af63d015fa19f05f29f9c5ff329a2cc",
+    "group": "human"
+  },
+  {
+    "repo": "NandhaKishorM/laya",
+    "pr": 1296,
+    "head": "5397fa9bb4a16c498bf2f3e32426dd33620e1d07",
+    "base": "ffc142012af63d015fa19f05f29f9c5ff329a2cc",
+    "group": "human"
+  },
+  {
+    "repo": "NandhaKishorM/laya",
+    "pr": 1295,
+    "head": "c5be0c87181028c858fc76c904758b4f47272756",
+    "base": "ffc142012af63d015fa19f05f29f9c5ff329a2cc",
+    "group": "human"
+  },
+  {
+    "repo": "calesthio/OpenMontage",
+    "pr": 753,
+    "head": "08a39e1fdc0c964f4c90e5d04f79537eeccb36d7",
+    "base": "9327439db69021ab4b0e2776729bf3b58fdb5a87",
+    "group": "human"
+  },
+  {
+    "repo": "calesthio/OpenMontage",
+    "pr": 719,
+    "head": "571978c8a285c2d1bcf46788fab2390ee52f3445",
+    "base": "9327439db69021ab4b0e2776729bf3b58fdb5a87",
+    "group": "human"
+  },
+  {
+    "repo": "calesthio/OpenMontage",
+    "pr": 717,
+    "head": "72bd61ed4a9c7121a3ee48ba3efe6affc9838c5e",
+    "base": "9327439db69021ab4b0e2776729bf3b58fdb5a87",
+    "group": "human"
+  },
+  {
+    "repo": "ScrapeGraphAI/Scrapegraph-ai",
+    "pr": 1141,
+    "head": "8769c3bddd7c865963cc7e245eefb496f55dc519",
+    "base": "d59c3dfceecdacbba4e17f237b017117cf7f1cee",
+    "group": "human"
+  },
+  {
+    "repo": "ScrapeGraphAI/Scrapegraph-ai",
+    "pr": 1131,
+    "head": "875385b56a3b2ce33b0bddc7baa194017d0293e2",
+    "base": "cb8f9b58e0e9a7c27b2178a4818e6cdd5f9f07a1",
+    "group": "human"
+  },
+  {
+    "repo": "vectorize-io/hindsight",
+    "pr": 5958,
+    "head": "70d13b24260393cba37db62cb3f5856eadd55115",
+    "base": "57fe9f0c2bea94523e0174f26bb0db4d7a8a1816",
+    "group": "human"
+  },
+  {
+    "repo": "vectorize-io/hindsight",
+    "pr": 5957,
+    "head": "b4e640d345a2a03500ac85609fc7bf539d8cd524",
+    "base": "1d5de32930a7e461e46a294db6646f46a2cf44b8",
+    "group": "human"
+  },
+  {
+    "repo": "vectorize-io/hindsight",
+    "pr": 5955,
+    "head": "de54a8cc2d9a67e2632f5dddb0e194d6d6a8a14a",
+    "base": "e0aee933cae73c37e4c2a57832279eef9412b90a",
+    "group": "human"
+  },
+  {
+    "repo": "ray-project/ray",
+    "pr": 67172,
+    "head": "47da5e576a9ad70ad9663e2b14b96fdf1b31186c",
+    "base": "1e1d7ebe082bc561c62d43c39295379a2fefef92",
+    "group": "human"
+  },
+  {
+    "repo": "ray-project/ray",
+    "pr": 67128,
+    "head": "8fd151dbaa924364395f19ba155c7db63d64a384",
+    "base": "e4b3f4ab49ff7b80497452f5bd774e59615032e2",
+    "group": "human"
+  },
+  {
+    "repo": "ray-project/ray",
+    "pr": 67126,
+    "head": "b9bfe3bba9b9a77ade4cf3298f933872f8331373",
+    "base": "e8c5f61d83b29e200eb5a51c34887db1c39e1ca8",
+    "group": "human"
+  },
+  {
+    "repo": "apache/airflow",
+    "pr": 75334,
+    "head": "23d9d19e0fcb75f8dea4b94971dd3466d12ea118",
+    "base": "a3a4c138a081b7cf1c6e3113c5253c8cadbb1ebc",
+    "group": "human"
+  },
+  {
+    "repo": "apache/airflow",
+    "pr": 75327,
+    "head": "d8f7eb9228de59c19898d5fe7f9cd84f8e3c9c5c",
+    "base": "aee2d4d512209c112c7df1efc6260bf534615102",
+    "group": "human"
+  },
+  {
+    "repo": "apache/airflow",
+    "pr": 75100,
+    "head": "ef7556cf6979a9583b16af4e1fe8ea5891ff89a2",
+    "base": "1d66775efcbc2b31ecb476bef3198ca51ef7b4e3",
+    "group": "human"
+  },
+  {
+    "repo": "pypa/pipenv",
+    "pr": 6752,
+    "head": "184d9091860dfd18e008f1481f7a787b72fee638",
+    "base": "42338a23ced829d69517634fb62f27a1e97b7a0b",
+    "group": "human"
+  },
+  {
+    "repo": "pypa/pipenv",
+    "pr": 6751,
+    "head": "c3bf6923c1da1fa6398c6ae9d1726bbf1b801bea",
+    "base": "42338a23ced829d69517634fb62f27a1e97b7a0b",
+    "group": "human"
+  },
+  {
+    "repo": "pypa/pipenv",
+    "pr": 6740,
+    "head": "af3b6dabfe7fa2893d86fc08c889c92d3792889e",
+    "base": "ee2eb7237f0aa198d01bd3428942ebbbd8ddd55c",
+    "group": "human"
+  },
+  {
+    "repo": "ocrmypdf/OCRmyPDF",
+    "pr": 1745,
+    "head": "29dd093e389d3281e76fd45d3e0918a186edc8f8",
+    "base": "ffee83231532f4f67b8c0e756cddec67446570c9",
+    "group": "human"
+  },
+  {
+    "repo": "ocrmypdf/OCRmyPDF",
+    "pr": 1739,
+    "head": "3953d1424980e836cda1f270bc1f2a70102cb2bc",
+    "base": "e63fab4287a3cc04fe3f6419b5c941bc5e410d9a",
+    "group": "human"
+  },
+  {
+    "repo": "jundot/omlx",
+    "pr": 4758,
+    "head": "2681123dcd9061fd991e145a7e2faa93819c6f69",
+    "base": "6aba0dd3f28c690230a572a0c96cb43ee4f3d738",
+    "group": "human"
+  },
+  {
+    "repo": "jundot/omlx",
+    "pr": 4732,
+    "head": "42f201411b993c8adf4f731487ce8aae839d3d30",
+    "base": "7f9cb77e5eefcd6a5dc1721a0afb1034f33f0999",
+    "group": "human"
+  },
+  {
+    "repo": "jundot/omlx",
+    "pr": 4722,
+    "head": "b5cbabde62ac20cb80ce4180bf07fb2c1ccfe27f",
+    "base": "8b7e7018cb6f824c55f666aab817db4613e86bd7",
+    "group": "human"
+  },
+  {
+    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "pr": 502,
+    "head": "059770fcc2757c1f7f38e700207778e4313ec5b1",
+    "base": "f1c725fd2fdaf2ef63fc43e75efc0dac38f1fe50",
+    "group": "human"
+  },
+  {
+    "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "pr": 444,
+    "head": "e72fc6da2d6d080bbd829c97454ab73e81513528",
+    "base": "97eb2a20032f0833e3d317162208a60385b0f96e",
+    "group": "human"
+  },
+  {
+    "repo": "wagtail/wagtail",
+    "pr": 14647,
+    "head": "d68aab72f241994cadb5de7797077544a4a0a251",
+    "base": "b902614848bbf170046e4d1aa1ad977da77ac89c",
+    "group": "human"
+  },
+  {
+    "repo": "wagtail/wagtail",
+    "pr": 14548,
+    "head": "9aba92699309e6ba89ba2b1b10e92d7d29ffa718",
+    "base": "96cbe7a4d3214f19b2c23716aa6587704446f995",
+    "group": "human"
+  },
+  {
+    "repo": "wagtail/wagtail",
+    "pr": 14547,
+    "head": "b99fa1a7a78bbcba24106e0e5d2e92c12ad1d036",
+    "base": "0750da75e0fb353f82c9f8f71f9aa5be69aaf41a",
+    "group": "human"
+  },
+  {
+    "repo": "usestrix/strix",
+    "pr": 1551,
+    "head": "df3aab3b57504723e365cc26d566085279fd0890",
+    "base": "3a3855fc4f0ecd0e7d15488afb29a779162eba85",
+    "group": "human"
+  },
+  {
+    "repo": "usestrix/strix",
+    "pr": 1550,
+    "head": "344b86196d4c26b9c3cea0ec84bf59ae8600464b",
+    "base": "aa2036f22942eed3ecd142169289a256a2e7acb7",
+    "group": "human"
+  },
+  {
+    "repo": "usestrix/strix",
+    "pr": 1520,
+    "head": "5713ebc14be7eb0a7dffba8826ab6a349c2bf9b4",
+    "base": "d8c00a8f4ebadec265582fb777081067a35f79d3",
+    "group": "human"
+  },
+  {
+    "repo": "NousResearch/hermes-agent",
+    "pr": 142965,
+    "head": "c1f3de90981914ad0eb75b50152d8fe4e289fd2e",
+    "base": "81a55437f3f31a9f12a30c53b6c5d49d420898aa",
+    "group": "human"
+  },
+  {
+    "repo": "NousResearch/hermes-agent",
+    "pr": 142919,
+    "head": "328e19cefab9c2f9645682c6e701adbb1a7754c7",
+    "base": "6c5d3c97828f95fa69ecb0e9fd22d871ca1b7240",
+    "group": "human"
+  },
+  {
+    "repo": "NousResearch/hermes-agent",
+    "pr": 142918,
+    "head": "6c5d3c97828f95fa69ecb0e9fd22d871ca1b7240",
+    "base": "b5a77cb23d03df63715352494debe5865e98df49",
+    "group": "human"
+  },
+  {
+    "repo": "docling-project/docling",
+    "pr": 4946,
+    "head": "e3eaa75a41a28ac95c36215b488102dbc4cef14e",
+    "base": "29caea8381e885872905dc9438f10014368a2a25",
+    "group": "human"
+  },
+  {
+    "repo": "docling-project/docling",
+    "pr": 4929,
+    "head": "f384721d2e93e6f9352c799a49a6d5facec7d52b",
+    "base": "dae5636510612f183fc25f9315e29eb23669cf07",
+    "group": "human"
+  },
+  {
+    "repo": "docling-project/docling",
+    "pr": 4924,
+    "head": "c3ecc993f318c81c27b863abc4736608f9bdf9f7",
+    "base": "4f00195b8dadbc1a67f4cefae6b619c47e4e515f",
+    "group": "human"
+  },
+  {
+    "repo": "huggingface/lerobot",
+    "pr": 4997,
+    "head": "9c40d693f21bbbc0945cc68d5447fc8f812f0991",
+    "base": "146d8474932c8b566717eb2738ba459337ab71c4",
+    "group": "human"
+  },
+  {
+    "repo": "huggingface/lerobot",
+    "pr": 4955,
+    "head": "f8bfd9b19b2c9033c515376f54536c53d86fc39f",
+    "base": "61373ee1c848f4e857b324de80872620d6bb7bb9",
+    "group": "human"
+  },
+  {
+    "repo": "home-assistant/core",
+    "pr": 187984,
+    "head": "1d09e605e29e3d5d1a845c7076b725b3d7aa623f",
+    "base": "119faa5293f584f188807d58988e6a76c057664b",
+    "group": "human"
+  },
+  {
+    "repo": "home-assistant/core",
+    "pr": 187941,
+    "head": "d8603398122e742a5a88c019fe420003381ed902",
+    "base": "28d19e9d8d08a62bdfd4efbc40b6f01ebac7d47b",
+    "group": "human"
+  },
+  {
+    "repo": "home-assistant/core",
+    "pr": 187913,
+    "head": "d7445903e09d918d49810a3b0090c01984c42166",
+    "base": "f201094549dab902c63306542acfc59e7ff41aac",
+    "group": "human"
+  },
+  {
+    "repo": "harry0703/MoneyPrinterTurbo",
+    "pr": 1699,
+    "head": "b5ecc075561e3dde15da635853c2bf74d9a0f18a",
+    "base": "6992380c5e82f07f3e1fc46b90927b6f1c655407",
+    "group": "human"
+  },
+  {
+    "repo": "harry0703/MoneyPrinterTurbo",
+    "pr": 1690,
+    "head": "5b53d7e161fd76a229b02f6c1e47c4b8bd4a8dad",
+    "base": "9e7d8b7efa6b912058156943906542b53b945f0a",
+    "group": "human"
+  },
+  {
+    "repo": "harry0703/MoneyPrinterTurbo",
+    "pr": 1688,
+    "head": "a7a1d91eb9c9afe6cf2b46b3261a684435a4d597",
+    "base": "9e7d8b7efa6b912058156943906542b53b945f0a",
+    "group": "human"
+  },
+  {
+    "repo": "eosphoros-ai/DB-GPT",
+    "pr": 3273,
+    "head": "3044d07e54752c8d3afd1582d32be3d1ea9f6bd5",
+    "base": "d1d398eb7ab2b2b3c9dc53fa376594a3600a7458",
+    "group": "human"
+  },
+  {
+    "repo": "eosphoros-ai/DB-GPT",
+    "pr": 3266,
+    "head": "7d527a85c0aa2359bb9e52000c8b78d4424bcbb1",
+    "base": "ca9f014cb3ead157ca2ee6ce645658f5fb55138c",
+    "group": "human"
+  },
+  {
+    "repo": "ultralytics/ultralytics",
+    "pr": 26794,
+    "head": "942e7b9c4814fd5e20a7e173bdbfd253bbcc8d8e",
+    "base": "84694ebf8cd5d126c099626c363f0e0066019c43",
+    "group": "human"
+  },
+  {
+    "repo": "topoteretes/cognee",
+    "pr": 6163,
+    "head": "5179273fc53ae8a0a8bb5751212e70140d6214ce",
+    "base": "3645f2b4f92286c949115770faff61faf8f4cfb4",
+    "group": "human"
+  },
+  {
+    "repo": "python/cpython",
+    "pr": 160152,
+    "head": "0f0656d21b5e7ca75edc580b4ac93169beee64e0",
+    "base": "56c01857903b2aeef9cb5aa7e2cde4a0aee5685c",
+    "group": "human"
+  },
+  {
+    "repo": "python/cpython",
+    "pr": 160151,
+    "head": "4c7815fd6e058848119a7f1484b9714b51251c3b",
+    "base": "57f1bad491b6228d71dbca05c2b3c99ddf2b67fe",
+    "group": "human"
+  },
+  {
+    "repo": "python/cpython",
+    "pr": 160146,
+    "head": "203ddc8880d57767b89cc5ec2d16584528a418fc",
+    "base": "ba0e4a410552652bf7ca28ef23552111671c8e02",
+    "group": "human"
+  },
+  {
+    "repo": "ayghri/i-have-adhd",
+    "pr": 115,
+    "head": "75ee1c49dc73ed1c0bf51b933bacdf055b7969cd",
+    "base": "2ed064090711586e0c97a2fbbf15465fe8f1808b",
+    "group": "human"
+  },
+  {
+    "repo": "ayghri/i-have-adhd",
+    "pr": 48,
+    "head": "4e38331d6e4db9179f16faf883009bac39e61dab",
+    "base": "9213c1cd6786b4d5c61c45a019b822533dd691c5",
+    "group": "human"
+  },
+  {
+    "repo": "onnx/onnx",
+    "pr": 8643,
+    "head": "7b52a2d34e379ccd1fd3ab092a026c633aeefc9f",
+    "base": "18fb3cfb3b7b2c3f3b05ba9bd3829333432c095d",
+    "group": "human"
+  },
+  {
+    "repo": "onnx/onnx",
+    "pr": 8545,
+    "head": "5cecb4a8b2d20d3e278986c0d1b2666922eb268e",
+    "base": "ab429ea400dff7d2d89b855f28c58453ec03b5ad",
+    "group": "human"
+  },
+  {
+    "repo": "onnx/onnx",
+    "pr": 8543,
+    "head": "e7b2550fa657655c451adf2ad33cd30df467788d",
+    "base": "7197386680ce9327f31e953a235c075fb5da6a77",
+    "group": "human"
+  },
+  {
+    "repo": "browser-use/video-use",
+    "pr": 137,
+    "head": "4ff8e6006377f9753f3d0b205fe6c01cf6b5835e",
+    "base": "92c2b34e44c205cbc2acae7f6ca7c1c219d5dd66",
+    "group": "human"
+  },
+  {
+    "repo": "pandas-dev/pandas",
+    "pr": 71463,
+    "head": "b1fdbe846e1e436d312d1b66064a98434881606d",
+    "base": "08efb142e143a2e5c180c828ccafc7241c2d9801",
+    "group": "human"
+  },
+  {
+    "repo": "pandas-dev/pandas",
+    "pr": 71462,
+    "head": "bd729c5ac605f1e095368703364d6b860bd48b23",
+    "base": "08efb142e143a2e5c180c828ccafc7241c2d9801",
+    "group": "human"
+  },
+  {
+    "repo": "pandas-dev/pandas",
+    "pr": 71460,
+    "head": "b182fcb895c241d95509f8aae21238330a677840",
+    "base": "ee8dcb77b9da54ce34466a7212354e5b52fe08ad",
+    "group": "human"
+  },
+  {
+    "repo": "verl-project/verl",
+    "pr": 8185,
+    "head": "e8bd698366f72c04418de41b91797931384f9afa",
+    "base": "45a40312a61b51dfca8865254fcf4cac8e62933e",
+    "group": "human"
+  },
+  {
+    "repo": "verl-project/verl",
+    "pr": 8177,
+    "head": "7ac709808ff6e4052afd4dd6d8c38b73c3d7117b",
+    "base": "fc72e2f384212470868a9928b62baedb9bcc3ff0",
+    "group": "human"
+  },
+  {
+    "repo": "verl-project/verl",
+    "pr": 8172,
+    "head": "aeb459fddddc8f154c73ec888e9dc86f7f634282",
+    "base": "fc72e2f384212470868a9928b62baedb9bcc3ff0",
+    "group": "human"
+  },
+  {
+    "repo": "psf/black",
+    "pr": 5568,
+    "head": "6eb6e7037b6fec33bb911cfbdd4a69b5efe2aa7c",
+    "base": "56a7ee682ada03e086f62d66ac01b752fbda21db",
+    "group": "human"
+  },
+  {
+    "repo": "psf/black",
+    "pr": 5559,
+    "head": "05fc6bd340fb6cd3773bc9e6de7bbb51b54e378f",
+    "base": "b39ac0c59acac7196e4f6387a012e914d84cbd76",
+    "group": "human"
+  },
+  {
+    "repo": "streamlit/streamlit",
+    "pr": 17582,
+    "head": "cdd1ff2d16fcc696ce403038dc0a9d2f007703fb",
+    "base": "62fd69ba42890832f5f0c92c9bbb558c35238f4c",
+    "group": "human"
+  },
+  {
+    "repo": "streamlit/streamlit",
+    "pr": 17504,
+    "head": "5daacb6f4638974a62bbb13e307d38225760c338",
+    "base": "7c521159b310e1b93efa65658eaf5cffe7d9e6da",
+    "group": "human"
+  },
+  {
+    "repo": "streamlit/streamlit",
+    "pr": 17498,
+    "head": "a8ed48af7828de00901bd36f1645378a967316d3",
+    "base": "2279761775991bd789e8688372cb9724fef1a0ae",
+    "group": "human"
+  },
+  {
+    "repo": "ahujasid/mcp-for-blender",
+    "pr": 381,
+    "head": "dfc205af0486b9e874bb06a78aa27695270fb1a8",
+    "base": "60d2a31b4632a7bc178f3dd636f7e68dfb5c8ae4",
+    "group": "human"
+  },
+  {
+    "repo": "danielgatis/rembg",
+    "pr": 859,
+    "head": "2ec04fe51196e6551ab45b41faec1fdf2bed94ba",
+    "base": "cd8f3665dda6c246b5baecb85fda6a2acd644c2a",
+    "group": "human"
+  },
+  {
+    "repo": "Comfy-Org/ComfyUI",
+    "pr": 17241,
+    "head": "15ea7ab6eabfa94e8c481216af2552f4c28e2bac",
+    "base": "f5c611e3849ff7219dfb7d7b251092ab8a9b51dc",
+    "group": "human"
+  },
+  {
+    "repo": "Comfy-Org/ComfyUI",
+    "pr": 17224,
+    "head": "887fc4874c90933f3e19f1a40ceac2d4b7829150",
+    "base": "37ff76b4d3d47405ba46ac1e14698e280b70b33f",
+    "group": "human"
+  },
+  {
+    "repo": "Comfy-Org/ComfyUI",
+    "pr": 17007,
+    "head": "f6f27c8a40d3a2c8a17d6a9ba42208b2fa55659a",
+    "base": "a639f187a9f6abfecbda9673034f2045148b6d85",
+    "group": "human"
+  },
+  {
+    "repo": "huggingface/datasets",
+    "pr": 8856,
+    "head": "82b6c88ff97f9afb8a604b10ef57ef8cda13990c",
+    "base": "18378f7322c7eb1c2d93f895dd8e9f71f8623934",
+    "group": "human"
+  },
+  {
+    "repo": "huggingface/datasets",
+    "pr": 8795,
+    "head": "253d0baa449eac14899e13942480147f25b45813",
+    "base": "9e7496a4d11caf68da2846d84c9596cda4a4f984",
+    "group": "human"
+  },
+  {
+    "repo": "huggingface/datasets",
+    "pr": 8791,
+    "head": "a09a3926bb4488a9d38b445841893202d1d77e7c",
+    "base": "9e7496a4d11caf68da2846d84c9596cda4a4f984",
+    "group": "human"
+  },
+  {
+    "repo": "browser-use/browser-use",
+    "pr": 5978,
+    "head": "a25564be15cea98327a87079b3bef9ed15304ba2",
+    "base": "62a0f71ba5e4724e287fcb7f93be84465366441a",
+    "group": "human"
+  },
+  {
+    "repo": "huggingface/trl",
+    "pr": 7620,
+    "head": "9f1f13745dbc9696b01408cca5d8f5b051fa0d3e",
+    "base": "72cf37df714d3183e8e96ec391d474b26eaa30b6",
+    "group": "human"
+  },
+  {
+    "repo": "openbq-org/OpenBB",
+    "pr": 7794,
+    "head": "833860f25cef3132337e13f0d16357491b9cfe90",
+    "base": "ae0268771f761b036996d81bd21522ce79d95415",
+    "group": "human"
+  },
+  {
+    "repo": "roboflow/supervision",
+    "pr": 2772,
+    "head": "c23d3e74c607c02bbadad2cb9b59b935a305d251",
+    "base": "e82da419241f4b2ece58485dcf20996c17dd26a4",
+    "group": "human"
+  },
+  {
+    "repo": "langflow-ai/langflow",
+    "pr": 15890,
+    "head": "9e16fbaad62eabc95b3cb96dd5a5e0d878db7b64",
+    "base": "4a984704c0c2b6158b8874a51ef045f43a968ed5",
+    "group": "human"
+  },
+  {
+    "repo": "pytorch/pytorch",
+    "pr": 201512,
+    "head": "66f19c304508beee9c52f7a4534e0bc65e4ed3e9",
+    "base": "e47ff363fc3efdcedac32883c6a884366e69ed71",
+    "group": "human"
+  },
+  {
+    "repo": "Shubhamsaboo/awesome-llm-apps",
+    "pr": 1233,
+    "head": "acd9a84314e12251eecdc712502d95c151b3b622",
+    "base": "4bf51ab704fb2c5b3803cd5191b30d7dcdb51dc2",
+    "group": "human"
+  },
+  {
+    "repo": "earthtojake/text-to-cad",
+    "pr": 558,
+    "head": "524ee3b82e17a75b9152aa1b7c66ca800aaf65b9",
+    "base": "ecc85e120d85cc87963d66dd08c268d269f7175a",
+    "group": "human"
+  },
+  {
+    "repo": "langchain-ai/langchain",
+    "pr": 41349,
+    "head": "0e07631e6561fe385e1d2968d44c28793be62cba",
+    "base": "98d48ade0e5ec5d1b2e58b6b7485d86387ceacd7",
+    "group": "human"
+  },
+  {
+    "repo": "jax-ml/jax",
+    "pr": 41768,
+    "head": "0c7fba37d97eba5caf9f56342799812b1a224d26",
+    "base": "514d6e83ea758d4e681392ac9e156f308a8086ca",
+    "group": "human"
+  },
+  {
+    "repo": "MemPalace/mempalace",
+    "pr": 2866,
+    "head": "07f928eb8812b81bec1144e29d5bbfe25e503ad3",
+    "base": "f884dd4c08244278fc11bf9ccc154d6b6f63ad66",
+    "group": "human"
+  },
+  {
+    "repo": "ifixai-ai/iFixAi",
+    "pr": 356,
+    "head": "d14018265fa78f1421dbe5bf9d6a4389de5658fc",
+    "base": "15599839eccfc2ffcf181b0ca3651413416a9d40",
+    "group": "human"
+  },
+  {
+    "repo": "ranaroussi/yfinance",
+    "pr": 3005,
+    "head": "73847b787db2dc8f2c335982648136589b285565",
+    "base": "deeb2d9e22110cad7befab44e63f0637ff1a6efa",
+    "group": "human"
+  },
+  {
+    "repo": "sickn33/agentic-awesome-skills",
+    "pr": 2000,
+    "head": "d40130521b65814221d261eac9c11b916048c04b",
+    "base": "b59e22957dfe318b8937c1f34d16d08fe31cf20f",
+    "group": "human"
+  },
+  {
+    "repo": "soxoj/maigret",
+    "pr": 3216,
+    "head": "b228e09a45fcce7a943a3edd501dd34dec85e613",
+    "base": "b6642744988e7e6c2d21f75db60ec3093019ba25",
+    "group": "human"
+  },
+  {
+    "repo": "ansible/ansible",
+    "pr": 87725,
+    "head": "9ddd59c82833eae7350cc8fd8660f5a4937df2e8",
+    "base": "493ea56c4ed2fca85d43e016fccfbd705a300eab",
+    "group": "human"
+  },
+  {
+    "repo": "kivy/kivy",
+    "pr": 9434,
+    "head": "f8b3433abbea01aea0e09aee8dbf5025f397205f",
+    "base": "91bde405afca14d5ab828f3c32c47381cc3e02d4",
+    "group": "human"
+  },
+  {
+    "repo": "python-telegram-bot/python-telegram-bot",
+    "pr": 5374,
+    "head": "172bb72af2fa43da37dd130b06d029dd7da4ec99",
+    "base": "fb11920ac79dc797a580c4b27d40056dede72f0b",
+    "group": "human"
+  }
+]

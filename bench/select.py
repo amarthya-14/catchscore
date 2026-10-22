@@ -42,7 +42,7 @@ def main():
             continue
         per_repo[pr["repo"]] = per_repo.get(pr["repo"], 0) + 1
         picked.append({"repo": pr["repo"], "pr": pr["number"], "head": shas["head"], "base": shas["base"],
-                       "stars": pr["stars"]})
+                       "stars": pr["stars"], "group": "agent"})
     json.dump(picked, open(args.out, "w"), indent=1)
     print(f"{len(picked)} PRs from {len(per_repo)} repositories (of {len(usable)} usable)", file=sys.stderr)
 

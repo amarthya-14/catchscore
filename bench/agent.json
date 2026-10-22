@@ -1,0 +1,2402 @@
+[
+ {
+  "repo": "huggingface/sentence-transformers",
+  "pr": 4089,
+  "head": "618650394187aefd92aef9068dbf901631424728",
+  "base": "4a3b5cd6ec718e421f57e824a41ed3fd99595df6",
+  "stars": 19206,
+  "group": "agent"
+ },
+ {
+  "repo": "getsentry/sentry",
+  "pr": 127717,
+  "head": "8d3636d716530c13bc0229f3cf3e06c57fe40ee8",
+  "base": "63ac4bc658e679a403da0013f428dc365802d716",
+  "stars": 45626,
+  "group": "agent"
+ },
+ {
+  "repo": "onyx-dot-app/onyx",
+  "pr": 16279,
+  "head": "b050fcedf82d6a1f8cc9f89a803a421876877cf1",
+  "base": "0439a43a219c816faad2fcc01e61b46aa33a1def",
+  "stars": 32782,
+  "group": "agent"
+ },
+ {
+  "repo": "teng-lin/notebooklm-py",
+  "pr": 2465,
+  "head": "baeae70dc246b0a64fae54ccfaee81a83212dbc1",
+  "base": "f797ba058eb568ea65d15f00854d0e6333956b0d",
+  "stars": 19841,
+  "group": "agent"
+ },
+ {
+  "repo": "HKUDS/DeepTutor",
+  "pr": 1985,
+  "head": "6af53e2582c06a383fb361504893ad82a323e1a8",
+  "base": "e60fb1582895300454eef2e001004d05d462114c",
+  "stars": 42042,
+  "group": "agent"
+ },
+ {
+  "repo": "srbhr/Resume-Matcher",
+  "pr": 1060,
+  "head": "644e33468a9dcf226eeb2ad12158c1000bd85054",
+  "base": "ff5b370372d39b6cb6b56fd0dad88a2fe5c3abce",
+  "stars": 28802,
+  "group": "agent"
+ },
+ {
+  "repo": "ai-job-search-dev/ai-job-search",
+  "pr": 564,
+  "head": "dcf1851ffcaad943422e548145798c505f99f424",
+  "base": "407dc34a2c4951e4ea3b047eaccdf2e4081a139a",
+  "stars": 63011,
+  "group": "agent"
+ },
+ {
+  "repo": "blakeblackshear/frigate",
+  "pr": 24714,
+  "head": "1e921c4e74c09360dc2f835ac1877f7259f01485",
+  "base": "8263f13d1b07fd22fe913e32782c5c0d4e47331d",
+  "stars": 36809,
+  "group": "agent"
+ },
+ {
+  "repo": "onyx-dot-app/onyx",
+  "pr": 16320,
+  "head": "f682f3614aea4003a7f4d349ea4cf3ca28de4f96",
+  "base": "e55376f3434d84f9c4297ca55eb8d64c01c907dd",
+  "stars": 32782,
+  "group": "agent"
+ },
+ {
+  "repo": "srbhr/Resume-Matcher",
+  "pr": 1056,
+  "head": "723bc605f9c7a079f39f1c84566fade26c48dd75",
+  "base": "a8fd5c4a9af0b1d8b4439b4dcb1c4cacd034f132",
+  "stars": 28802,
+  "group": "agent"
+ },
+ {
+  "repo": "apache/superset",
+  "pr": 45547,
+  "head": "4a514f4ce4a30dfad3a280b85818d4d2cd09e9c0",
+  "base": "452dea81f23995ee6162d86d2291d725003cc684",
+  "stars": 75245,
+  "group": "agent"
+ },
+ {
+  "repo": "reflex-dev/reflex",
+  "pr": 7518,
+  "head": "5569c9bddf163747b4f0700ed6317ba1140e11b8",
+  "base": "73c7cb3be4928dc15496e98fc6d380f87d8f5ad7",
+  "stars": 28972,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/sentence-transformers",
+  "pr": 4228,
+  "head": "54e3259d86d8bbf7cb8ce9b6b675d84b48dcec30",
+  "base": "1fa45b4212a53e7d6c8d3c2682f88743338179fb",
+  "stars": 19206,
+  "group": "agent"
+ },
+ {
+  "repo": "srbhr/Resume-Matcher",
+  "pr": 1061,
+  "head": "f0aa07f2c8b46983bd1f74418df1ac4b7df8657f",
+  "base": "985b59665a19cc9d63cff6a2c6d7ad65de2a445b",
+  "stars": 28802,
+  "group": "agent"
+ },
+ {
+  "repo": "BerriAI/litellm",
+  "pr": 47401,
+  "head": "4593bca9c6dd8c414b4e8bb88bc30e670bede469",
+  "base": "89a194bbd0fd25c57df5456ccdc223978e4ac084",
+  "stars": 61759,
+  "group": "agent"
+ },
+ {
+  "repo": "dgtlmoon/changedetection.io",
+  "pr": 4426,
+  "head": "cec26472c34258029dfae06a658ea4f85e40dee7",
+  "base": "900a77e8285ac8c4241d5ad2acabaf01657404eb",
+  "stars": 35196,
+  "group": "agent"
+ },
+ {
+  "repo": "goauthentik/authentik",
+  "pr": 26790,
+  "head": "6b254a067750bcff20d928ed181651a794c2955c",
+  "base": "45c0d8e29977d1c40d8751731e37f325199fc627",
+  "stars": 26036,
+  "group": "agent"
+ },
+ {
+  "repo": "modelcontextprotocol/python-sdk",
+  "pr": 3395,
+  "head": "2665a66d951a1e0499835aa3eb74694d93dda972",
+  "base": "6705402e246dc4eb1fcdf4d9902b78d3c9c36e1b",
+  "stars": 24636,
+  "group": "agent"
+ },
+ {
+  "repo": "VectifyAI/PageIndex",
+  "pr": 430,
+  "head": "9bbdcefe4ed3ae4debbc7e6daa4690b001701052",
+  "base": "174f95f35b0b6acca5eee2a1c4f6ddeaf6ce88c7",
+  "stars": 39439,
+  "group": "agent"
+ },
+ {
+  "repo": "unslothai/unsloth",
+  "pr": 13547,
+  "head": "4198c3d38b67c47b71e4d8d6da2158b2a5d36567",
+  "base": "8149f57436e612fe232a45cb33d3e8e26715f8ba",
+  "stars": 78387,
+  "group": "agent"
+ },
+ {
+  "repo": "mvanhorn/last30days-skill",
+  "pr": 1244,
+  "head": "7f91a77895b7a213afb96fa99467ae73fdf7524b",
+  "base": "627def1c85a8f8358a7e20f28a3b531803980ae3",
+  "stars": 65014,
+  "group": "agent"
+ },
+ {
+  "repo": "zylon-ai/private-gpt",
+  "pr": 2407,
+  "head": "d3f4368be04aff36af963d0cd296dd36a0a9d9b2",
+  "base": "4d7f36e53d46c51acdf74edc934235ac7cdb5e64",
+  "stars": 57602,
+  "group": "agent"
+ },
+ {
+  "repo": "mvanhorn/last30days-skill",
+  "pr": 1246,
+  "head": "c7bc1b25ace3ebffda1bdcf741d1d4d62a230b96",
+  "base": "3c9d7dd57fd4193b8e30a13e7926531a7529f603",
+  "stars": 65014,
+  "group": "agent"
+ },
+ {
+  "repo": "bmad-code-org/BMAD-METHOD",
+  "pr": 2991,
+  "head": "cd88dbcf2e87472018a1b8d77a2ffae898cb0373",
+  "base": "5b05098b9f2e9aebef3bf4288033dc1aa12b7ee5",
+  "stars": 54422,
+  "group": "agent"
+ },
+ {
+  "repo": "Dao-AILab/flash-attention",
+  "pr": 2907,
+  "head": "07b394f09fb3a4e7fbea934a92d95ef5cad25239",
+  "base": "d15f1531a460ba456f41b01a774f33ab2db8febf",
+  "stars": 25184,
+  "group": "agent"
+ },
+ {
+  "repo": "nesquena/hermes-webui",
+  "pr": 7823,
+  "head": "cace70201e15687eb56e4d714ece17d6d035a713",
+  "base": "60b38c46301e7ac7c304f9819ee343315b6f8658",
+  "stars": 19090,
+  "group": "agent"
+ },
+ {
+  "repo": "ai-job-search-dev/ai-job-search",
+  "pr": 668,
+  "head": "e42ae245dc3ff9328999da8e46c52c9a6992ff42",
+  "base": "a59535083faef8be8784369b28b680a60202aa8b",
+  "stars": 63011,
+  "group": "agent"
+ },
+ {
+  "repo": "PrefectHQ/fastmcp",
+  "pr": 5291,
+  "head": "2c9fdb10d5d359f126d30c0965cb3e9bb88fd671",
+  "base": "92e44ffcc04b29f960a6c678f44fac226ccc0ea6",
+  "stars": 28171,
+  "group": "agent"
+ },
+ {
+  "repo": "agentscope-ai/agentscope",
+  "pr": 2428,
+  "head": "d3508c738ae18baad2bc29e5c05dcc1a23a03aed",
+  "base": "2a4e957e46f392d91da8b925a00a047f8969374b",
+  "stars": 33612,
+  "group": "agent"
+ },
+ {
+  "repo": "TheAlgorithms/Python",
+  "pr": 15583,
+  "head": "fd748335fedbe99c2a40e96dbcd0286888a642a9",
+  "base": "adccf0cf0ca1cdc5f28fa8d244bac89efa18d0f6",
+  "stars": 225440,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/peft",
+  "pr": 3974,
+  "head": "3e56b40ee866df78515f7f97772356cdf729e78f",
+  "base": "eac46efeef6e5f63ecc38de5c9148513df602b29",
+  "stars": 21823,
+  "group": "agent"
+ },
+ {
+  "repo": "langgenius/dify",
+  "pr": 44470,
+  "head": "252672f1de77f4bc5795725a86aad69062b89de0",
+  "base": "7d039cb6198e234a085f4a3982dc9bc2715d70b1",
+  "stars": 159176,
+  "group": "agent"
+ },
+ {
+  "repo": "tornadoweb/tornado",
+  "pr": 3774,
+  "head": "983aeb0518150b9e725c6844d1efa3b4ecbfeb77",
+  "base": "d60cf4d94795bbd6147cc7f071994416db767d50",
+  "stars": 22168,
+  "group": "agent"
+ },
+ {
+  "repo": "assafelovic/gpt-researcher",
+  "pr": 2158,
+  "head": "dcb781e40bb72caab838ad7abfa91706075dd742",
+  "base": "d86692d5ebe62804befed26b05f017f0651def5c",
+  "stars": 30230,
+  "group": "agent"
+ },
+ {
+  "repo": "zylon-ai/private-gpt",
+  "pr": 2409,
+  "head": "1dfa345cb5c3cfd6f01fecb9908a244e9b3cf415",
+  "base": "4a5cb6863a13de1ae6176659b45efc5c925b11b7",
+  "stars": 57602,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/peft",
+  "pr": 4001,
+  "head": "a22ce3f683682b434efc43eadf37ee6cd04f6bab",
+  "base": "c2d5f697fbb30063cbde6f39e2734883b70b8753",
+  "stars": 21823,
+  "group": "agent"
+ },
+ {
+  "repo": "VectifyAI/PageIndex",
+  "pr": 460,
+  "head": "56de632d9718f75720aece25c76f4cbe91c943ac",
+  "base": "91b6c365e0ee75616333370228919ddfc4b31ae1",
+  "stars": 39439,
+  "group": "agent"
+ },
+ {
+  "repo": "Alishahryar1/free-claude-code",
+  "pr": 2083,
+  "head": "071c90437a61e001e0597ca8112cea845376d52d",
+  "base": "74d4ccfde724f7416fa2a728d594d704dddc7c94",
+  "stars": 62481,
+  "group": "agent"
+ },
+ {
+  "repo": "reflex-dev/reflex",
+  "pr": 7606,
+  "head": "2c6c1656266c1510395bf20763fb99d302573f7c",
+  "base": "d3f8ccbb8dacee96a389c3051d8c0fd7b7184c6a",
+  "stars": 28972,
+  "group": "agent"
+ },
+ {
+  "repo": "virgiliojr94/book-to-skill",
+  "pr": 242,
+  "head": "e51ce5504f283f9bd7876709c545b3a2c4ebc20b",
+  "base": "80ae087784ddbc21dbbfde355fe5509631e0e322",
+  "stars": 35630,
+  "group": "agent"
+ },
+ {
+  "repo": "langchain-ai/deepagents",
+  "pr": 6132,
+  "head": "3dd7d633b81e8c1978d99ab9116b2daf621d186d",
+  "base": "904326a7932f72a189fcf0a74ba1f77a4087f79f",
+  "stars": 30487,
+  "group": "agent"
+ },
+ {
+  "repo": "openai/openai-agents-python",
+  "pr": 4195,
+  "head": "2aba9b3d7d891533ab225d651bf2fc34fe9726c3",
+  "base": "08c1c9f365e4a02bdfbe051e89c6ababfad85ee7",
+  "stars": 30209,
+  "group": "agent"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "pr": 23180,
+  "head": "ca027be817cc26a5311e935744f1800a0d9abb4d",
+  "base": "383da7ac4a44784d1bf27e208bc24c042512da28",
+  "stars": 24059,
+  "group": "agent"
+ },
+ {
+  "repo": "reflex-dev/reflex",
+  "pr": 7456,
+  "head": "5ab2cef3e7b4429d2b497420bbee00bbe15bc512",
+  "base": "62a56ba7f81c2c7da3c66f96542a0200fc967461",
+  "stars": 28972,
+  "group": "agent"
+ },
+ {
+  "repo": "stanfordnlp/dspy",
+  "pr": 10399,
+  "head": "5902f1e763c1f4842f7856f268c31cd302ef6fb7",
+  "base": "ecba33763316d2a4c6c756046a1118ecbff033e7",
+  "stars": 38725,
+  "group": "agent"
+ },
+ {
+  "repo": "numpy/numpy",
+  "pr": 32519,
+  "head": "7bb99ad45776084fa9bbb5c761e6bcbfe0ccbb1e",
+  "base": "72b43bfa4b6d470a02f697c990aa27150f18f7de",
+  "stars": 33087,
+  "group": "agent"
+ },
+ {
+  "repo": "BerriAI/litellm",
+  "pr": 47634,
+  "head": "041deedb7348467a236e12225279bb34c84f89da",
+  "base": "5346a40c37a25b6e264c7b3783c5afb7d99ba456",
+  "stars": 61759,
+  "group": "agent"
+ },
+ {
+  "repo": "Significant-Gravitas/AutoGPT",
+  "pr": 15758,
+  "head": "620e0ad877ab8931ce7b9be3c85dfd7993f72f75",
+  "base": "75e5a9ada410e998bb014d6447a6159ed16c1339",
+  "stars": 187704,
+  "group": "agent"
+ },
+ {
+  "repo": "agno-agi/agno",
+  "pr": 11161,
+  "head": "a94a7168e206b859853a064e77428b24b9efd539",
+  "base": "287bc588c3cfd90e191034c08574498efe3ddb33",
+  "stars": 42853,
+  "group": "agent"
+ },
+ {
+  "repo": "BerriAI/litellm",
+  "pr": 47441,
+  "head": "23ddd0f13bd46d8d7f5e612d9f90bab126ab60d6",
+  "base": "93b79d2587d186fb7266556a34a22d03f187a3da",
+  "stars": 61759,
+  "group": "agent"
+ },
+ {
+  "repo": "crewAIInc/crewAI",
+  "pr": 8270,
+  "head": "0a225aee9a2a2c5bc3fc65b5db0a8915cb229319",
+  "base": "1410318b2ed037ea4b721eef51af91267c13f806",
+  "stars": 59965,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/sentence-transformers",
+  "pr": 4181,
+  "head": "a0e2c15839d10178619e7abb64130ae3455db89c",
+  "base": "d8a4090dc98d518ae3cae8ca004f6b1bbe740dd3",
+  "stars": 19206,
+  "group": "agent"
+ },
+ {
+  "repo": "mlflow/mlflow",
+  "pr": 26872,
+  "head": "a68b8f8bc80b6b828089216231acb43a04087d1a",
+  "base": "ef1c40086df4595c44dabcec57eea3cfe6ff141c",
+  "stars": 28482,
+  "group": "agent"
+ },
+ {
+  "repo": "sgl-project/sglang",
+  "pr": 45632,
+  "head": "d463e2123d1f0f1576a768f2330ff77dcf56b558",
+  "base": "6e98c84c601a6a18405403c12ce047f167a054b4",
+  "stars": 37581,
+  "group": "agent"
+ },
+ {
+  "repo": "teng-lin/notebooklm-py",
+  "pr": 2359,
+  "head": "54d3e0ef3069d26b43036322b3601079dcd91bbb",
+  "base": "54e5f4db48b014dfd398368aec59a7fbf0555c9b",
+  "stars": 19841,
+  "group": "agent"
+ },
+ {
+  "repo": "exo-explore/exo",
+  "pr": 2413,
+  "head": "e099298f688d9549455f99ff807e451b2663c225",
+  "base": "c4903418272942512d6815e64ca352d81f323162",
+  "stars": 48004,
+  "group": "agent"
+ },
+ {
+  "repo": "wshobson/agents",
+  "pr": 724,
+  "head": "3137f960d4abae28ea6e5de735c7ecb78eefc5b0",
+  "base": "6b63235b13d93219f5e75cd4b55fd64dd47dfbcb",
+  "stars": 41492,
+  "group": "agent"
+ },
+ {
+  "repo": "HKUDS/DeepTutor",
+  "pr": 1637,
+  "head": "6dd4542a0bb1147d0e1477cfb1ea71cb35a090c6",
+  "base": "ef2d9e5c3c99fd073742c5aadc2bb9584b1e503b",
+  "stars": 42042,
+  "group": "agent"
+ },
+ {
+  "repo": "matplotlib/matplotlib",
+  "pr": 32275,
+  "head": "cd9810701d279a5700c1c64d73c1f6209bf9941a",
+  "base": "ef42921e0af3590ddcff6299ec9fa13f32bc0d3e",
+  "stars": 23386,
+  "group": "agent"
+ },
+ {
+  "repo": "virgiliojr94/book-to-skill",
+  "pr": 223,
+  "head": "94e62cda36751d02034fa12fe3788baa0017cb74",
+  "base": "01f8a742aeb9022df59ad61870469d07f299c479",
+  "stars": 35630,
+  "group": "agent"
+ },
+ {
+  "repo": "teng-lin/notebooklm-py",
+  "pr": 2483,
+  "head": "03dbbf6859f562975648d4fec48e6595f5596ea3",
+  "base": "f4dc02a16fac62b306b3cfac03c51ec47860c126",
+  "stars": 19841,
+  "group": "agent"
+ },
+ {
+  "repo": "debpalash/VoiceStudio",
+  "pr": 3027,
+  "head": "e198fd470f7f6bd1221a1d2aa283efd461e37cb4",
+  "base": "c5cead91878d9b5d9f9691f9c055c5e71d9fbd36",
+  "stars": 80617,
+  "group": "agent"
+ },
+ {
+  "repo": "PrefectHQ/fastmcp",
+  "pr": 5765,
+  "head": "bc01313889d06cd5c50a34779b0c8cf91ef5b89d",
+  "base": "8d71296fbf79670f866870dc7c9f3622a7b0fe24",
+  "stars": 28171,
+  "group": "agent"
+ },
+ {
+  "repo": "deepset-ai/haystack",
+  "pr": 12908,
+  "head": "118382670c3be6055d9f637bdc4ddaea14ef49bb",
+  "base": "640b8f4d610c8060c957bb91dedeb99e773756b3",
+  "stars": 26804,
+  "group": "agent"
+ },
+ {
+  "repo": "guillaumemeyer/watermarks-remover",
+  "pr": 3,
+  "head": "1fea58d88a2f2fad324d1e3dfc995b1c76703b8c",
+  "base": "e1d53c88a593d05257df57553067b28887f52222",
+  "stars": 24616,
+  "group": "agent"
+ },
+ {
+  "repo": "dgtlmoon/changedetection.io",
+  "pr": 4544,
+  "head": "d71cd57f3277cb5602b38eb6a42657d709a1340f",
+  "base": "bbe02bb58de177f4c6afd61fa418921f2ff3164a",
+  "stars": 35196,
+  "group": "agent"
+ },
+ {
+  "repo": "debpalash/VoiceStudio",
+  "pr": 3026,
+  "head": "4fe49ce18dfd25ef5708ca028136426aefc0a939",
+  "base": "e09bf3e0669ab0f30428d4418dd040818e1214d6",
+  "stars": 80617,
+  "group": "agent"
+ },
+ {
+  "repo": "mvanhorn/last30days-skill",
+  "pr": 1249,
+  "head": "79ce20ace88a4cac88bc743cd7433bfc3c83e4af",
+  "base": "5ba637cee328d94ec41469ea016f65b32096bf86",
+  "stars": 65014,
+  "group": "agent"
+ },
+ {
+  "repo": "HKUDS/Vibe-Trading",
+  "pr": 1882,
+  "head": "62bae25ced62108e5c871730216d708cee37a203",
+  "base": "29aa084fb7866087c612ddd55ef5449824374e22",
+  "stars": 36222,
+  "group": "agent"
+ },
+ {
+  "repo": "agno-agi/agno",
+  "pr": 11198,
+  "head": "0edf1f0f28bc63e450649054b7341f779cc2ccdd",
+  "base": "672ca9a5dafe57a5322db2fee85e251597558973",
+  "stars": 42853,
+  "group": "agent"
+ },
+ {
+  "repo": "oraios/serena",
+  "pr": 2121,
+  "head": "d462a89acda27e291bd5f48f8bb5bf1485dfa43d",
+  "base": "7a2968335f2198b966864de1ce3655c8e485a653",
+  "stars": 30586,
+  "group": "agent"
+ },
+ {
+  "repo": "anthropics/claude-plugins-official",
+  "pr": 6722,
+  "head": "d6b6f0bbab91d36963deef987a22e5ae457534f7",
+  "base": "ea10b213686c90bb1984b2016937310e05336cf3",
+  "stars": 43677,
+  "group": "agent"
+ },
+ {
+  "repo": "hummingbot/hummingbot",
+  "pr": 8430,
+  "head": "08a008b80e236ad4e4e63923f2377197933ffa18",
+  "base": "57803c083f9ea3af12b46ec903a4574e5b39c0ec",
+  "stars": 20622,
+  "group": "agent"
+ },
+ {
+  "repo": "ai-job-search-dev/ai-job-search",
+  "pr": 642,
+  "head": "7c88a4edcbaffd57ba218a00e96e920bf3ea5b42",
+  "base": "30158c0493ae8ae1610769955ad04b189049afe8",
+  "stars": 63011,
+  "group": "agent"
+ },
+ {
+  "repo": "pydantic/pydantic-ai",
+  "pr": 10896,
+  "head": "527982cedb7878c9b1c948b700743b01cd0a186e",
+  "base": "415eeb6b642b0af0f5addf095aef969a7fbac905",
+  "stars": 20774,
+  "group": "agent"
+ },
+ {
+  "repo": "marimo-team/marimo",
+  "pr": 10581,
+  "head": "315494e83cb677689f2450089325b183647d10a0",
+  "base": "7ff2b4d2ce4720cd49da50e5e902441d2b4b3d92",
+  "stars": 23280,
+  "group": "agent"
+ },
+ {
+  "repo": "onyx-dot-app/onyx",
+  "pr": 16266,
+  "head": "e55376f3434d84f9c4297ca55eb8d64c01c907dd",
+  "base": "3b7a0eb38386fe8bbb3324a9267f1f6b1428ff07",
+  "stars": 32782,
+  "group": "agent"
+ },
+ {
+  "repo": "openai/openai-agents-python",
+  "pr": 3904,
+  "head": "a9a6d24584e3f6508a62bb6838e527950c6276c1",
+  "base": "394d4dc9ba99d645838bdbfda6d367500d3dcf3e",
+  "stars": 30209,
+  "group": "agent"
+ },
+ {
+  "repo": "bytedance/deer-flow",
+  "pr": 7255,
+  "head": "7bb8486db3c35ff40add7828dadd6b1fd65d2361",
+  "base": "a78fcdeb91287ab05605ef1e05542a14699130c2",
+  "stars": 84261,
+  "group": "agent"
+ },
+ {
+  "repo": "Significant-Gravitas/AutoGPT",
+  "pr": 15759,
+  "head": "c08de8480f6d49427f8fde87d3f2fc70fbb42c0d",
+  "base": "75e5a9ada410e998bb014d6447a6159ed16c1339",
+  "stars": 187704,
+  "group": "agent"
+ },
+ {
+  "repo": "agentscope-ai/agentscope",
+  "pr": 2893,
+  "head": "35a328ebc03cbc851dbeaf3c80b732dea58eaf0b",
+  "base": "5e6587b36fc8f5030de3c68e7a4173bc22563f74",
+  "stars": 33612,
+  "group": "agent"
+ },
+ {
+  "repo": "wshobson/agents",
+  "pr": 733,
+  "head": "dbdc31fb94034d29795bba36b9493ea980eb6c8a",
+  "base": "65685054a7587e3bd7caf38bc0f416c91f9be058",
+  "stars": 41492,
+  "group": "agent"
+ },
+ {
+  "repo": "PrefectHQ/fastmcp",
+  "pr": 5700,
+  "head": "fd07c689eeeab33a62c2bea0ec0ac7b6fbd9b6ed",
+  "base": "e2fcc412001ff7414095c5dc282f94c70299a612",
+  "stars": 28171,
+  "group": "agent"
+ },
+ {
+  "repo": "matplotlib/matplotlib",
+  "pr": 32271,
+  "head": "f5017a39feafb9c9234ce7f984aaf9b6841e3c98",
+  "base": "03507075ca35c961f165b911b1f408d9dc898870",
+  "stars": 23386,
+  "group": "agent"
+ },
+ {
+  "repo": "headroomlabs-ai/headroom",
+  "pr": 4240,
+  "head": "b3854a6630b0744445b20a75ee0a41ba3cfe8f5a",
+  "base": "bb1275b7522dc8c236f0ab5a2615cbe2e6ae7085",
+  "stars": 77321,
+  "group": "agent"
+ },
+ {
+  "repo": "HKUDS/Vibe-Trading",
+  "pr": 1804,
+  "head": "d52e0192d3fe9d8b3365921583c3399577a4133e",
+  "base": "d3c76819c35ae1a73742acc3477530e0beb5d9ef",
+  "stars": 36222,
+  "group": "agent"
+ },
+ {
+  "repo": "Significant-Gravitas/AutoGPT",
+  "pr": 15815,
+  "head": "f95a04cd89860a2c915d40b4af805a8ad8b68a81",
+  "base": "18f79e05083becfc20a669ce1b81f35b760c19c4",
+  "stars": 187704,
+  "group": "agent"
+ },
+ {
+  "repo": "chidiwilliams/buzz",
+  "pr": 1659,
+  "head": "d69ce1fb0df5f363bb7ba1c40dd6b91401d26008",
+  "base": "f1b943ccd305868e2cc18d36a214e0321185c28c",
+  "stars": 22134,
+  "group": "agent"
+ },
+ {
+  "repo": "HKUDS/Vibe-Trading",
+  "pr": 1883,
+  "head": "5977e8591aade67c1c5109b5bda5f052f7bc7d79",
+  "base": "29aa084fb7866087c612ddd55ef5449824374e22",
+  "stars": 36222,
+  "group": "agent"
+ },
+ {
+  "repo": "assafelovic/gpt-researcher",
+  "pr": 2159,
+  "head": "034be494c7f57babc415efd8d7eee3f7601f72a1",
+  "base": "d86692d5ebe62804befed26b05f017f0651def5c",
+  "stars": 30230,
+  "group": "agent"
+ },
+ {
+  "repo": "nesquena/hermes-webui",
+  "pr": 7983,
+  "head": "3b5d142f144f223e99318143ae56d55e6fbdfe8c",
+  "base": "62e4d7b9e2560f9d49c0c29c2dc1414fbd4e2d12",
+  "stars": 19090,
+  "group": "agent"
+ },
+ {
+  "repo": "debpalash/VoiceStudio",
+  "pr": 2761,
+  "head": "e8252009e866918f2860370af165d29ad2e52498",
+  "base": "de26f21fbbf9d358f18dd2b0f179dd4bf21d4571",
+  "stars": 80617,
+  "group": "agent"
+ },
+ {
+  "repo": "wshobson/agents",
+  "pr": 734,
+  "head": "9b21ab3f581880b685827318bc019731ab053851",
+  "base": "8b957cde5caa16dad5549c568e0016296bb8de94",
+  "stars": 41492,
+  "group": "agent"
+ },
+ {
+  "repo": "HKUDS/RAG-Anything",
+  "pr": 420,
+  "head": "df5b92303cfea764ed7a3ecfa2a4b14e6c57ea0d",
+  "base": "26526b26a353bf5c66153ed816407c47b98f5ab5",
+  "stars": 23975,
+  "group": "agent"
+ },
+ {
+  "repo": "saleor/saleor",
+  "pr": 19833,
+  "head": "609dd2262a8109d33624ab7f264e57ac930335e8",
+  "base": "38a37f7d77cdda6f73399d94ea618057d2782928",
+  "stars": 23461,
+  "group": "agent"
+ },
+ {
+  "repo": "mlflow/mlflow",
+  "pr": 26804,
+  "head": "46b0a154162fe33d1bb930c79c861037cee63dcf",
+  "base": "db2648b1472e1a5c66c1b976c3a9e445889699a4",
+  "stars": 28482,
+  "group": "agent"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "pr": 23426,
+  "head": "630d905982544bc6f1394e89e9d57b8808606059",
+  "base": "e29ee8a50c54aa3b41c1566827f6223997e7153c",
+  "stars": 24059,
+  "group": "agent"
+ },
+ {
+  "repo": "Alishahryar1/free-claude-code",
+  "pr": 2088,
+  "head": "c1ae11e2c92a7ef87a10a6105519f53f553ef501",
+  "base": "261ecf7a181dd66098bf6fd2c2ee79a8c15d370e",
+  "stars": 62481,
+  "group": "agent"
+ },
+ {
+  "repo": "deepset-ai/haystack",
+  "pr": 12997,
+  "head": "2263a2848da4b0951a1e9363bddcf49080b46710",
+  "base": "24484ac6d545011ac681213a221bf2cac077844f",
+  "stars": 26804,
+  "group": "agent"
+ },
+ {
+  "repo": "guillaumemeyer/watermarks-remover",
+  "pr": 39,
+  "head": "669785b8f92e2e7d6c2e4d54f1456fcf06c3756a",
+  "base": "bf8c00ee5c89d97f51c734dac4da49edc38686a7",
+  "stars": 24616,
+  "group": "agent"
+ },
+ {
+  "repo": "headroomlabs-ai/headroom",
+  "pr": 4236,
+  "head": "3e88d3a5f401d184db8f7f2d4ec0e49561f68aa5",
+  "base": "df11f2749862a0090db11f7fca3e7dc42a75b612",
+  "stars": 77321,
+  "group": "agent"
+ },
+ {
+  "repo": "anthropics/claude-plugins-official",
+  "pr": 6721,
+  "head": "c7608894ec1ec29ae176b0ca60ef239e57f6e776",
+  "base": "ea10b213686c90bb1984b2016937310e05336cf3",
+  "stars": 43677,
+  "group": "agent"
+ },
+ {
+  "repo": "mem0ai/mem0",
+  "pr": 7322,
+  "head": "c043e97673c3ba6cba52375d94ce8fa14a14115f",
+  "base": "c7ee362aff94a369af70f13f2b4f853f6793ff4c",
+  "stars": 67605,
+  "group": "agent"
+ },
+ {
+  "repo": "anthropics/claude-plugins-official",
+  "pr": 6808,
+  "head": "dc6c4e2470abdd65ffec47b11fa8273deeed2efe",
+  "base": "ea10b213686c90bb1984b2016937310e05336cf3",
+  "stars": 43677,
+  "group": "agent"
+ },
+ {
+  "repo": "rohitg00/ai-engineering-from-scratch",
+  "pr": 584,
+  "head": "24cb6a4732874972b5dbae660d48f38ce8ee465e",
+  "base": "1c8e62b526e78b8773559594aab3a3487d9998ac",
+  "stars": 72136,
+  "group": "agent"
+ },
+ {
+  "repo": "netbox-community/netbox",
+  "pr": 23347,
+  "head": "e5488523bdeeb882bc2c5458d7507192506503ab",
+  "base": "b390a574eb8237b69363d78db20de190b57d3193",
+  "stars": 21744,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/pytorch-image-models",
+  "pr": 2868,
+  "head": "7575a38c4d377731db72431e652a06e7efafea9b",
+  "base": "877d75468df9508d87dd696ffb6468b1ccdf832f",
+  "stars": 37231,
+  "group": "agent"
+ },
+ {
+  "repo": "emmabostian/developer-portfolios",
+  "pr": 4366,
+  "head": "fb863cf9ffaa0daae291b4a6b3b6748494da9805",
+  "base": "a6e8f79e263c65c2089e701c2e33252853cb7fe3",
+  "stars": 27315,
+  "group": "agent"
+ },
+ {
+  "repo": "vllm-project/vllm",
+  "pr": 62652,
+  "head": "fb2c1bf9cc4b21284e2e2931f995bff00bd4ece8",
+  "base": "532a7d19d2ae70b1fd9188d82620d26f028564fb",
+  "stars": 94942,
+  "group": "agent"
+ },
+ {
+  "repo": "github/spec-kit",
+  "pr": 4910,
+  "head": "cecb82ae7b52ccb6afe7b4a5632cfab440a3d599",
+  "base": "0443760542e7e5269724744a2ac55c4bd386d095",
+  "stars": 142329,
+  "group": "agent"
+ },
+ {
+  "repo": "assafelovic/gpt-researcher",
+  "pr": 2154,
+  "head": "c4b5957d792aa3c6057d2bbefbdc11832706287d",
+  "base": "6f998577d547b1e54ec662dac63583aa11e3b84b",
+  "stars": 30230,
+  "group": "agent"
+ },
+ {
+  "repo": "bmad-code-org/BMAD-METHOD",
+  "pr": 3010,
+  "head": "81420751241c57a741bdec04f1cedd663d2c19ca",
+  "base": "6146a2281cfef7b00e4d35c1c2c81d6e4361ff7f",
+  "stars": 54422,
+  "group": "agent"
+ },
+ {
+  "repo": "Alishahryar1/free-claude-code",
+  "pr": 2135,
+  "head": "3f20b3834ee4c8174db69867e25fbe43d846dd38",
+  "base": "f919f46de3aef9b1602e2dc6c164219d4b87a684",
+  "stars": 62481,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/diffusers",
+  "pr": 14967,
+  "head": "7130083cd3f026f1e39ade11dd07b2c23b28ef5b",
+  "base": "c6df88a511a98740646ee55577b590c9852650ce",
+  "stars": 34773,
+  "group": "agent"
+ },
+ {
+  "repo": "hummingbot/hummingbot",
+  "pr": 8417,
+  "head": "a924599dda0c275f0208bd80578bac58ba669b33",
+  "base": "b9f6778fa83a3018cc62d43b736a11ab005e76ff",
+  "stars": 20622,
+  "group": "agent"
+ },
+ {
+  "repo": "deepset-ai/haystack",
+  "pr": 12942,
+  "head": "85a51f1e04047bf462b3b2a3449bff54a579abb8",
+  "base": "d9d5686b317299b366238fa0e89c3e33bee97fbc",
+  "stars": 26804,
+  "group": "agent"
+ },
+ {
+  "repo": "tornadoweb/tornado",
+  "pr": 3749,
+  "head": "66e9c1e631461fdd76095681b33ed686cb0a2166",
+  "base": "d2bd3a854e16c47d4a16b68ab92207ec2cd9b51b",
+  "stars": 22168,
+  "group": "agent"
+ },
+ {
+  "repo": "PostHog/posthog",
+  "pr": 121341,
+  "head": "3fe3b58d72e41b97d524e0c01bd11e4281824c1f",
+  "base": "ac63f82b8ddf1862317eda08457bd048ce962c47",
+  "stars": 40378,
+  "group": "agent"
+ },
+ {
+  "repo": "mem0ai/mem0",
+  "pr": 7325,
+  "head": "aa123e779a563e7547e0e01c1f1a9582345f8f3e",
+  "base": "33629990956ca6336501deea2e9cd625e5fe09af",
+  "stars": 67605,
+  "group": "agent"
+ },
+ {
+  "repo": "pydantic/pydantic-ai",
+  "pr": 10845,
+  "head": "123455d880d112f1bd713d793630bed06b57bf31",
+  "base": "1e4d35195218af5814f493e40746c736884c738e",
+  "stars": 20774,
+  "group": "agent"
+ },
+ {
+  "repo": "VectifyAI/PageIndex",
+  "pr": 492,
+  "head": "d1f133cdf3be66bf2ec7af9ea8bad366917332c1",
+  "base": "ae169566b3148792776531d987f543edcad92321",
+  "stars": 39439,
+  "group": "agent"
+ },
+ {
+  "repo": "nesquena/hermes-webui",
+  "pr": 8150,
+  "head": "a56591e41d65de4377b00c53f92869863748db53",
+  "base": "fd0141fa196fe832171c9c0551bbb8205b6412d4",
+  "stars": 19090,
+  "group": "agent"
+ },
+ {
+  "repo": "davila7/claude-code-templates",
+  "pr": 1242,
+  "head": "81e4cc059280ead005df806d6667ae562b4a6156",
+  "base": "1d8f458687e05a99463f79ef6d6de0d25354bde6",
+  "stars": 32817,
+  "group": "agent"
+ },
+ {
+  "repo": "langchain-ai/deepagents",
+  "pr": 6164,
+  "head": "6e344cb982a012f11265d9c98181cec450643d06",
+  "base": "99fc61a44f9ad8a42c43396d0887a3e948262634",
+  "stars": 30487,
+  "group": "agent"
+ },
+ {
+  "repo": "keras-team/keras",
+  "pr": 23860,
+  "head": "2d30a7942366cffdbf7b9e1f44e88dd0e8d0b6fa",
+  "base": "e32e4a18b0fd1b5e88c652e333211ae46bff5cf4",
+  "stars": 64377,
+  "group": "agent"
+ },
+ {
+  "repo": "langchain-ai/deepagents",
+  "pr": 6147,
+  "head": "b62ba55668b30f8f1b8d02093126bc94ca008035",
+  "base": "469b0a5a5e5e5a9b1a55a2666f61d389b48720cf",
+  "stars": 30487,
+  "group": "agent"
+ },
+ {
+  "repo": "Genesis-Embodied-AI/genesis-world",
+  "pr": 3431,
+  "head": "8ff1fc406493aa544cf3285dfcce8ce0094f67b1",
+  "base": "6b0a0b4f3d626c17aa7e2c7a754512336a611929",
+  "stars": 30105,
+  "group": "agent"
+ },
+ {
+  "repo": "headroomlabs-ai/headroom",
+  "pr": 4235,
+  "head": "d2f8582f974a80023ea9dae1ccd4b6e56f88c6f7",
+  "base": "df11f2749862a0090db11f7fca3e7dc42a75b612",
+  "stars": 77321,
+  "group": "agent"
+ },
+ {
+  "repo": "netbox-community/netbox",
+  "pr": 23384,
+  "head": "7d666588d7913b371ac868353bd028fdcba8393c",
+  "base": "1c729ae666512cdde6f40b09a68392a1e8e5c62d",
+  "stars": 21744,
+  "group": "agent"
+ },
+ {
+  "repo": "freqtrade/freqtrade",
+  "pr": 13678,
+  "head": "d9d1644c9897a853d2d404339d49e52830d7d974",
+  "base": "07ef2d4e93ed5f62cf6625ae29c347df4775bb8e",
+  "stars": 55717,
+  "group": "agent"
+ },
+ {
+  "repo": "mem0ai/mem0",
+  "pr": 7324,
+  "head": "afc3d02a805613e0f0535a755d37b22dab97d8c2",
+  "base": "012cd32c3a5a8d1cbd3eccc3f71a62fa29e9ff26",
+  "stars": 67605,
+  "group": "agent"
+ },
+ {
+  "repo": "mlflow/mlflow",
+  "pr": 26960,
+  "head": "05ee6a8ceb36516249ac4515ed2f2b21de2d80c6",
+  "base": "9800fd1548d1de030e3c7cc34f296ff3e895c215",
+  "stars": 28482,
+  "group": "agent"
+ },
+ {
+  "repo": "NandhaKishorM/laya",
+  "pr": 718,
+  "head": "ecd3f9ef9ee6e155197f2fd9c4c0e53a5fe71602",
+  "base": "9d955671415fc19f069b9cc998928075c1f255ec",
+  "stars": 33881,
+  "group": "agent"
+ },
+ {
+  "repo": "calesthio/OpenMontage",
+  "pr": 534,
+  "head": "45f45855da1f592bd1dd989f14e72c15c63e5e2b",
+  "base": "1bab711820828c2e5fc1f87ed274a32587cb048f",
+  "stars": 70646,
+  "group": "agent"
+ },
+ {
+  "repo": "virgiliojr94/book-to-skill",
+  "pr": 202,
+  "head": "b88757d80599821ab5d6cf1447c3992424f76378",
+  "base": "9c207f870adebe20ade4f7d2f11bc3d759c2fd88",
+  "stars": 35630,
+  "group": "agent"
+ },
+ {
+  "repo": "pydantic/pydantic-ai",
+  "pr": 10901,
+  "head": "ae130f92b02b1945a291fdee743b0a9567d71d29",
+  "base": "2242fbfb9f56fa4416908ad38b119357eef70823",
+  "stars": 20774,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/peft",
+  "pr": 3950,
+  "head": "8b13a55eb8602459fd16afc1d61a2b979559c1b3",
+  "base": "8314d7c8606a901953261c5582d1bdc98dacd6be",
+  "stars": 21823,
+  "group": "agent"
+ },
+ {
+  "repo": "chidiwilliams/buzz",
+  "pr": 1653,
+  "head": "b4e229172de5db1b8ecf059bf0be42e826442fb2",
+  "base": "851c8b359343db8c9460aa15ee59a40f2ab66aa8",
+  "stars": 22134,
+  "group": "agent"
+ },
+ {
+  "repo": "hummingbot/hummingbot",
+  "pr": 8448,
+  "head": "178a3f08b2d63d249071ce3b7ec85af39478bef2",
+  "base": "4d24a8fcacbcc1185d765c1d480ac65340d438cb",
+  "stars": 20622,
+  "group": "agent"
+ },
+ {
+  "repo": "Dao-AILab/flash-attention",
+  "pr": 2911,
+  "head": "0e0e386afaf483331dbc15ffad6f86c497ffbc4c",
+  "base": "2cb0a8e4710d6472fb1e0c5187af27cae6ed9ec2",
+  "stars": 25184,
+  "group": "agent"
+ },
+ {
+  "repo": "agno-agi/agno",
+  "pr": 11122,
+  "head": "33f7f8e7acb1ff13ab9e28b63efe7b6a2ebe8e33",
+  "base": "c874272dfa52af8ca8546d477c2db2052bbfdbe0",
+  "stars": 42853,
+  "group": "agent"
+ },
+ {
+  "repo": "ScrapeGraphAI/Scrapegraph-ai",
+  "pr": 1135,
+  "head": "f91478eacf86485f6b9efcf843fc0c815dde1ec5",
+  "base": "decfc6bb6eb10a29ed6aaabb07244b8915042604",
+  "stars": 32106,
+  "group": "agent"
+ },
+ {
+  "repo": "rohitg00/ai-engineering-from-scratch",
+  "pr": 395,
+  "head": "fcf1e5a76462842ccb1f07f6a4d075d59bc9f767",
+  "base": "6b10711e7ba7950c682cc0167020d84bbec210fc",
+  "stars": 72136,
+  "group": "agent"
+ },
+ {
+  "repo": "netbox-community/netbox",
+  "pr": 23298,
+  "head": "474b99fde999a2e5cdc16c08ba9238397c0ed1e8",
+  "base": "573f0e47b827be07080fe600eed6ecaa5362572a",
+  "stars": 21744,
+  "group": "agent"
+ },
+ {
+  "repo": "unslothai/unsloth",
+  "pr": 13481,
+  "head": "aeabef464225dd8e71515ddc7505736eb92d4dfc",
+  "base": "59ab069b54118cb6971ce79ad3dddce0029a83a4",
+  "stars": 78387,
+  "group": "agent"
+ },
+ {
+  "repo": "vectorize-io/hindsight",
+  "pr": 5693,
+  "head": "972279d86e1892d6c29c64ae3c030c361087e508",
+  "base": "11cf2c1a4796caea4da68e4acdb97673664ae53d",
+  "stars": 52432,
+  "group": "agent"
+ },
+ {
+  "repo": "ray-project/ray",
+  "pr": 67212,
+  "head": "36497a6f6b4c987e07aad8422f341650d038fde5",
+  "base": "e8a2fd42631dd6342914c2ae5b5ac21671d69522",
+  "stars": 44101,
+  "group": "agent"
+ },
+ {
+  "repo": "saleor/saleor",
+  "pr": 19913,
+  "head": "3f3da6d5a10e40862a0d1b01b6509816f3dde1ad",
+  "base": "925b69959a97c9deda7cdc85092494896d0aa1f4",
+  "stars": 23461,
+  "group": "agent"
+ },
+ {
+  "repo": "apache/airflow",
+  "pr": 75090,
+  "head": "fa9a7350c3b754fcff2b05589c1ecd6c88fe527d",
+  "base": "e36ff39c8c7a59c36739942206728b8d01a5f747",
+  "stars": 47252,
+  "group": "agent"
+ },
+ {
+  "repo": "blakeblackshear/frigate",
+  "pr": 24709,
+  "head": "ee64b71ab5685af3cd97aa0f1e3e3aec1e030abb",
+  "base": "aa42b17911e83b3d1a863b74bb1990cc773ab791",
+  "stars": 36809,
+  "group": "agent"
+ },
+ {
+  "repo": "HKUDS/DeepTutor",
+  "pr": 1911,
+  "head": "cedd060ac17eb6616a8c316b84bce65aaad930da",
+  "base": "e0bd867db1bc384f806ae1d838d6835969367bcf",
+  "stars": 42042,
+  "group": "agent"
+ },
+ {
+  "repo": "tornadoweb/tornado",
+  "pr": 3811,
+  "head": "d81e63006ee3727b0a486310f072192155255444",
+  "base": "1031a93d75c0fcdc00aa109b0a17056474e79029",
+  "stars": 22168,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/diffusers",
+  "pr": 14988,
+  "head": "7035d25d168d32da3c167aa4697cc53d495fe700",
+  "base": "08d69774f08f19ae903f97bc393a8abdeafc98aa",
+  "stars": 34773,
+  "group": "agent"
+ },
+ {
+  "repo": "vllm-project/vllm",
+  "pr": 62745,
+  "head": "a75389bd5bd2766ecfa552defa31071322d59332",
+  "base": "fc9b7e654643844c1fd17fd54fcd86be86f67e2b",
+  "stars": 94942,
+  "group": "agent"
+ },
+ {
+  "repo": "pypa/pipenv",
+  "pr": 6734,
+  "head": "fdb8f072716d6cb98566439a17e9233891f9d037",
+  "base": "ca91943611d36b4d820c7d40fd98f56e9db62d45",
+  "stars": 25021,
+  "group": "agent"
+ },
+ {
+  "repo": "goauthentik/authentik",
+  "pr": 25204,
+  "head": "85e6c0bb24346ce4f28d59a0eb46e382987666b7",
+  "base": "57c36af9cdb1056f29cc7a5071ffb9a12c59ea59",
+  "stars": 26036,
+  "group": "agent"
+ },
+ {
+  "repo": "calesthio/OpenMontage",
+  "pr": 776,
+  "head": "149bf10293055e2e0b621f6e0811fca741fa3cdd",
+  "base": "9327439db69021ab4b0e2776729bf3b58fdb5a87",
+  "stars": 70646,
+  "group": "agent"
+ },
+ {
+  "repo": "pypa/pipenv",
+  "pr": 6750,
+  "head": "075094913408b836b34d894c7327007b8c8470f2",
+  "base": "56c31ad1a187d455e3b455e1c4a5ce1c757f9417",
+  "stars": 25021,
+  "group": "agent"
+ },
+ {
+  "repo": "zylon-ai/private-gpt",
+  "pr": 2404,
+  "head": "21793829b54651c0f999546dec55ba7e300c7aa4",
+  "base": "3cefd532cb6cccf65065af5e873c44bdca71e4d4",
+  "stars": 57602,
+  "group": "agent"
+ },
+ {
+  "repo": "ocrmypdf/OCRmyPDF",
+  "pr": 1732,
+  "head": "040c83fdcb29de90b57a0cff26bb4569e8404b66",
+  "base": "62b42095eca831faaa3c84ddb699674788c4c1b7",
+  "stars": 35116,
+  "group": "agent"
+ },
+ {
+  "repo": "jundot/omlx",
+  "pr": 4676,
+  "head": "ac816b8024e47946cc4da5d82b2cdea83f2d9b27",
+  "base": "85d299585d95129a525b10ce683937bd88a02f50",
+  "stars": 22980,
+  "group": "agent"
+ },
+ {
+  "repo": "guillaumemeyer/watermarks-remover",
+  "pr": 133,
+  "head": "4704fe19d43e52e55a296c30ac171637822a14ff",
+  "base": "1cc278342ea9d9d2a78dd2768def20df279f4b7b",
+  "stars": 24616,
+  "group": "agent"
+ },
+ {
+  "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+  "pr": 526,
+  "head": "296bf1cd36ec6349c6bbb0bed5a0b90bd7249e78",
+  "base": "67803eac81607188194aea9842a723b89326d90d",
+  "stars": 138552,
+  "group": "agent"
+ },
+ {
+  "repo": "NandhaKishorM/laya",
+  "pr": 726,
+  "head": "bc875da7e6a0d1b966875721459854e756c254bd",
+  "base": "6d942c92081fbc139e736bbd9ac0023223c29b7f",
+  "stars": 33881,
+  "group": "agent"
+ },
+ {
+  "repo": "wagtail/wagtail",
+  "pr": 14478,
+  "head": "6eb15274a9bc5bd8866816ded51d879653ec0e02",
+  "base": "89bfc39470960e8cf40fc90fa0d8869b21f76aa3",
+  "stars": 20583,
+  "group": "agent"
+ },
+ {
+  "repo": "usestrix/strix",
+  "pr": 893,
+  "head": "aceccb13bdfe11313ddd2b5dde6511aead96cc91",
+  "base": "427cdcd9d46595743881c80e253219f187b73ca0",
+  "stars": 70847,
+  "group": "agent"
+ },
+ {
+  "repo": "langgenius/dify",
+  "pr": 44458,
+  "head": "9e6f72fb14cbc86e6779f5bdfeade396946e9d00",
+  "base": "e7c2c6fad5ac08364b51578da676a98469edd97f",
+  "stars": 159176,
+  "group": "agent"
+ },
+ {
+  "repo": "PrefectHQ/prefect",
+  "pr": 23240,
+  "head": "3f959c4d4c40ee889483580712b415fd1d5db825",
+  "base": "5b6d85e793dc9c6a3e310841ad16a00369f231d5",
+  "stars": 24059,
+  "group": "agent"
+ },
+ {
+  "repo": "NousResearch/hermes-agent",
+  "pr": 138917,
+  "head": "ce066dd2fdbbcfb3b752fe9e2664419d4e084d0d",
+  "base": "7bda2a3368024f7ae1c70cef16583e7c2c891674",
+  "stars": 255997,
+  "group": "agent"
+ },
+ {
+  "repo": "jundot/omlx",
+  "pr": 4708,
+  "head": "920f5376be51c31cc38160946a3064bf7d9544da",
+  "base": "8b7e7018cb6f824c55f666aab817db4613e86bd7",
+  "stars": 22980,
+  "group": "agent"
+ },
+ {
+  "repo": "crewAIInc/crewAI",
+  "pr": 8326,
+  "head": "8941b629792472dd175ef924ae73d1761bcef58a",
+  "base": "94508c971f026543c6196d7e62c3545cfbc9ea68",
+  "stars": 59965,
+  "group": "agent"
+ },
+ {
+  "repo": "PostHog/posthog",
+  "pr": 121773,
+  "head": "c1ebbb9bbf320a24b51f65451d5bd62fc1482e31",
+  "base": "da492be577e15fcd219c02eb25f30f8d350e4f5b",
+  "stars": 40378,
+  "group": "agent"
+ },
+ {
+  "repo": "vectorize-io/hindsight",
+  "pr": 5700,
+  "head": "bf0c48535741fc19f6426284bda457cb5a4d364b",
+  "base": "dbb86c9047030354d159e0e0c09ab43a660a823b",
+  "stars": 52432,
+  "group": "agent"
+ },
+ {
+  "repo": "vllm-project/vllm",
+  "pr": 62884,
+  "head": "adabbc53c2e0489de71816277629e6a33ef12779",
+  "base": "c1210ccbe5eab9ad5ee1213f0fc09c3ff13e4bea",
+  "stars": 94942,
+  "group": "agent"
+ },
+ {
+  "repo": "docling-project/docling",
+  "pr": 4697,
+  "head": "953498e5ed2551ac4c66475aec2bc961689cbf87",
+  "base": "3181d9fcbb8b7568ceba14b7ed5cd21f66b221e7",
+  "stars": 69312,
+  "group": "agent"
+ },
+ {
+  "repo": "apache/superset",
+  "pr": 45507,
+  "head": "da1d2cac03ba4a23ea2b425387beda36038cc998",
+  "base": "152e1e9de9a9e7d157e38ea99256068df621f76d",
+  "stars": 75245,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/lerobot",
+  "pr": 5023,
+  "head": "a690fb52aca57a581cc02c0d8b571ccea4bf5a42",
+  "base": "463202b1b005e8802343a282661eb26ef27a160c",
+  "stars": 28376,
+  "group": "agent"
+ },
+ {
+  "repo": "blakeblackshear/frigate",
+  "pr": 24734,
+  "head": "39567b37ebcca7aeeb7d330741e01438f182c08c",
+  "base": "dc116ecaf466ab4c71ffbe148c80256b61a05bcd",
+  "stars": 36809,
+  "group": "agent"
+ },
+ {
+  "repo": "home-assistant/core",
+  "pr": 187846,
+  "head": "a3b8a3266913f38076b8178bfe428fc43adb6655",
+  "base": "ac7144a91a227e63f8b21284057d0c79f6cbeb23",
+  "stars": 91643,
+  "group": "agent"
+ },
+ {
+  "repo": "nextlevelbuilder/ui-ux-pro-max-skill",
+  "pr": 500,
+  "head": "79b64af0f967dc9674a731bf235e7f34e1484dec",
+  "base": "15de38fb70bc80ae9276fa7703b48ae861a672e6",
+  "stars": 138552,
+  "group": "agent"
+ },
+ {
+  "repo": "apache/airflow",
+  "pr": 75219,
+  "head": "a1489a0553ddbaa782ea893c9332268dfdc284bb",
+  "base": "d8bae18d50922cca60b1d78c5de52816845ceb03",
+  "stars": 47252,
+  "group": "agent"
+ },
+ {
+  "repo": "github/spec-kit",
+  "pr": 5033,
+  "head": "611451d3b438b159a60c343043da896aa910c3e5",
+  "base": "f68ffcab37a253d42a226bc9bcf4fef451efa38c",
+  "stars": 142329,
+  "group": "agent"
+ },
+ {
+  "repo": "harry0703/MoneyPrinterTurbo",
+  "pr": 1600,
+  "head": "788c93e6d068ce105075dc3177f7d4d0d1934f65",
+  "base": "7c80ca0b14407966a4fa3cc5bfc428868b186f5f",
+  "stars": 133821,
+  "group": "agent"
+ },
+ {
+  "repo": "PostHog/posthog",
+  "pr": 121379,
+  "head": "4a2e04ba0f76000043e9115b654c4df304a08cc6",
+  "base": "2f9f8125528604f07b988e1685c0223ef5958037",
+  "stars": 40378,
+  "group": "agent"
+ },
+ {
+  "repo": "stanfordnlp/dspy",
+  "pr": 10637,
+  "head": "e8bcbf0a535e72d7c11650f4466e74cc70a7d749",
+  "base": "da9211ae00d2d40cb7450393feb3373962276226",
+  "stars": 38725,
+  "group": "agent"
+ },
+ {
+  "repo": "pypa/pipenv",
+  "pr": 6733,
+  "head": "06a5f203fa038b0333d370e320c26959ab9265a7",
+  "base": "97625022b58c69e0bdef220e96bd5252a6ba537b",
+  "stars": 25021,
+  "group": "agent"
+ },
+ {
+  "repo": "harry0703/MoneyPrinterTurbo",
+  "pr": 1645,
+  "head": "1e5682a7cfb2c6e48848781d59216bcacbb9d30c",
+  "base": "bbe7eb9ae3e7a44f4553070b82d4a126aad62a33",
+  "stars": 133821,
+  "group": "agent"
+ },
+ {
+  "repo": "matplotlib/matplotlib",
+  "pr": 32252,
+  "head": "6bd17d5e0b9541621115294b873ccf798ac7e813",
+  "base": "767a08929542f6174579c3c61aacce91d647ff13",
+  "stars": 23386,
+  "group": "agent"
+ },
+ {
+  "repo": "calesthio/OpenMontage",
+  "pr": 761,
+  "head": "241a451a48434a1b1db5da365d533088c837aeb8",
+  "base": "9327439db69021ab4b0e2776729bf3b58fdb5a87",
+  "stars": 70646,
+  "group": "agent"
+ },
+ {
+  "repo": "eosphoros-ai/DB-GPT",
+  "pr": 3140,
+  "head": "7b05c3d5c9a03b890bb64471dd6556cff10beaba",
+  "base": "100acd76f9510d4e974707bb11a63f71d957d431",
+  "stars": 20178,
+  "group": "agent"
+ },
+ {
+  "repo": "ultralytics/ultralytics",
+  "pr": 26698,
+  "head": "034c5942bf9c24168224a297ef48975e2387f07d",
+  "base": "2849d4f03f63e114382026bab3f68cf52d9c9a1e",
+  "stars": 62722,
+  "group": "agent"
+ },
+ {
+  "repo": "github/spec-kit",
+  "pr": 4870,
+  "head": "6744336dc35e296b76e7b97451c14fc48155d4df",
+  "base": "90d65f815c76ec9941dc6ac22ee617c0a617a62c",
+  "stars": 142329,
+  "group": "agent"
+ },
+ {
+  "repo": "vectorize-io/hindsight",
+  "pr": 5807,
+  "head": "c7ea83840f07f8a35563e42f91d904418f3e36a5",
+  "base": "31520cab0bf98573c70f1d2fa133c0ac09c15271",
+  "stars": 52432,
+  "group": "agent"
+ },
+ {
+  "repo": "Genesis-Embodied-AI/genesis-world",
+  "pr": 3162,
+  "head": "cecb866bd3338ff9e591082ccf3f745f7adc17cd",
+  "base": "d6035922b387b591f785cc631bb7532f2054146e",
+  "stars": 30105,
+  "group": "agent"
+ },
+ {
+  "repo": "apache/superset",
+  "pr": 45424,
+  "head": "a56beee8d271e32ad9fec91a2e4ee75252b694c5",
+  "base": "5eaad449f5c2b96a4efdd93beeba83664bf00467",
+  "stars": 75245,
+  "group": "agent"
+ },
+ {
+  "repo": "apache/airflow",
+  "pr": 75231,
+  "head": "82fc5c6fb106870e2f7dea11ee382f3635052b99",
+  "base": "deac01079db427cf0ddc5004664ad94c2b7a9347",
+  "stars": 47252,
+  "group": "agent"
+ },
+ {
+  "repo": "openai/openai-agents-python",
+  "pr": 4143,
+  "head": "1963cffd1f04bfa8191b75d7a4414c9085fef84e",
+  "base": "bdc294fcd446718060b3444c2894c8b3d39fae56",
+  "stars": 30209,
+  "group": "agent"
+ },
+ {
+  "repo": "topoteretes/cognee",
+  "pr": 6118,
+  "head": "3b2ec85d9d2b59eeff3df7b1123df2420b2f5314",
+  "base": "5432ede702db4c0d6f012bfe82d9b478b494819b",
+  "stars": 32640,
+  "group": "agent"
+ },
+ {
+  "repo": "python/cpython",
+  "pr": 159687,
+  "head": "c45a20e8427a9aa57c9bc03c7fbbe57c9637c1bb",
+  "base": "7dbc7975db8e34db8be8e4a10bd10784ab49b07a",
+  "stars": 77729,
+  "group": "agent"
+ },
+ {
+  "repo": "HKUDS/RAG-Anything",
+  "pr": 386,
+  "head": "05d9047d0c51758d150d85eb5bd6e2ed1ab4c8aa",
+  "base": "bfed0c6ecfbb98cb70d7e8f5aa8bc9afe5e02803",
+  "stars": 23975,
+  "group": "agent"
+ },
+ {
+  "repo": "ScrapeGraphAI/Scrapegraph-ai",
+  "pr": 1128,
+  "head": "cb8f9b58e0e9a7c27b2178a4818e6cdd5f9f07a1",
+  "base": "ca112db4d8b1bd34961e9f1b7e3adf0c7d600c01",
+  "stars": 32106,
+  "group": "agent"
+ },
+ {
+  "repo": "docling-project/docling",
+  "pr": 4208,
+  "head": "1fc4325668fc688e04439002753ce3eebfad2656",
+  "base": "9a2c3e775051f2e19de7f70b04b7241ac95c70fc",
+  "stars": 69312,
+  "group": "agent"
+ },
+ {
+  "repo": "keras-team/keras",
+  "pr": 23938,
+  "head": "11c303e38e59f244a3239b5b79d62f31ed3b9e23",
+  "base": "c476319e96ef85200add614e8c5eb762091da368",
+  "stars": 64377,
+  "group": "agent"
+ },
+ {
+  "repo": "AgriciDaniel/claude-seo",
+  "pr": 299,
+  "head": "1d2299dd8d70b0acf125826e0ecc042db9c4ba2e",
+  "base": "a1480c7e590b16001bd9dc1627eacdcd44d580f9",
+  "stars": 19610,
+  "group": "agent"
+ },
+ {
+  "repo": "bmad-code-org/BMAD-METHOD",
+  "pr": 2986,
+  "head": "1d2be4237c446d39df268ded7b98122b65a958b4",
+  "base": "c7717b7d657a48a340d42a29910dbd5571823040",
+  "stars": 54422,
+  "group": "agent"
+ },
+ {
+  "repo": "ayghri/i-have-adhd",
+  "pr": 97,
+  "head": "589882c62065ee1fecd04fadd5ede8daaa89073a",
+  "base": "d05af1e4ac2259846e81686d14180d46d84acc2d",
+  "stars": 58179,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/diffusers",
+  "pr": 15015,
+  "head": "9795c51647bcb44cb6449c07cf254204830296b3",
+  "base": "1628cb1c331741b64f67c97209ab49018e71ac70",
+  "stars": 34773,
+  "group": "agent"
+ },
+ {
+  "repo": "exo-explore/exo",
+  "pr": 2420,
+  "head": "df061218c24b640b9c314de4252b699f5ecc25b8",
+  "base": "439fba74ad0f63379015760ac641e103732ea46c",
+  "stars": 48004,
+  "group": "agent"
+ },
+ {
+  "repo": "wagtail/wagtail",
+  "pr": 14696,
+  "head": "d06e45a683a650b790bccfb205d89b3ddbe58b35",
+  "base": "14222af93b4267151cf0eb260b581bbaad119f06",
+  "stars": 20583,
+  "group": "agent"
+ },
+ {
+  "repo": "onnx/onnx",
+  "pr": 8366,
+  "head": "5e569084308eca349aac0c920f43217bcc061830",
+  "base": "7ccb2e9973d90dc14fde7ca45bfce31849b51256",
+  "stars": 21607,
+  "group": "agent"
+ },
+ {
+  "repo": "browser-use/video-use",
+  "pr": 183,
+  "head": "ca5922b7a24b72a72027296ffddbd3cb34ed76ec",
+  "base": "9575612f066aa517354790a645fd90f9f95a743b",
+  "stars": 29491,
+  "group": "agent"
+ },
+ {
+  "repo": "titanwings/distilly",
+  "pr": 208,
+  "head": "e8c03d1e082e1529da80d15922e76a97e640a83d",
+  "base": "2caf58e9fc36ac063846d61c9a2feb0ffd334aa7",
+  "stars": 25888,
+  "group": "agent"
+ },
+ {
+  "repo": "pandas-dev/pandas",
+  "pr": 71228,
+  "head": "17cabaa6df91af19758d46981aa73d30bc8125dd",
+  "base": "92c879b4bf2422cefce6557152169c3018320da0",
+  "stars": 50241,
+  "group": "agent"
+ },
+ {
+  "repo": "NandhaKishorM/laya",
+  "pr": 1050,
+  "head": "98a7b4db0447fd407bc22d4ffd4d3d15a1f76a2e",
+  "base": "3cf26cbcb18725dbc2d127bb8bb2c4c43243ae63",
+  "stars": 33881,
+  "group": "agent"
+ },
+ {
+  "repo": "ray-project/ray",
+  "pr": 67023,
+  "head": "1d371eaafde85676cb8bd0d40c3fe2bc6ee4bf51",
+  "base": "ad6b5bd061e6b064b972a59ded9af17612e1d13c",
+  "stars": 44101,
+  "group": "agent"
+ },
+ {
+  "repo": "verl-project/verl",
+  "pr": 8064,
+  "head": "46126ff41375af01e6c6961c89870218e002914a",
+  "base": "3084c2617c9f26defba704359cdd89c9cca0060e",
+  "stars": 23969,
+  "group": "agent"
+ },
+ {
+  "repo": "psf/black",
+  "pr": 5492,
+  "head": "bbf7b3235303b1c512355c77965ef71aa147b588",
+  "base": "b801776af42c29333afa644f92023eda5c9c8e39",
+  "stars": 41972,
+  "group": "agent"
+ },
+ {
+  "repo": "marimo-team/marimo",
+  "pr": 11330,
+  "head": "539f27c32fe68ab48af3d1d000e3f05a7fa25eed",
+  "base": "5f59ef3661b90d0e2f4111fc66cde7ca9c49608b",
+  "stars": 23280,
+  "group": "agent"
+ },
+ {
+  "repo": "numpy/numpy",
+  "pr": 32823,
+  "head": "386c95ac11ea4bbabff45e4698cc3a139c5eec43",
+  "base": "bf1d21d29ca0d1b1ea58eec18930897a6ccc8f7b",
+  "stars": 33087,
+  "group": "agent"
+ },
+ {
+  "repo": "NousResearch/hermes-agent",
+  "pr": 142139,
+  "head": "3d68ef5ac6bb6a247447b93e72c5ab1103d685a1",
+  "base": "0319e113c9602b86ffda350e931cb4b035e1d5d8",
+  "stars": 255997,
+  "group": "agent"
+ },
+ {
+  "repo": "docling-project/docling",
+  "pr": 4085,
+  "head": "ceaf640c3b6b02b4e8056eb69d93bad6c27fdaf3",
+  "base": "c09ddfabff27b1ba6217ab47e207cb646b4ba023",
+  "stars": 69312,
+  "group": "agent"
+ },
+ {
+  "repo": "streamlit/streamlit",
+  "pr": 17580,
+  "head": "adfcb7e7139daebe919dc35132e44064f00efa95",
+  "base": "b7bab178bb9bfccb157e6b7eb604b45da40a6152",
+  "stars": 46078,
+  "group": "agent"
+ },
+ {
+  "repo": "ahujasid/mcp-for-blender",
+  "pr": 398,
+  "head": "20d86617fd92e6f83ad2ede3fd74bad656c4755e",
+  "base": "7a0373ec9199183cb460068c4f96aed9c579fb4f",
+  "stars": 31912,
+  "group": "agent"
+ },
+ {
+  "repo": "Dao-AILab/flash-attention",
+  "pr": 2755,
+  "head": "03146294c44e3a0cf660c837f8f8621890cea9b5",
+  "base": "df61ab6c4a0fb1f94f1f43b2a23479a0ab92b8ab",
+  "stars": 25184,
+  "group": "agent"
+ },
+ {
+  "repo": "exo-explore/exo",
+  "pr": 2393,
+  "head": "c459bd33b7640e07dd0bf3a3638d705e47e30544",
+  "base": "4cc91000d14a9b4dfae6bf46815b5ff6135ce379",
+  "stars": 48004,
+  "group": "agent"
+ },
+ {
+  "repo": "agentscope-ai/agentscope",
+  "pr": 2616,
+  "head": "81c2e0af43b6867cdaf984e2acdad817095883df",
+  "base": "132446ca7892c975860a4f4153cd8a5429f8e181",
+  "stars": 33612,
+  "group": "agent"
+ },
+ {
+  "repo": "modelcontextprotocol/python-sdk",
+  "pr": 3073,
+  "head": "f978b6890c4ca891ed5b6bd9360000eb6a4600dc",
+  "base": "74a242ae7f52aee21cce7128a54ae8522c2f7c50",
+  "stars": 24636,
+  "group": "agent"
+ },
+ {
+  "repo": "ray-project/ray",
+  "pr": 67094,
+  "head": "947e832da94e439d1f591d6a0456c7a90ec8918c",
+  "base": "8f2cbc53d4732fbc398ca745db703aede8b60102",
+  "stars": 44101,
+  "group": "agent"
+ },
+ {
+  "repo": "dgtlmoon/changedetection.io",
+  "pr": 4421,
+  "head": "e93e45d7cf49d7533d27fe6961b969dc0accee7f",
+  "base": "7ded3fd5759b593105a8fe8c7cd31ba34519f843",
+  "stars": 35196,
+  "group": "agent"
+ },
+ {
+  "repo": "danielgatis/rembg",
+  "pr": 858,
+  "head": "203f972fff77dc4291d5d763268ab3d32a326495",
+  "base": "5282f22be6f70457410a2860dfbb75c478ee442e",
+  "stars": 25153,
+  "group": "agent"
+ },
+ {
+  "repo": "Comfy-Org/ComfyUI",
+  "pr": 16722,
+  "head": "03a91b7e34165c2bc43e484d712ce8a21baef447",
+  "base": "5c460d8172fe30761ff67c0df3d5643bb74e0d70",
+  "stars": 141619,
+  "group": "agent"
+ },
+ {
+  "repo": "goauthentik/authentik",
+  "pr": 26251,
+  "head": "d1e645a907e92716894864df7536c4afdfa5df83",
+  "base": "095195c79535a360d5c4185d24a197f80e5c24d2",
+  "stars": 26036,
+  "group": "agent"
+ },
+ {
+  "repo": "saleor/saleor",
+  "pr": 19820,
+  "head": "ee9b79d84e646e37eb13a80f117b65c1a6d5f26a",
+  "base": "88e7a46c704817aa6d40ed5d653d2efb2ade7890",
+  "stars": 23461,
+  "group": "agent"
+ },
+ {
+  "repo": "chidiwilliams/buzz",
+  "pr": 1658,
+  "head": "a31260f61439ed0e0bc14324ffb58cb09626831a",
+  "base": "c02e63f60a615538cd7fb8ca9913998d82d68507",
+  "stars": 22134,
+  "group": "agent"
+ },
+ {
+  "repo": "modelcontextprotocol/python-sdk",
+  "pr": 3354,
+  "head": "5faa8fe92db8f22f4b3944f964ecf68e81d7e008",
+  "base": "57394b0548d1e2dc2dce8d67d84985769df3b8bb",
+  "stars": 24636,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/datasets",
+  "pr": 8777,
+  "head": "80f08a6385c122698ed5ec7f914746409968cf51",
+  "base": "9e7496a4d11caf68da2846d84c9596cda4a4f984",
+  "stars": 22080,
+  "group": "agent"
+ },
+ {
+  "repo": "wagtail/wagtail",
+  "pr": 14695,
+  "head": "14222af93b4267151cf0eb260b581bbaad119f06",
+  "base": "8dd2627bb9c73fbb905fd5e8c1472f460372dbf7",
+  "stars": 20583,
+  "group": "agent"
+ },
+ {
+  "repo": "browser-use/browser-use",
+  "pr": 6091,
+  "head": "9a77953b73baac92e31f3f7f08220fd3ba236824",
+  "base": "4ebe2e60860d105bccfe35c62aefe8bc8992eb21",
+  "stars": 118791,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/trl",
+  "pr": 7446,
+  "head": "c780e4837b8770a74105cf796e3d47027f2fd9d2",
+  "base": "3151505de4a680c3c6e3c3328332c0423564ab22",
+  "stars": 19565,
+  "group": "agent"
+ },
+ {
+  "repo": "Comfy-Org/ComfyUI",
+  "pr": 16884,
+  "head": "dc9abec398eaab5d3a093bc5e339f62c49e1811b",
+  "base": "926d828e37c6f369a3cf3582887da470f7dab515",
+  "stars": 141619,
+  "group": "agent"
+ },
+ {
+  "repo": "titanwings/distilly",
+  "pr": 201,
+  "head": "3d7d41944531ad03a85f83d1496e83d039a5a43b",
+  "base": "0c781a92e551a4a8598cd0e9bba315fc717cbaf6",
+  "stars": 25888,
+  "group": "agent"
+ },
+ {
+  "repo": "python/cpython",
+  "pr": 160124,
+  "head": "e818c8d80f332f8d508d1855084082b5e3fe6e0b",
+  "base": "ed5bcda8ded8de36136a61c32eafb0fe51de7cd3",
+  "stars": 77729,
+  "group": "agent"
+ },
+ {
+  "repo": "verl-project/verl",
+  "pr": 7987,
+  "head": "805870dffe75a5a9e8a468511cde770c55d1e065",
+  "base": "0ed63af8a1e1a36e9cccbb47323c2e4d15cda7f6",
+  "stars": 23969,
+  "group": "agent"
+ },
+ {
+  "repo": "openbq-org/OpenBB",
+  "pr": 7758,
+  "head": "0ec3b9b874dc64165f36639c4dbe8c01b5cdffa0",
+  "base": "7f043343984c5c20082fb5ad63aa89c46f1a3d61",
+  "stars": 74530,
+  "group": "agent"
+ },
+ {
+  "repo": "streamlit/streamlit",
+  "pr": 17565,
+  "head": "f70c549734a43ed96e1b55a30c23f8c26d208382",
+  "base": "63d421a59b322aef7cab22decfca9fe8eef2a41a",
+  "stars": 46078,
+  "group": "agent"
+ },
+ {
+  "repo": "pandas-dev/pandas",
+  "pr": 71232,
+  "head": "d48d368ac32a89221035cdd1b0d34928868c01e1",
+  "base": "9f63a8cc0101a36223ccd308fc2618c67494d932",
+  "stars": 50241,
+  "group": "agent"
+ },
+ {
+  "repo": "roboflow/supervision",
+  "pr": 2741,
+  "head": "23e4558d3391a8e9a9b5746bc7b94fec278109e1",
+  "base": "74c9574beea8ec9c2bc148b53704cf6fb13d447c",
+  "stars": 51260,
+  "group": "agent"
+ },
+ {
+  "repo": "unslothai/unsloth",
+  "pr": 13795,
+  "head": "376036fd23eb1dd9b4664d540ec457af85f8d285",
+  "base": "497841047ca73ce6864ba5da3fa8c7bd6a5189f1",
+  "stars": 78387,
+  "group": "agent"
+ },
+ {
+  "repo": "onnx/onnx",
+  "pr": 8580,
+  "head": "3c12e36e16dd38475dc69ab5c74e03b3bcc518f7",
+  "base": "f69bac74008649557d5c218b1c6cfdf30a646436",
+  "stars": 21607,
+  "group": "agent"
+ },
+ {
+  "repo": "NousResearch/hermes-agent",
+  "pr": 141092,
+  "head": "a729222ab1c8a8c29aa87e75ca432cfdb5affced",
+  "base": "d87e7536e042a9d0668e88d8762769db41018189",
+  "stars": 255997,
+  "group": "agent"
+ },
+ {
+  "repo": "home-assistant/core",
+  "pr": 187840,
+  "head": "a97bb7c23e83d47048e4234ce46e496d769e8c43",
+  "base": "1cb3593ea2af0e3dabcb93ef10470514370bf3d0",
+  "stars": 91643,
+  "group": "agent"
+ },
+ {
+  "repo": "usestrix/strix",
+  "pr": 1021,
+  "head": "6df4795a257897bfd882314998cf78f3ae3d9f41",
+  "base": "58df71d3db449d5a371c680af76ef0197ffd85e9",
+  "stars": 70847,
+  "group": "agent"
+ },
+ {
+  "repo": "numpy/numpy",
+  "pr": 32915,
+  "head": "68cf1e6e3a84af2bdba72c0fbc1cdf0ebad02a32",
+  "base": "286e698f1dcf601648b165f48485ceaeec9c6231",
+  "stars": 33087,
+  "group": "agent"
+ },
+ {
+  "repo": "keras-team/keras",
+  "pr": 23920,
+  "head": "0d87824b0cc3b72f03dc92c0d21699283a1ee2c5",
+  "base": "c476319e96ef85200add614e8c5eb762091da368",
+  "stars": 64377,
+  "group": "agent"
+ },
+ {
+  "repo": "sgl-project/sglang",
+  "pr": 44803,
+  "head": "e77be2416b37dc0ce7ff27b00c4d536e350e0abf",
+  "base": "1dd0f361b83a0f4c5fe917c37fc60525972c26e2",
+  "stars": 37581,
+  "group": "agent"
+ },
+ {
+  "repo": "langflow-ai/langflow",
+  "pr": 15733,
+  "head": "2d8990e9effea760ebe743f161504ebab95268e1",
+  "base": "02745a7f6972a2e9d79a5838a9a9575d814bf4b9",
+  "stars": 155900,
+  "group": "agent"
+ },
+ {
+  "repo": "verl-project/verl",
+  "pr": 8010,
+  "head": "f411fc20687e32eaee11858ba102e2a593cdc38e",
+  "base": "3084c2617c9f26defba704359cdd89c9cca0060e",
+  "stars": 23969,
+  "group": "agent"
+ },
+ {
+  "repo": "crewAIInc/crewAI",
+  "pr": 8308,
+  "head": "10ecff77fd515f173cb21741468035fa833e1567",
+  "base": "78cc9d9e9573442d1313348529e6378412edcbec",
+  "stars": 59965,
+  "group": "agent"
+ },
+ {
+  "repo": "pytorch/pytorch",
+  "pr": 198394,
+  "head": "a47a9ee55ba565804f4723919748f7b2269768c4",
+  "base": "2b3ec34829036a65cd9d1398ea72a0167dc37470",
+  "stars": 104977,
+  "group": "agent"
+ },
+ {
+  "repo": "stanfordnlp/dspy",
+  "pr": 10553,
+  "head": "f1a4611d5252848c78a71f34c44aa8799e1d7e75",
+  "base": "98a4deebcf5dd30c02ea86a5abc46b8ae877111c",
+  "stars": 38725,
+  "group": "agent"
+ },
+ {
+  "repo": "rohitg00/ai-engineering-from-scratch",
+  "pr": 484,
+  "head": "0acae60787ea8bd51e4eab3821103be1c8c2da38",
+  "base": "f6721a0167315118236ed2022ac11936831cce46",
+  "stars": 72136,
+  "group": "agent"
+ },
+ {
+  "repo": "jundot/omlx",
+  "pr": 4716,
+  "head": "eadb9f631ec008cc70824e51e5c97c37a150970c",
+  "base": "8b7e7018cb6f824c55f666aab817db4613e86bd7",
+  "stars": 22980,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/datasets",
+  "pr": 8701,
+  "head": "3a1403b9d1deac72c3c4a66110d5d80b177e7eb4",
+  "base": "a4ee9cf1b9ba07d59766b17c33f91412a69969c4",
+  "stars": 22080,
+  "group": "agent"
+ },
+ {
+  "repo": "AgriciDaniel/claude-seo",
+  "pr": 304,
+  "head": "55c7914a3ed2869b217b5d5f360a4e7ba28b4848",
+  "base": "7652d71c833ef02a89296b24f451823252aec83d",
+  "stars": 19610,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/datasets",
+  "pr": 8354,
+  "head": "219769afd8850574cd614d32fb96c06f67db9f20",
+  "base": "959825da1fcb58ec0151e7fa51628e4bc1bb60ca",
+  "stars": 22080,
+  "group": "agent"
+ },
+ {
+  "repo": "Shubhamsaboo/awesome-llm-apps",
+  "pr": 1240,
+  "head": "c79a506d056b880c982304a953d8a8f7c1ae5040",
+  "base": "8bb9c0ad9dd3bebc348a116d7ae7d7ed7ac3b42c",
+  "stars": 142541,
+  "group": "agent"
+ },
+ {
+  "repo": "harry0703/MoneyPrinterTurbo",
+  "pr": 1387,
+  "head": "85ad45aa8f41aafa5bad3cd471da0b521993f0bd",
+  "base": "552e0ee9fbfb486414731f7177a831121de716df",
+  "stars": 133821,
+  "group": "agent"
+ },
+ {
+  "repo": "marimo-team/marimo",
+  "pr": 10785,
+  "head": "639e79daf74d71091130f93cb838bee4343d037f",
+  "base": "0336d5cfdf1633b01962e451c4ce0493ed90d372",
+  "stars": 23280,
+  "group": "agent"
+ },
+ {
+  "repo": "oraios/serena",
+  "pr": 2079,
+  "head": "b8ae800aec048bcd7b676f936f22fbdb1c775226",
+  "base": "c6fbd1c5932df2494ffa0020af5a9fbe80b82143",
+  "stars": 30586,
+  "group": "agent"
+ },
+ {
+  "repo": "pandas-dev/pandas",
+  "pr": 71334,
+  "head": "51a072cab94bfbebad54405ad209e140244f4c0d",
+  "base": "300c67c223bdadd3b1050a12a7533e938bf8f745",
+  "stars": 50241,
+  "group": "agent"
+ },
+ {
+  "repo": "HKUDS/RAG-Anything",
+  "pr": 418,
+  "head": "efbd76203e656e1c484d01d259dbc8e8c936895a",
+  "base": "1410756a3e84be982529da11da0def2adf538ac8",
+  "stars": 23975,
+  "group": "agent"
+ },
+ {
+  "repo": "earthtojake/text-to-cad",
+  "pr": 665,
+  "head": "a8b839902846ac1c693fa8746d24b6191c767639",
+  "base": "c2061379ad38c32c6990edfb42743011cc7a81ac",
+  "stars": 22324,
+  "group": "agent"
+ },
+ {
+  "repo": "langchain-ai/langchain",
+  "pr": 41246,
+  "head": "60228083b7b1bf745e65e867dbcdddf757e37608",
+  "base": "f295bfef22e9aeb02ad0f79b49883f4b446e4641",
+  "stars": 148235,
+  "group": "agent"
+ },
+ {
+  "repo": "streamlit/streamlit",
+  "pr": 17609,
+  "head": "2f4f98d64eea9cda3993610298a3b728c169f6ab",
+  "base": "cc05b95c3973fe00388d6e490133623d5d063700",
+  "stars": 46078,
+  "group": "agent"
+ },
+ {
+  "repo": "usestrix/strix",
+  "pr": 1375,
+  "head": "ab6824926879e25c7a130805e658dd2c970dc5f9",
+  "base": "0c702723aa4adf2d388b7218510a6207676bb2e0",
+  "stars": 70847,
+  "group": "agent"
+ },
+ {
+  "repo": "Comfy-Org/ComfyUI",
+  "pr": 16898,
+  "head": "4f5d7dc4532c0cf19c593cfe11b4795fdbaff463",
+  "base": "8010b48d2c1be986613f8e8c761527d205bd756f",
+  "stars": 141619,
+  "group": "agent"
+ },
+ {
+  "repo": "oraios/serena",
+  "pr": 2091,
+  "head": "63ede94ce129477dc79e8fb8070fc8ff7bb01de4",
+  "base": "b023b685cfdc5cb021cefcd9a47b52ce0deeeee7",
+  "stars": 30586,
+  "group": "agent"
+ },
+ {
+  "repo": "titanwings/distilly",
+  "pr": 209,
+  "head": "1c593304e6651bbd86f5eb9226398daf5b564fc3",
+  "base": "6fb0ab9074b4b7c4e256fb1a355d5fbeb0d5ca1a",
+  "stars": 25888,
+  "group": "agent"
+ },
+ {
+  "repo": "jax-ml/jax",
+  "pr": 41364,
+  "head": "0ae0195a80d2789b7f0377b0c56501a2bc45df21",
+  "base": "58846e51f5b2a42a00093f097ca5838855273902",
+  "stars": 36482,
+  "group": "agent"
+ },
+ {
+  "repo": "bytedance/deer-flow",
+  "pr": 4769,
+  "head": "d3b0f7e8a243ff0dac59c2f732cbc1925dbac180",
+  "base": "828363705a20dbc2d49f5dc9388c02fef1574c17",
+  "stars": 84261,
+  "group": "agent"
+ },
+ {
+  "repo": "sgl-project/sglang",
+  "pr": 45294,
+  "head": "28eb455f5c54afd254b99f673dfe40ee225f5e74",
+  "base": "8683f8ad4ade22b33eb15414f61602c91850360a",
+  "stars": 37581,
+  "group": "agent"
+ },
+ {
+  "repo": "MemPalace/mempalace",
+  "pr": 2845,
+  "head": "36dbfae99427637a96c46c5d01c7f93f995b7eca",
+  "base": "bc7557e7ce9ac88594286affe3769292e202d777",
+  "stars": 59690,
+  "group": "agent"
+ },
+ {
+  "repo": "ifixai-ai/iFixAi",
+  "pr": 317,
+  "head": "ba3e3367d28d4fbe43ec47c424ad5bc92da39f27",
+  "base": "18078a480b944a943e848737b86a07c857dcee05",
+  "stars": 31788,
+  "group": "agent"
+ },
+ {
+  "repo": "ranaroussi/yfinance",
+  "pr": 2988,
+  "head": "f4ddf5caa166d3d381d330c1e31a25e3f5b6e065",
+  "base": "cbea1cc19d9058fe4266559ad20881f400b8f925",
+  "stars": 25583,
+  "group": "agent"
+ },
+ {
+  "repo": "onnx/onnx",
+  "pr": 8579,
+  "head": "317ea150c46fb946973c19e69cc5fecfaa195701",
+  "base": "23e53940925005b6ffab4d2deac3fbf2e8552146",
+  "stars": 21607,
+  "group": "agent"
+ },
+ {
+  "repo": "home-assistant/core",
+  "pr": 187883,
+  "head": "312a83468d7a788c290ffbf8643f1bc4552a0b73",
+  "base": "29fde5807e681269c1320278a848cf0a30bfd7fd",
+  "stars": 91643,
+  "group": "agent"
+ },
+ {
+  "repo": "ocrmypdf/OCRmyPDF",
+  "pr": 1736,
+  "head": "bbc82ad634c9a661b50f2845d5a4b5152db4e053",
+  "base": "5074a0b0e109362422b768fd271ed84bf717c4ec",
+  "stars": 35116,
+  "group": "agent"
+ },
+ {
+  "repo": "sickn33/agentic-awesome-skills",
+  "pr": 1931,
+  "head": "cfbdb52e740b5a4b64d9761e83c0aaab1be91d5a",
+  "base": "fecc3d9afa60eac8caf05813e442cfe86758d1f5",
+  "stars": 48282,
+  "group": "agent"
+ },
+ {
+  "repo": "soxoj/maigret",
+  "pr": 3109,
+  "head": "64ee01b79d9e1a070c17130264284f08c5d8a70a",
+  "base": "5f25860f3dd5e756ad99f8ce059990a708808933",
+  "stars": 39282,
+  "group": "agent"
+ },
+ {
+  "repo": "ayghri/i-have-adhd",
+  "pr": 125,
+  "head": "fcd0e2fb5393a852a87ad7cd1e2f250cb21c7854",
+  "base": "ff690b6fbd3383e4fce6a7e50c7b409ca9a6a804",
+  "stars": 58179,
+  "group": "agent"
+ },
+ {
+  "repo": "eosphoros-ai/DB-GPT",
+  "pr": 3141,
+  "head": "2796e32629d04861e0819a0422551a477d093698",
+  "base": "100acd76f9510d4e974707bb11a63f71d957d431",
+  "stars": 20178,
+  "group": "agent"
+ },
+ {
+  "repo": "getsentry/sentry",
+  "pr": 128065,
+  "head": "51ffee193dc3c9aef275bca90e4d559b774b5076",
+  "base": "ce8af8646edf030abcba90375346b36a2f2cb2d6",
+  "stars": 45626,
+  "group": "agent"
+ },
+ {
+  "repo": "psf/black",
+  "pr": 5449,
+  "head": "9505c2325554fd3b7199fc2168ee245d50682636",
+  "base": "994ef7eeb18172178552daa1f36f001d156ad583",
+  "stars": 41972,
+  "group": "agent"
+ },
+ {
+  "repo": "Genesis-Embodied-AI/genesis-world",
+  "pr": 3427,
+  "head": "5d177eaa69321b994fcf1ea3f834b4dc0dd3626c",
+  "base": "38484bf43bdabaf1bcd684e3aeaedea00b4385ea",
+  "stars": 30105,
+  "group": "agent"
+ },
+ {
+  "repo": "ansible/ansible",
+  "pr": 87572,
+  "head": "92d3a1925fbcf37ee84df2147a4a2b930203c43a",
+  "base": "da910e7ffdb4005093f446f72001f7f700a60a53",
+  "stars": 71053,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/trl",
+  "pr": 7639,
+  "head": "4faded9e9f88265d4de12239501b55a0c543cd47",
+  "base": "d9b9f39b54324b272df051de7852e18761040edd",
+  "stars": 19565,
+  "group": "agent"
+ },
+ {
+  "repo": "python/cpython",
+  "pr": 160007,
+  "head": "081689bc6bc0a7fd03fcbc6f2c47fd142b2500d2",
+  "base": "1277a5e5820ee747865413998981ceba90587bcc",
+  "stars": 77729,
+  "group": "agent"
+ },
+ {
+  "repo": "kivy/kivy",
+  "pr": 9440,
+  "head": "8bcfc12fb683c9b996d6da7a8863041649aa1105",
+  "base": "bdac6a6f2537f2ed095a42869263faa612a7732b",
+  "stars": 19030,
+  "group": "agent"
+ },
+ {
+  "repo": "python-telegram-bot/python-telegram-bot",
+  "pr": 5363,
+  "head": "31da02befd94d10c86387da79183ce99a3c96b44",
+  "base": "47c0a03d34eb4560ea8626e2c7b7cf9e59be9fa5",
+  "stars": 29526,
+  "group": "agent"
+ },
+ {
+  "repo": "huggingface/lerobot",
+  "pr": 5022,
+  "head": "329d779cc1c5248a12370766cdb152c148c7c09c",
+  "base": "3b31fd99e1fef140619f93a258edb1401bf8f7f4",
+  "stars": 28376,
+  "group": "agent"
+ }
+]
