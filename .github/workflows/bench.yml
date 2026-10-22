@@ -1,0 +1,85 @@
+# Scores merged AI-agent PRs from public repositories. Each PR runs in its own disposable runner,
+# because scoring runs that project's tests. The runners get read-only access and no secrets.
+name: bench
+
+on:
+  workflow_dispatch:
+    inputs:
+      prs:
+        description: JSON list of PRs to score (made by bench/select.py)
+        default: bench/pilot.json
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      prs: ${{ steps.read.outputs.prs }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - id: read
+        run: echo "prs=$(jq -c . '${{ inputs.prs }}')" >> "$GITHUB_OUTPUT"
+
+  score:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        pr: ${{ fromJSON(needs.plan.outputs.prs) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: catchscore
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@v6
+      - name: Score ${{ matrix.pr.repo }}#${{ matrix.pr.pr }}
+        env:
+          CATCHSCORE_SRC: ${{ github.workspace }}/catchscore
+          GITHUB_TOKEN: ""
+        run: |
+          mkdir -p out
+          bash catchscore/bench/score_pr.sh "${{ matrix.pr.repo }}" "${{ matrix.pr.pr }}" \
+            "${{ matrix.pr.head }}" "${{ matrix.pr.base }}" "$PWD/out/result.json"
+          cat out/result.json
+      - id: name
+        if: always()
+        run: echo "name=$(echo '${{ matrix.pr.repo }}-${{ matrix.pr.pr }}' | tr '/' '_')" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: result-${{ steps.name.outputs.name }}
+          path: out/result.json
+          if-no-files-found: ignore
+
+  collect:
+    needs: score
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: result-*
+          path: results
+      - run: |
+          find results -name result.json -exec cat {} + | jq -c . > all.jsonl
+          {
+            echo "## Benchmark results"
+            echo
+            echo "Scored: $(jq -s 'map(select(.injected)) | length' all.jsonl) of $(wc -l < all.jsonl) PRs"
+            echo
+            echo "Skipped, by stage:"
+            jq -rs 'map(select(.skipped)) | group_by(.skipped)[] | "- \(.[0].skipped): \(length)"' all.jsonl
+            echo
+            echo "Bugs caught across scored PRs: $(jq -s 'map(select(.injected)) | (map(.caught) | add // 0 | tostring) + " of " + (map(.injected) | add // 0 | tostring)' all.jsonl)"
+          } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: all-results
+          path: all.jsonl

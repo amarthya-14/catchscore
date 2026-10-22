@@ -1,0 +1,212 @@
+[
+ {
+  "repo": "huggingface/sentence-transformers",
+  "pr": 4089,
+  "head": "618650394187aefd92aef9068dbf901631424728",
+  "base": "4a3b5cd6ec718e421f57e824a41ed3fd99595df6",
+  "stars": 19206
+ },
+ {
+  "repo": "getsentry/sentry",
+  "pr": 127717,
+  "head": "8d3636d716530c13bc0229f3cf3e06c57fe40ee8",
+  "base": "63ac4bc658e679a403da0013f428dc365802d716",
+  "stars": 45626
+ },
+ {
+  "repo": "onyx-dot-app/onyx",
+  "pr": 16279,
+  "head": "b050fcedf82d6a1f8cc9f89a803a421876877cf1",
+  "base": "0439a43a219c816faad2fcc01e61b46aa33a1def",
+  "stars": 32782
+ },
+ {
+  "repo": "teng-lin/notebooklm-py",
+  "pr": 2465,
+  "head": "baeae70dc246b0a64fae54ccfaee81a83212dbc1",
+  "base": "f797ba058eb568ea65d15f00854d0e6333956b0d",
+  "stars": 19841
+ },
+ {
+  "repo": "HKUDS/DeepTutor",
+  "pr": 1985,
+  "head": "6af53e2582c06a383fb361504893ad82a323e1a8",
+  "base": "e60fb1582895300454eef2e001004d05d462114c",
+  "stars": 42042
+ },
+ {
+  "repo": "srbhr/Resume-Matcher",
+  "pr": 1060,
+  "head": "644e33468a9dcf226eeb2ad12158c1000bd85054",
+  "base": "ff5b370372d39b6cb6b56fd0dad88a2fe5c3abce",
+  "stars": 28802
+ },
+ {
+  "repo": "ai-job-search-dev/ai-job-search",
+  "pr": 564,
+  "head": "dcf1851ffcaad943422e548145798c505f99f424",
+  "base": "407dc34a2c4951e4ea3b047eaccdf2e4081a139a",
+  "stars": 63011
+ },
+ {
+  "repo": "blakeblackshear/frigate",
+  "pr": 24714,
+  "head": "1e921c4e74c09360dc2f835ac1877f7259f01485",
+  "base": "8263f13d1b07fd22fe913e32782c5c0d4e47331d",
+  "stars": 36809
+ },
+ {
+  "repo": "onyx-dot-app/onyx",
+  "pr": 16320,
+  "head": "f682f3614aea4003a7f4d349ea4cf3ca28de4f96",
+  "base": "e55376f3434d84f9c4297ca55eb8d64c01c907dd",
+  "stars": 32782
+ },
+ {
+  "repo": "srbhr/Resume-Matcher",
+  "pr": 1056,
+  "head": "723bc605f9c7a079f39f1c84566fade26c48dd75",
+  "base": "a8fd5c4a9af0b1d8b4439b4dcb1c4cacd034f132",
+  "stars": 28802
+ },
+ {
+  "repo": "apache/superset",
+  "pr": 45547,
+  "head": "4a514f4ce4a30dfad3a280b85818d4d2cd09e9c0",
+  "base": "452dea81f23995ee6162d86d2291d725003cc684",
+  "stars": 75245
+ },
+ {
+  "repo": "reflex-dev/reflex",
+  "pr": 7518,
+  "head": "5569c9bddf163747b4f0700ed6317ba1140e11b8",
+  "base": "73c7cb3be4928dc15496e98fc6d380f87d8f5ad7",
+  "stars": 28972
+ },
+ {
+  "repo": "huggingface/sentence-transformers",
+  "pr": 4228,
+  "head": "54e3259d86d8bbf7cb8ce9b6b675d84b48dcec30",
+  "base": "1fa45b4212a53e7d6c8d3c2682f88743338179fb",
+  "stars": 19206
+ },
+ {
+  "repo": "BerriAI/litellm",
+  "pr": 47401,
+  "head": "4593bca9c6dd8c414b4e8bb88bc30e670bede469",
+  "base": "89a194bbd0fd25c57df5456ccdc223978e4ac084",
+  "stars": 61759
+ },
+ {
+  "repo": "dgtlmoon/changedetection.io",
+  "pr": 4426,
+  "head": "cec26472c34258029dfae06a658ea4f85e40dee7",
+  "base": "900a77e8285ac8c4241d5ad2acabaf01657404eb",
+  "stars": 35196
+ },
+ {
+  "repo": "goauthentik/authentik",
+  "pr": 26790,
+  "head": "6b254a067750bcff20d928ed181651a794c2955c",
+  "base": "45c0d8e29977d1c40d8751731e37f325199fc627",
+  "stars": 26036
+ },
+ {
+  "repo": "modelcontextprotocol/python-sdk",
+  "pr": 3395,
+  "head": "2665a66d951a1e0499835aa3eb74694d93dda972",
+  "base": "6705402e246dc4eb1fcdf4d9902b78d3c9c36e1b",
+  "stars": 24636
+ },
+ {
+  "repo": "VectifyAI/PageIndex",
+  "pr": 430,
+  "head": "9bbdcefe4ed3ae4debbc7e6daa4690b001701052",
+  "base": "174f95f35b0b6acca5eee2a1c4f6ddeaf6ce88c7",
+  "stars": 39439
+ },
+ {
+  "repo": "unslothai/unsloth",
+  "pr": 13547,
+  "head": "4198c3d38b67c47b71e4d8d6da2158b2a5d36567",
+  "base": "8149f57436e612fe232a45cb33d3e8e26715f8ba",
+  "stars": 78387
+ },
+ {
+  "repo": "mvanhorn/last30days-skill",
+  "pr": 1244,
+  "head": "7f91a77895b7a213afb96fa99467ae73fdf7524b",
+  "base": "627def1c85a8f8358a7e20f28a3b531803980ae3",
+  "stars": 65014
+ },
+ {
+  "repo": "zylon-ai/private-gpt",
+  "pr": 2407,
+  "head": "d3f4368be04aff36af963d0cd296dd36a0a9d9b2",
+  "base": "4d7f36e53d46c51acdf74edc934235ac7cdb5e64",
+  "stars": 57602
+ },
+ {
+  "repo": "mvanhorn/last30days-skill",
+  "pr": 1246,
+  "head": "c7bc1b25ace3ebffda1bdcf741d1d4d62a230b96",
+  "base": "3c9d7dd57fd4193b8e30a13e7926531a7529f603",
+  "stars": 65014
+ },
+ {
+  "repo": "bmad-code-org/BMAD-METHOD",
+  "pr": 2991,
+  "head": "cd88dbcf2e87472018a1b8d77a2ffae898cb0373",
+  "base": "5b05098b9f2e9aebef3bf4288033dc1aa12b7ee5",
+  "stars": 54422
+ },
+ {
+  "repo": "Dao-AILab/flash-attention",
+  "pr": 2907,
+  "head": "07b394f09fb3a4e7fbea934a92d95ef5cad25239",
+  "base": "d15f1531a460ba456f41b01a774f33ab2db8febf",
+  "stars": 25184
+ },
+ {
+  "repo": "nesquena/hermes-webui",
+  "pr": 7823,
+  "head": "cace70201e15687eb56e4d714ece17d6d035a713",
+  "base": "60b38c46301e7ac7c304f9819ee343315b6f8658",
+  "stars": 19090
+ },
+ {
+  "repo": "ai-job-search-dev/ai-job-search",
+  "pr": 668,
+  "head": "e42ae245dc3ff9328999da8e46c52c9a6992ff42",
+  "base": "a59535083faef8be8784369b28b680a60202aa8b",
+  "stars": 63011
+ },
+ {
+  "repo": "PrefectHQ/fastmcp",
+  "pr": 5291,
+  "head": "2c9fdb10d5d359f126d30c0965cb3e9bb88fd671",
+  "base": "92e44ffcc04b29f960a6c678f44fac226ccc0ea6",
+  "stars": 28171
+ },
+ {
+  "repo": "agentscope-ai/agentscope",
+  "pr": 2428,
+  "head": "d3508c738ae18baad2bc29e5c05dcc1a23a03aed",
+  "base": "2a4e957e46f392d91da8b925a00a047f8969374b",
+  "stars": 33612
+ },
+ {
+  "repo": "TheAlgorithms/Python",
+  "pr": 15583,
+  "head": "fd748335fedbe99c2a40e96dbcd0286888a642a9",
+  "base": "adccf0cf0ca1cdc5f28fa8d244bac89efa18d0f6",
+  "stars": 225440
+ },
+ {
+  "repo": "huggingface/peft",
+  "pr": 3974,
+  "head": "3e56b40ee866df78515f7f97772356cdf729e78f",
+  "base": "eac46efeef6e5f63ecc38de5c9148513df602b29",
+  "stars": 21823
+ }
+]
