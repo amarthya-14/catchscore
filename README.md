@@ -71,15 +71,20 @@ Either way, the agent gets a concrete definition of done: name the bugs your tes
    - number and boolean changes
    - `return x` → `return None`
    - negated `if` / `while` conditions
-3. **Run.** It copies the project to a scratch directory, never touching your working tree. Your tests run once to confirm they pass, then once per mutant. A mutant is *caught* if the tests fail or time out.
+3. **Run.** It copies the project to a scratch directory, never touching your working tree. Your tests run once to confirm they pass, recording which tests run each changed line. Then each mutant is tested against only those tests. A mutant is *caught* if the tests fail or time out. Mutants that no test even reaches are reported separately, without running anything.
+   - **Fast path (macOS and Linux, Python 3.11+).** pytest collects and imports your project once. Each mutant then runs in a forked child with the mutated function's code swapped in memory, so imports aren't paid again per mutant.
+   - **Fresh process instead.** Mutants in code that runs at import time, or in code a test runs in another process, are run from disk in a fresh process. So is anything the fast path can't apply, or a child that crashes. `--no-select` runs every mutant this way, against the whole test command.
 4. **Integrity.** Conservative checks on test diffs flag tests that were deleted (not moved), skipped unconditionally, changed to expect a different value, or that assert nothing (or only `is not None`).
 5. **Suggest.** Claude gets the module, the existing tests and the surviving bugs, and writes new tests. The file is accepted only if it **passes on the current code** and **fails on at least one surviving mutant**. Rejected files are kept in `.catchscore/` along with the reason.
+
+On Pathlight's whole suite (219 tests), scoring a 47-bug commit took 245 s with `--jobs 4`, down from 623 s with one process per bug, with identical results (details in [docs/EVIDENCE.md](docs/EVIDENCE.md)).
 
 ## Limitations
 
 - Python and pytest only, for now.
 - Some mutants are *equivalent*: they don't change behaviour, so no test could catch them. A score of 100% isn't always possible, so treat survivors as questions, not verdicts.
-- Runtime is one test run per mutant. Point `--pytest` at the relevant test files, and use `--max-mutants` to cap a run. Planned: running only the tests that cover each changed line, and running mutants in parallel.
+- Runtime is roughly the time of the tests that reach each mutated line, per mutant. Use `--jobs` to run mutants in parallel and `--max-mutants` to cap a run. With `--jobs`, tests that share a real database, port or fixed file path can interfere; the forked fast path isolates in-memory state but not those.
+- Test selection assumes your tests don't depend on running in a particular order. If a test only passes after another test has run, running it on its own fails, and a bug would count as caught when it wasn't. [pytest-randomly](https://github.com/pytest-dev/pytest-randomly) finds such tests; `--no-select` avoids the problem.
 - Suggested tests are checked against the code as it is now, so a test can lock in a bug that's already there. Passing on today's code proves the test catches the injected bugs, not that the current behaviour is right. Read them before keeping them.
 - `--suggest` sends the changed module and its tests to Claude through your Claude Code CLI.
 
@@ -94,7 +99,6 @@ catchscore puts together known ideas; it doesn't invent them. What it adds is a 
 
 ## Roadmap
 
-- Coverage-guided test selection and parallel runs, for speed.
 - A GitHub Action that comments the score and survivors on each PR.
 - JavaScript and TypeScript support (Jest and Vitest).
 - A public benchmark: catch scores of agent-written changes across real open-source PRs, measured in a sandbox.

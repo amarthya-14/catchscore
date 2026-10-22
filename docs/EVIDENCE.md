@@ -37,7 +37,15 @@ Pathlight is a solo project with 222 backend tests. Its commit `2c68c02` ("Tailo
 
 **`--suggest` on this commit:** Claude wrote 8 tests for `resume_tailor.py`, the module with the most survivors. catchscore ran them before accepting them: they pass on the real code and catch **all 13** bugs that had survived in that module. The commit's catch rate rose from **45% to 72%** (34 of 47) after one call. The tests check the honesty rules directly: implied skills vs skills the resume doesn't show, confirmed skills deduplicated, and "never add these" excluding confirmed skills (saved in [`pathlight-case-study/`](pathlight-case-study/)). One test was contrived: a `str` subclass that is falsy, written only to kill one mutant. The prompt now tells the model to skip bugs that need unrealistic inputs and mark them as probably harmless.
 
-**Timing (MacBook Air M2, 8 GB):** 47 mutants against 5 test files took 181 s sequentially and 123 s with `--jobs 4`, with identical results.
+**Timing (MacBook Air M2, 8 GB), all with identical results:**
+
+| Tests used | One process per bug (`--no-select`) | Selected tests, forked (default) |
+|---|---|---|
+| 5 relevant test files, one bug at a time | 181 s | 126 s |
+| 5 relevant test files, `--jobs 4` | 123 s | 58 s |
+| Whole suite (219 tests), `--jobs 4` | 623 s | 245 s |
+
+On the default path, 40 of the 47 bugs ran in memory, 4 ran in a fresh process (import-time code), and 3 needed no run because no test reaches their line. The whole-suite run catches exactly the same bugs as the hand-picked 5 files, so the 45% figure doesn't depend on that choice. Pathlight's 3 tests that already fail on this commit (unrelated to it) were deselected. The 623 s run overlapped with about a minute of other test runs on the same machine.
 
 The same pattern appears in the demo project (`examples/make_demo.sh`): the agent's tests caught 2 of 16 injected bugs, and the verified tests from `--suggest` caught all 14 that had survived.
 
