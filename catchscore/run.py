@@ -299,6 +299,9 @@ class Runner:
         (self.work / rel).unlink(missing_ok=True)
 
     def close(self):
+        if os.environ.get("CATCHSCORE_KEEP_TMP"):  # for debugging catchscore itself
+            print(f"catchscore: kept scratch files in {self.tmp}", file=sys.stderr)
+            return
         shutil.rmtree(self.tmp, ignore_errors=True)
 
 

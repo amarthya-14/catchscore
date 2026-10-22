@@ -52,19 +52,25 @@ uv venv -q --seed --python "$py" "$work/venv" >>"$install_log" 2>&1 || result in
 uv pip install -q --no-config pytest pytest-asyncio pytest-mock "$CATCHSCORE_SRC" >>"$install_log" 2>&1 ||
   result install "could not install catchscore"
 # Best effort for the project itself: whichever of these exist. Failures show up as a failing baseline.
+# Loose requirement files first and the project's own declared dependencies last, so the project's
+# constraints win (an examples/ file pinning numpy<2 must not break the package itself).
 {
+  find . -maxdepth 3 -name '*requirements*.txt' -not -path '*/node_modules/*' -not -path '*/docs/*' |
+    while read -r r; do uv pip install -q -r "$r" || true; done
+  [ -f pyproject.toml ] && { uv pip install -q -r pyproject.toml --all-extras || true; }
   uv pip install -q -e ".[test]" || uv pip install -q -e ".[tests]" || uv pip install -q -e ".[dev]" ||
     uv pip install -q -e . || true
   uv pip install -q --group dev || uv pip install -q --group test || true
-  find . -maxdepth 3 -name '*requirements*.txt' -not -path '*/node_modules/*' -not -path '*/docs/*' |
-    while read -r r; do uv pip install -q -r "$r" || true; done
 } >>"$install_log" 2>&1
 
+export CATCHSCORE_KEEP_TMP=1 PYTHONFAULTHANDLER=1
 timeout 1500 catchscore --json --base "$fork" --max-mutants 40 --jobs 2 --pytest "python -m pytest $tests" \
   > "$work/score.json" 2>"$work/score.err"
 code=$?
 [ $code -eq 124 ] && result timeout "catchscore ran over 25 minutes"
-[ $code -eq 0 ] || result run "exit $code: $(cat "$work/score.err")"
+[ $code -eq 0 ] || result run "exit $code: $(cat "$work/score.err")
+--- pytest log of the fast path:
+$(tail -c 1500 /tmp/catchscore-*/serve-*/pytest.log 2>/dev/null)"
 jq --arg repo "$repo" --argjson pr "$pr" --arg tests "$tests" --arg proj "$proj" --arg py "$py" \
    --argjson secs $((SECONDS - started)) \
    '. + {repo: $repo, pr: $pr, tests: $tests, project_dir: $proj, python: $py, total_seconds: $secs}' \
