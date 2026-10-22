@@ -292,3 +292,19 @@ def test_swap_replaces_function_code_and_refuses_module_level_changes():
     assert swap.apply(path, src, "def f(x):\n    return x - 1\nK = 1\n", index)
     assert ns["f"](1) == 0
     assert not swap.apply(path, src, "def f(x):\n    return x + 1\nK = 2\n", index)
+
+
+def test_an_editable_install_of_the_original_folder_does_not_hide_the_bugs(tmp_path):
+    # `pip install -e .` puts the original src/ on the import path; catchscore mutates a copy. The copy
+    # has to win, or every bug would silently "survive". PYTHONPATH stands in for the install here.
+    before = {"src/shop/__init__.py": "", "src/shop/core.py": "\n", "tests/test_core.py": "def test_x():\n    pass\n"}
+    after = {"src/shop/core.py": "def fee(total):\n    return 5 if total < 50 else 0\n",
+             "tests/test_core.py": "from shop.core import fee\n\n\ndef test_fee():\n"
+                                   "    assert fee(49) == 5 and fee(50) == 0 and fee(0) == 5\n"}
+    repo = _project(tmp_path, before, after)
+    env = {**__import__("os").environ, "PYTHONPATH": str(repo / "src")}
+    for flags in ([], ["--no-select"]):
+        out = subprocess.run([sys.executable, "-m", "catchscore.cli", "--json", "--repo", str(repo), *flags],
+                             check=True, capture_output=True, text=True, env=env).stdout
+        report = json.loads(out)
+        assert report["injected"] > 0 and report["caught"] == report["injected"], (flags, report["survivors"])

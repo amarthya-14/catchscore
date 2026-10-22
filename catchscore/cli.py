@@ -61,7 +61,7 @@ def main(argv=None):
                     print(f"\r  testing injected bug {i}/{n}...", end="", file=sys.stderr, flush=True)
 
             if args.no_select:
-                runner.baseline()
+                runner.baseline(sorted({m.path for m in mutants}), trace=False)
                 results = runner.run_many(mutants, args.jobs, progress)
             else:
                 results = runner.score(mutants, args.jobs, progress)

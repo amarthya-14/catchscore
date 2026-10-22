@@ -33,15 +33,24 @@ ENV = {**os.environ, "PYTHONDONTWRITEBYTECODE": "1"}
 PLUGIN = Path(__file__).parent / "pytest_plugin"
 
 
-def _plugin_env(**extra: str) -> dict[str, str]:
-    path = os.pathsep.join(p for p in (str(PLUGIN), ENV.get("PYTHONPATH")) if p)
-    return {**ENV, "PYTHONPATH": path, **extra}
+def _import_roots(work: Path, paths) -> list[str]:
+    """Directories (relative to `work`) from which the mutated files are imported: above the topmost
+    package of each file, plus `src` if there is one."""
+    roots = []
+    for p in paths:
+        d = (work / p).parent
+        while d != work and (d / "__init__.py").exists():
+            d = d.parent
+        roots.append(os.path.relpath(d, work))
+    if (work / "src").is_dir():
+        roots.append("src")
+    return list(dict.fromkeys(roots))
 
 
 def _pytest(workdir: Path, cmd: list[str], timeout: float, want_output: bool = False, env=None):
     start = time.monotonic()
     try:
-        proc = subprocess.run(cmd, cwd=workdir, capture_output=True, text=True, timeout=timeout, env=env or ENV)
+        proc = subprocess.run(cmd, cwd=workdir, capture_output=True, text=True, timeout=timeout, env=env)
     except subprocess.TimeoutExpired:
         return (False, timeout, "timed out") if want_output else (False, timeout)
     took = time.monotonic() - start
@@ -65,32 +74,43 @@ class Runner:
         self.subprocess_lines: set[tuple[str, int]] = set()  # run by a process a test started
         self._spans: dict[str, dict[int, range]] = {}
         self.stats = {"in_memory": 0, "fresh_process": 0, "not_run": 0}  # how each mutant was tested
+        self.roots: list[str] = []
         self.max_timeout = max_timeout
         self.tmp = Path(tempfile.mkdtemp(prefix="catchscore-"))
         self.work = self.tmp / repo.name
-        shutil.copytree(repo, self.work, ignore=IGNORE)
+        shutil.copytree(repo, self.work, ignore=IGNORE, symlinks=True)
 
-    def baseline(self, trace: list[str] = ()) -> float:
+    def _env(self, workdir: Path, plugin: bool = False, **extra: str) -> dict[str, str]:
+        # The copy's own source roots go first on the path. Otherwise an editable install of the
+        # project, which points at the original folder, would import that instead of the mutated copy.
+        paths = ([str(PLUGIN)] if plugin else []) + [str(workdir / r) for r in self.roots]
+        if ENV.get("PYTHONPATH"):
+            paths.append(ENV["PYTHONPATH"])
+        return {**ENV, "PYTHONPATH": os.pathsep.join(paths), **extra}
+
+    def baseline(self, paths: list[str] = (), trace: bool = True) -> float:
         """Tests must pass before any bug is injected; returns how long they took.
 
-        With `trace` (paths of the files to be mutated), also records which tests run each of their
-        lines, so each mutant only needs the tests that can reach it.
+        `paths` are the files that will be mutated. With `trace`, also records which tests run each of
+        their lines, so each mutant only needs the tests that can reach it.
         """
         ok = False
-        if trace:
-            ok, took = self._traced_baseline(trace)
+        self.roots = _import_roots(self.work, paths)
+        if paths and trace:
+            ok, took = self._traced_baseline(paths)
         if not ok:
             self.tests_on = None
-            ok, took = _pytest(self.work, self.cmd, self.max_timeout)
+            ok, took, output = _pytest(self.work, self.cmd, self.max_timeout, want_output=True, env=self._env(self.work))
         if not ok:
-            raise RuntimeError("the test suite fails before any mutation; fix it first (or pass --pytest)")
+            raise RuntimeError("the test suite fails before any mutation; fix it first (or pass --pytest).\n"
+                               "Last lines of pytest's output:\n" + output[-2500:])
         self.timeout = min(self.max_timeout, took * 3 + 5)
         return took
 
     def _traced_baseline(self, paths: list[str]) -> tuple[bool, float]:
         out = Path(tempfile.mkdtemp(prefix="trace-", dir=self.tmp))
         files = {os.path.realpath(self.work / p): p for p in paths}
-        env = _plugin_env(CATCHSCORE_TRACE_FILES=json.dumps(files), CATCHSCORE_TRACE_OUT=str(out))
+        env = self._env(self.work, plugin=True, CATCHSCORE_TRACE_FILES=json.dumps(files), CATCHSCORE_TRACE_OUT=str(out))
         ok, took = _pytest(self.work, self.cmd + ["-p", "catchscore_plugin"], self.max_timeout, env=env)
         if not ok or not (out / "main.json").exists():
             return False, took  # e.g. another tracer (pytest-cov) took over: fall back to running every test
@@ -136,8 +156,9 @@ class Runner:
             return None
         out = Path(tempfile.mkdtemp(prefix="serve-", dir=self.tmp))
         files = {os.path.realpath(self.work / p): p for p in {m.path for m in mutants}}
-        env = _plugin_env(CATCHSCORE_TRACE_FILES=json.dumps(files), CATCHSCORE_TRACE_OUT=str(out),
-                          CATCHSCORE_SERVE=str(out), OBJC_DISABLE_INITIALIZE_FORK_SAFETY="YES")
+        self.roots = _import_roots(self.work, {m.path for m in mutants})
+        env = self._env(self.work, plugin=True, CATCHSCORE_TRACE_FILES=json.dumps(files), CATCHSCORE_TRACE_OUT=str(out),
+                        CATCHSCORE_SERVE=str(out), OBJC_DISABLE_INITIALIZE_FORK_SAFETY="YES")
         if sys.platform == "darwin" and not any(k.lower().endswith("_proxy") for k in env):
             # After fork(), macOS's system proxy lookup (urllib, used by httpx/requests) segfaults.
             # With a proxy variable set, Python never asks the system.
@@ -215,7 +236,7 @@ class Runner:
         free.put(self.work)
         for k in range(1, min(jobs, len(mutants))):
             copy = self.tmp / f"{self.work.name}-{k}"
-            shutil.copytree(self.work, copy, ignore=IGNORE)
+            shutil.copytree(self.work, copy, ignore=IGNORE, symlinks=True)
             free.put(copy)
         done = 0
 
@@ -235,7 +256,7 @@ class Runner:
 
     def run(self, mutant: Mutant, workdir: Path | None = None) -> Result:
         workdir = workdir or self.work
-        cmd, env = self._cmd(), None
+        cmd, env = self._cmd(), self._env(workdir)
         tests = self.tests_for(mutant)
         if tests == []:
             return Result(mutant, False, "not run by any test")
@@ -243,7 +264,7 @@ class Runner:
             fd, select = tempfile.mkstemp(suffix=".txt", dir=self.tmp)
             with os.fdopen(fd, "w") as f:
                 f.write("\n".join(tests))
-            cmd, env = cmd + ["-p", "catchscore_plugin"], _plugin_env(CATCHSCORE_SELECT=select)
+            cmd, env = cmd + ["-p", "catchscore_plugin"], self._env(workdir, plugin=True, CATCHSCORE_SELECT=select)
         target = workdir / mutant.path
         original = target.read_text()
         target.write_text(mutant.source)
@@ -261,7 +282,7 @@ class Runner:
         return self.invoke + self.only + ["-x", "-q", "-p", "no:cacheprovider"]
 
     def passes(self) -> tuple[bool, str]:
-        ok, _, output = _pytest(self.work, self._cmd(), self.timeout, want_output=True)
+        ok, _, output = _pytest(self.work, self._cmd(), self.timeout, want_output=True, env=self._env(self.work))
         return ok, output
 
     def add_file(self, rel: str, text: str):
