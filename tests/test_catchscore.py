@@ -173,3 +173,12 @@ def test_suggestions_are_kept_only_if_they_pass_and_catch_bugs(tmp_path, monkeyp
     else:
         assert result.rejected.startswith("the suggested tests fail on the current code")
         assert (repo / ".catchscore" / "rejected_reason.txt").exists()
+
+
+def test_parallel_jobs_give_the_same_results(tmp_path):
+    subprocess.run(["bash", str(ROOT / "examples" / "make_demo.sh"), str(tmp_path / "shop")],
+                   check=True, capture_output=True)
+    reports = [json.loads(subprocess.run(
+        [sys.executable, "-m", "catchscore.cli", "--json", "--jobs", jobs, "--repo", str(tmp_path / "shop")],
+        check=True, capture_output=True, text=True).stdout) for jobs in ("1", "4")]
+    assert reports[0]["survivors"] == reports[1]["survivors"]

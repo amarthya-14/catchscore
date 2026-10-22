@@ -26,6 +26,9 @@ def main(argv=None):
     p.add_argument("--pytest", default=f"{sys.executable} -m pytest",
                    help="command that runs the tests (default: this Python's pytest)")
     p.add_argument("--max-mutants", type=int, default=60, help="cap per run, to bound the time (default: 60)")
+    p.add_argument("--jobs", "-j", type=int, default=1,
+                   help="test this many bugs in parallel, each in its own copy (default: 1; use more if your "
+                        "tests don't share ports, files or databases)")
     p.add_argument("--min-score", type=float, help="exit 1 if the catch score is below this percentage")
     p.add_argument("--json", action="store_true", help="print a JSON report")
     p.add_argument("--suggest", action="store_true",
@@ -50,10 +53,11 @@ def main(argv=None):
         runner = Runner(repo, shlex.split(args.pytest))
         try:
             runner.baseline()
-            for i, m in enumerate(mutants, 1):
+            def progress(i, n):
                 if not args.json and sys.stderr.isatty():
-                    print(f"\r  testing injected bug {i}/{len(mutants)}...", end="", file=sys.stderr, flush=True)
-                results.append(runner.run(m))
+                    print(f"\r  testing injected bug {i}/{n}...", end="", file=sys.stderr, flush=True)
+
+            results = runner.run_many(mutants, args.jobs, progress)
             survivors = [r for r in results if not r.killed]
             if args.suggest and survivors:
                 if not args.json:

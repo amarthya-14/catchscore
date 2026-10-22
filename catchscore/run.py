@@ -1,9 +1,11 @@
 """Run the test suite against each mutant in a scratch copy of the project, never in the user's tree."""
 
+import queue
 import shutil
 import subprocess
 import tempfile
 import time
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -54,12 +56,44 @@ class Runner:
         self.timeout = min(self.max_timeout, took * 3 + 5)
         return took
 
-    def run(self, mutant: Mutant) -> Result:
-        target = self.work / mutant.path
+    def run_many(self, mutants: list[Mutant], jobs: int = 1, progress=None) -> list[Result]:
+        """Test every mutant; with jobs > 1, each worker gets its own copy of the project."""
+        if jobs <= 1:
+            out = []
+            for i, m in enumerate(mutants, 1):
+                out.append(self.run(m))
+                if progress:
+                    progress(i, len(mutants))
+            return out
+        free: queue.Queue[Path] = queue.Queue()
+        free.put(self.work)
+        for k in range(1, min(jobs, len(mutants))):
+            copy = self.tmp / f"{self.work.name}-{k}"
+            shutil.copytree(self.work, copy, ignore=IGNORE)
+            free.put(copy)
+        done = 0
+
+        def task(m: Mutant) -> Result:
+            nonlocal done
+            workdir = free.get()
+            try:
+                return self.run(m, workdir)
+            finally:
+                free.put(workdir)
+                done += 1
+                if progress:
+                    progress(done, len(mutants))
+
+        with ThreadPoolExecutor(max_workers=jobs) as pool:
+            return list(pool.map(task, mutants))
+
+    def run(self, mutant: Mutant, workdir: Path | None = None) -> Result:
+        workdir = workdir or self.work
+        target = workdir / mutant.path
         original = target.read_text()
         target.write_text(mutant.source)
         try:
-            passed, took = _pytest(self.work, self._cmd(), self.timeout)
+            passed, took = _pytest(workdir, self._cmd(), self.timeout)
             if took >= self.timeout:
                 return Result(mutant, True, "timeout")
             return Result(mutant, not passed, "failed" if not passed else "survived")
