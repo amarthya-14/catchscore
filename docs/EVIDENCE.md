@@ -35,7 +35,15 @@ Pathlight is a solo project with 222 backend tests. Its commit `2c68c02` ("Tailo
 - **26 bugs survived.** 13 of them are in the logic that decides which skills a tailored resume may claim (`resume_tailor.py` lines 159–185). For example, `not has_skill(..., implied=False) and has_skill(...)` → `or` would let the resume claim skills the candidate does not have, and no test notices. That is the most honesty-critical code in the project.
 - The other survivors are in `confirmed_skills_for` (saving newly confirmed skills, deduplication, the 60-skill cap). None of that is tested.
 
+**`--suggest` on this commit:** Claude wrote 8 tests for `resume_tailor.py`, the module with the most survivors. catchscore ran them before accepting them: they pass on the real code and catch **all 13** bugs that had survived in that module. The commit's catch rate rose from **45% to 72%** (34 of 47) after one call. The tests check the honesty rules directly: implied skills vs skills the resume doesn't show, confirmed skills deduplicated, and "never add these" excluding confirmed skills (saved in [`pathlight-case-study/`](pathlight-case-study/)). One test was contrived: a `str` subclass that is falsy, written only to kill one mutant. The prompt now tells the model to skip bugs that need unrealistic inputs and mark them as probably harmless.
+
+**Timing (MacBook Air M2, 8 GB):** 47 mutants against 5 test files took 181 s sequentially and 123 s with `--jobs 4`, with identical results.
+
 The same pattern appears in the demo project (`examples/make_demo.sh`): the agent's tests caught 2 of 16 injected bugs, and the verified tests from `--suggest` caught all 14 that had survived.
+
+## A bug catchscore's own tests found in catchscore
+
+Python reuses cached bytecode when a file's size and modification time (in whole seconds) look unchanged. A mutant like `/ 2` → `/ 3` keeps the file size and is written within the same second as the previous run, so the tests silently ran the *previous* code, and a bug could wrongly "survive" or wrongly be "caught". A test of the suggestion step showed nondeterministic counts, which exposed it. The fix disables the bytecode cache for every test run. A regression test that interleaves harmless and real same-size mutants failed in about half of runs without the fix and passes every time with it. The headline numbers above were re-measured after the fix and did not change. Their test runs take long enough that two rarely land in the same second, but the fast suggestion check was affected.
 
 ## What would make this a stronger study (next steps)
 

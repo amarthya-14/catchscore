@@ -38,7 +38,7 @@ Suggested tests in .catchscore/test_catchscore_shop.py pass on your code and cat
 
 Pathlight's commit `2c68c02` was written with Claude Code and adds the logic that decides which skills a tailored resume may claim. Its tests caught **21 of 47 (45%)** injected bugs.
 
-For example, `not has_skill(..., implied=False) and has_skill(...)` → `or` would let the resume claim skills the candidate doesn't have, and no test notices. The details and the method are in [docs/EVIDENCE.md](docs/EVIDENCE.md). The same document covers a scan of 1,297 merged agent PRs from 136 popular repositories. That scan explains why catchscore runs your tests instead of judging diffs: diffs alone mostly produce false alarms.
+For example, `not has_skill(..., implied=False) and has_skill(...)` → `or` would let the resume claim skills the candidate doesn't have, and no test notices. One `catchscore --suggest` run produced verified tests that catch all 13 survivors in that module, raising the commit's catch rate from 45% to 72%. The details and the method are in [docs/EVIDENCE.md](docs/EVIDENCE.md). The same document covers a scan of 1,297 merged agent PRs from 136 popular repositories. That scan explains why catchscore runs your tests instead of judging diffs: diffs alone mostly produce false alarms.
 
 ## Install and use
 
