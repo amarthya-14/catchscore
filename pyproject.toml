@@ -4,7 +4,25 @@ version = "0.1.0"
 description = "Would your tests catch a bug in what just changed? Mutation testing scoped to your diff, plus test-integrity checks for AI coding agents."
 readme = "README.md"
 requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Amarthya Jonnalagadda", email = "amarthyajonnalagadda2005@gmail.com" }]
+keywords = ["mutation-testing", "testing", "pytest", "ai-agents", "code-review"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Framework :: Pytest",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Quality Assurance",
+]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/amarthya-14/catchscore"
+Benchmark = "https://github.com/amarthya-14/catchscore/blob/main/docs/BENCHMARK.md"
+Issues = "https://github.com/amarthya-14/catchscore/issues"
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
@@ -15,3 +33,7 @@ catchscore = "catchscore.cli:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+# The package, its tests and docs; the benchmark data and PR study stay in the repo only.
+include = ["catchscore/", "tests/", "docs/", "README.md", "LICENSE", "pyproject.toml"]

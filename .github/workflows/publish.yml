@@ -1,0 +1,25 @@
+# Publishes to PyPI when a version tag (v0.1.0, ...) is pushed. Uses PyPI Trusted Publishing:
+# PyPI trusts this workflow directly, so there is no API token to store or leak.
+# One-time setup on pypi.org: Publishing -> add a pending publisher for
+#   project catchscore, owner amarthya-14, repository catchscore, workflow publish.yml, environment pypi.
+name: Publish
+
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write  # for Trusted Publishing; nothing else
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Test
+        run: uv run --python 3.12 --with pytest python -m pytest -q
+      - name: Build
+        run: uv build
+      - uses: pypa/gh-action-pypi-publish@release/v1
